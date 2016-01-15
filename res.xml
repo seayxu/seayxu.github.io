@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[SeayXu git blog]]></title>
   
-  <link href="/feed.xml" rel="self"/>
+  <link href="/res.xml" rel="self"/>
   <link href="http://seayxu.github.io/"/>
   <updated>2016-01-15T02:55:03.682Z</updated>
   <id>http://seayxu.github.io/</id>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[Windows-IoT-Get-Started-For-Raspberry-Pi2]]></title>
-    <link href="http://seayxu.github.io/2016/01/14/Windows-IoT-Get-Started-For-Raspberry-Pi2"/>
-    <id>http://seayxu.github.io/2016/01/14/Windows-IoT-Get-Started-For-Raspberry-Pi2</id>
+    <link href="http://seayxu.github.io/2016/01/14/Windows-IoT-Get-Started-For-Raspberry-Pi2.html"/>
+    <id>http://seayxu.github.io/2016/01/14/Windows-IoT-Get-Started-For-Raspberry-Pi2.html</id>
     <published>2016-01-14T15:32:55.000Z</published>
     <updated>2016-01-15T02:55:03.682Z</updated>
     <content type="html"><![CDATA[<h2 id="u8BBE_u7F6E_u7535_u8111"><a href="#u8BBE_u7F6E_u7535_u8111" class="headerlink" title="设置电脑"></a><a href="http://ms-iot.github.io/content/zh-CN/win10/SetupPCRPI.htm" target="_blank" rel="external">设置电脑</a></h2><h3 id="u5728_u7535_u8111_u4E0A_u8BBE_u7F6E_Visual_Studio_2015"><a href="#u5728_u7535_u8111_u4E0A_u8BBE_u7F6E_Visual_Studio_2015" class="headerlink" title="在电脑上设置 Visual Studio 2015"></a>在电脑上设置 Visual Studio 2015</h3><p>若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：</p>
