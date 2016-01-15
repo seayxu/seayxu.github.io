@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[SeayXu git blog]]></title>
   <subtitle><![CDATA[SeayXu git blog]]></subtitle>
-  <link href="/atom.xml" rel="self"/>
+  <link href="/feed.xml" rel="self"/>
   <link href="http://seayxu.github.io/"/>
   <updated>2016-01-15T02:55:03.682Z</updated>
   <id>http://seayxu.github.io/</id>
