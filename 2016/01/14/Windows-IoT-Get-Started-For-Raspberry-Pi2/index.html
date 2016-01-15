@@ -11,22 +11,20 @@
     
 
     
-    <meta name="description" content="设置电脑###在电脑上设置 Visual Studio 2015
-若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：
+    <meta name="description" content="设置电脑在电脑上设置 Visual Studio 2015若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：
 
 请确保运行的是 Windows 10（版本 10240）的公共版本或更高版本。可从此处升级。如果已经运行 Windows 10，可通过单击“开始”按钮、键入“winver”并点击 Enter，查找当前版本号。
 
-在此处安装 Visual Studio">
+在此处安装 Visual Studio Comm">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows-IoT-Get-Started-For-Raspberry-Pi2">
 <meta property="og:url" content="http://seayxu.github.io/2016/01/14/Windows-IoT-Get-Started-For-Raspberry-Pi2/index.html">
 <meta property="og:site_name" content="SeayXu git blog">
-<meta property="og:description" content="设置电脑###在电脑上设置 Visual Studio 2015
-若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：
+<meta property="og:description" content="设置电脑在电脑上设置 Visual Studio 2015若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：
 
 请确保运行的是 Windows 10（版本 10240）的公共版本或更高版本。可从此处升级。如果已经运行 Windows 10，可通过单击“开始”按钮、键入“winver”并点击 Enter，查找当前版本号。
 
-在此处安装 Visual Studio">
+在此处安装 Visual Studio Comm">
 <meta property="og:image" content="http://ms-iot.github.io/content/images/SetupRPI/Iso.PNG">
 <meta property="og:image" content="http://ms-iot.github.io/content/images/SetupRPI/MSI.PNG">
 <meta property="og:image" content="http://ms-iot.github.io/content/images/SetupRPI/rpiffu.PNG">
@@ -43,15 +41,14 @@
 <meta property="og:image" content="http://ms-iot.github.io/content/images/AppDeployment/cs-remote-connections.PNG">
 <meta property="og:image" content="http://ms-iot.github.io/content/images/AppDeployment/cs-debug-project-properties.PNG">
 <meta property="og:image" content="http://ms-iot.github.io/content/images/Blinky/blinky-screenshot.png">
-<meta property="og:updated_time" content="2016-01-14T16:03:56.308Z">
+<meta property="og:updated_time" content="2016-01-15T01:46:40.646Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows-IoT-Get-Started-For-Raspberry-Pi2">
-<meta name="twitter:description" content="设置电脑###在电脑上设置 Visual Studio 2015
-若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：
+<meta name="twitter:description" content="设置电脑在电脑上设置 Visual Studio 2015若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：
 
 请确保运行的是 Windows 10（版本 10240）的公共版本或更高版本。可从此处升级。如果已经运行 Windows 10，可通过单击“开始”按钮、键入“winver”并点击 Enter，查找当前版本号。
 
-在此处安装 Visual Studio">
+在此处安装 Visual Studio Comm">
 
     
     <link rel="alternative" href="/" title="SeayXu git blog" type="application/atom+xml">
@@ -60,8 +57,8 @@
     <link rel="icon" href="/img/favicon.ico">
     
     
-    <link rel="apple-touch-icon" href="/img/jacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon" href="/img/apple.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/apple.jpg">
     
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
@@ -123,12 +120,11 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BBE_u7F6E_u7535_u8111"><span class="toc-number">1.</span> <span class="toc-text">设置电脑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BBE_u7F6E_u4F60_u7684_u8BBE_u5907"><span class="toc-number">2.</span> <span class="toc-text">设置你的设备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u9700_u8981_u5177_u5907_u7684_u6761_u4EF6"><span class="toc-number">2.1.</span> <span class="toc-text">需要具备的条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5B89_u88C5_Windows_10_IoT__u6838_u5FC3_u7248_u5DE5_u5177"><span class="toc-number">2.2.</span> <span class="toc-text">安装 Windows 10 IoT 核心版工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5C06_Windows_10_IoT_Core_Insider_Preview__u6620_u50CF_u653E_u7F6E_u5728_SD__u5361_u4E0A"><span class="toc-number">2.3.</span> <span class="toc-text">将 Windows 10 IoT Core Insider Preview 映像放置在 SD 卡上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u8FDE_u63A5_u7535_u8DEF_u677F"><span class="toc-number">2.4.</span> <span class="toc-text">连接电路板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u542F_u52A8_Windows_10_IoT__u6838_u5FC3_u7248"><span class="toc-number">2.5.</span> <span class="toc-text">启动 Windows 10 IoT 核心版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5176_u4ED6_u8D44_u6E90"><span class="toc-number">2.6.</span> <span class="toc-text">其他资源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5F00_u53D1"><span class="toc-number">3.</span> <span class="toc-text">开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Blinky__u793A_u4F8B"><span class="toc-number">3.1.</span> <span class="toc-text">Blinky 示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u5C06_LED__u8FDE_u63A5_u5230_u4F60_u7684_Windows_IoT__u8BBE_u5907"><span class="toc-number">3.1.1.</span> <span class="toc-text">将 LED 连接到你的 Windows IoT 设备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u9002_u7528_u4E8E_Raspberry_Pi_2__28RPi2_29"><span class="toc-number">3.1.2.</span> <span class="toc-text">适用于 Raspberry Pi 2 (RPi2)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u9002_u7528_u4E8E_MinnowBoard_Max__28MBM_29"><span class="toc-number">3.1.3.</span> <span class="toc-text">适用于 MinnowBoard Max (MBM)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u90E8_u7F72_u4F60_u7684_u5E94_u7528"><span class="toc-number">3.1.4.</span> <span class="toc-text">部署你的应用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u6211_u4EEC_u6765_u770B_u770B_u4EE3_u7801"><span class="toc-number">3.1.5.</span> <span class="toc-text">我们来看看代码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#u8BA1_u65F6_u5668_u4EE3_u7801"><span class="toc-number">3.1.5.1.</span> <span class="toc-text">计时器代码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#u521D_u59CB_u5316_GPIO__u5F15_u811A"><span class="toc-number">3.1.5.2.</span> <span class="toc-text">初始化 GPIO 引脚</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#u4FEE_u6539_GPIO__u5F15_u811A_u7684_u72B6_u6001"><span class="toc-number">3.1.5.3.</span> <span class="toc-text">修改 GPIO 引脚的状态</span></a></li></ol></li></ol></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BBE_u7F6E_u7535_u8111"><span class="toc-number">1.</span> <span class="toc-text">设置电脑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u5728_u7535_u8111_u4E0A_u8BBE_u7F6E_Visual_Studio_2015"><span class="toc-number">1.1.</span> <span class="toc-text">在电脑上设置 Visual Studio 2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BBE_u7F6E_u4F60_u7684_u8BBE_u5907"><span class="toc-number">2.</span> <span class="toc-text">设置你的设备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u9700_u8981_u5177_u5907_u7684_u6761_u4EF6"><span class="toc-number">2.1.</span> <span class="toc-text">需要具备的条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5B89_u88C5_Windows_10_IoT__u6838_u5FC3_u7248_u5DE5_u5177"><span class="toc-number">2.2.</span> <span class="toc-text">安装 Windows 10 IoT 核心版工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5C06_Windows_10_IoT_Core_Insider_Preview__u6620_u50CF_u653E_u7F6E_u5728_SD__u5361_u4E0A"><span class="toc-number">2.3.</span> <span class="toc-text">将 Windows 10 IoT Core Insider Preview 映像放置在 SD 卡上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u8FDE_u63A5_u7535_u8DEF_u677F"><span class="toc-number">2.4.</span> <span class="toc-text">连接电路板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u542F_u52A8_Windows_10_IoT__u6838_u5FC3_u7248"><span class="toc-number">2.5.</span> <span class="toc-text">启动 Windows 10 IoT 核心版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5176_u4ED6_u8D44_u6E90"><span class="toc-number">2.6.</span> <span class="toc-text">其他资源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5F00_u53D1"><span class="toc-number">3.</span> <span class="toc-text">开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Blinky__u793A_u4F8B"><span class="toc-number">3.1.</span> <span class="toc-text">Blinky 示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u5C06_LED__u8FDE_u63A5_u5230_u4F60_u7684_Windows_IoT__u8BBE_u5907"><span class="toc-number">3.1.1.</span> <span class="toc-text">将 LED 连接到你的 Windows IoT 设备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u9002_u7528_u4E8E_Raspberry_Pi_2__28RPi2_29"><span class="toc-number">3.1.2.</span> <span class="toc-text">适用于 Raspberry Pi 2 (RPi2)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u9002_u7528_u4E8E_MinnowBoard_Max__28MBM_29"><span class="toc-number">3.1.3.</span> <span class="toc-text">适用于 MinnowBoard Max (MBM)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u90E8_u7F72_u4F60_u7684_u5E94_u7528"><span class="toc-number">3.1.4.</span> <span class="toc-text">部署你的应用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u6211_u4EEC_u6765_u770B_u770B_u4EE3_u7801"><span class="toc-number">3.1.5.</span> <span class="toc-text">我们来看看代码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#u8BA1_u65F6_u5668_u4EE3_u7801"><span class="toc-number">3.1.5.1.</span> <span class="toc-text">计时器代码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#u521D_u59CB_u5316_GPIO__u5F15_u811A"><span class="toc-number">3.1.5.2.</span> <span class="toc-text">初始化 GPIO 引脚</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#u4FEE_u6539_GPIO__u5F15_u811A_u7684_u72B6_u6001"><span class="toc-number">3.1.5.3.</span> <span class="toc-text">修改 GPIO 引脚的状态</span></a></li></ol></li></ol></li></ol></li></ol>
 		
 		</div>
 		
-		<h2 id="u8BBE_u7F6E_u7535_u8111"><a href="#u8BBE_u7F6E_u7535_u8111" class="headerlink" title="设置电脑"></a><a href="http://ms-iot.github.io/content/zh-CN/win10/SetupPCRPI.htm" target="_blank" rel="external">设置电脑</a></h2><p>###在电脑上设置 Visual Studio 2015</p>
-<p>若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：</p>
+		<h2 id="u8BBE_u7F6E_u7535_u8111"><a href="#u8BBE_u7F6E_u7535_u8111" class="headerlink" title="设置电脑"></a><a href="http://ms-iot.github.io/content/zh-CN/win10/SetupPCRPI.htm" target="_blank" rel="external">设置电脑</a></h2><h3 id="u5728_u7535_u8111_u4E0A_u8BBE_u7F6E_Visual_Studio_2015"><a href="#u5728_u7535_u8111_u4E0A_u8BBE_u7F6E_Visual_Studio_2015" class="headerlink" title="在电脑上设置 Visual Studio 2015"></a>在电脑上设置 Visual Studio 2015</h3><p>若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：</p>
 <ol>
 <li><p><strong>请确保运行的是 Windows 10（版本 10240）的公共版本或更高版本</strong>。可从<a href="http://www.microsoft.com/zh-CN/software-download/windows10" target="_blank" rel="external">此处</a>升级。如果已经运行 Windows 10，可通过单击“开始”按钮、键入“winver”并点击 Enter，查找当前版本号。</p>
 </li>
@@ -159,7 +155,8 @@
 <h3 id="u5B89_u88C5_Windows_10_IoT__u6838_u5FC3_u7248_u5DE5_u5177"><a href="#u5B89_u88C5_Windows_10_IoT__u6838_u5FC3_u7248_u5DE5_u5177" class="headerlink" title="安装 Windows 10 IoT 核心版工具"></a>安装 Windows 10 IoT 核心版工具</h3><ol>
 <li><p>从 Microsoft 下载中心<a href="http://go.microsoft.com/fwlink/?LinkId=616847" target="_blank" rel="external">下载</a>用于 Raspberry Pi 2 的 ISO。</p>
 </li>
-<li><p>将 ISO 保存到本地文件夹<br> <img src="http://ms-iot.github.io/content/images/SetupRPI/Iso.PNG" alt=""></p>
+<li><p>将 ISO 保存到本地文件夹</p>
+<p> <img src="http://ms-iot.github.io/content/images/SetupRPI/Iso.PNG" alt=""></p>
 </li>
 <li><p>双击 ISO（IoT 核心版 RPi.iso）。它将自动将其本身作为虚拟驱动器进行装载，以便你可以访问内容。</p>
 <p> <img src="http://ms-iot.github.io/content/images/SetupRPI/MSI.PNG" alt=""></p>
@@ -206,9 +203,9 @@
 <li><p><strong>强烈推荐</strong>更新管理员帐户的默认密码。若要执行此操作，请在 PowerShell 连接中发出以下命令：</p>
 <p>使用强密码替换 <code>[new password]</code>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net user Administrator [new password]</span><br></pre></td></tr></table></figure>
+<p>此操作完成后，将需要使用 psSession 和新凭据重新建立当前会话。</p>
 </li>
 </ol>
-<p>  此操作完成后，将需要使用 psSession 和新凭据重新建立当前会话。</p>
 <h3 id="u5176_u4ED6_u8D44_u6E90"><a href="#u5176_u4ED6_u8D44_u6E90" class="headerlink" title="其他资源"></a>其他资源</h3><ul>
 <li><a href="http://ms-iot.github.io/content/zh-CN/win10/SupportedInterfaces.htm" target="_blank" rel="external">受支持的外围接口和设备</a></li>
 </ul>
@@ -281,6 +278,9 @@
 <p>当然，写入 <code>GpioPinValue.High</code> 便会关闭 LED：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.pin.Write(GpioPinValue.High);</span><br></pre></td></tr></table></figure>
 <p>记得我们已将 LED 的另一端连接到了 3.3 伏电源，因此，我们需要将引脚驱动到低位，使电流通过 LED。</p>
+<blockquote>
+<p>本文来源于<a href="http://ms-iot.github.io/content/zh-CN/GetStarted.htm" target="_blank" rel="external"><code>微软Windows IoT官网</code></a></p>
+</blockquote>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -322,7 +322,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BBE_u7F6E_u7535_u8111"><span class="toc-number">1.</span> <span class="toc-text">设置电脑</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BBE_u7F6E_u4F60_u7684_u8BBE_u5907"><span class="toc-number">2.</span> <span class="toc-text">设置你的设备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u9700_u8981_u5177_u5907_u7684_u6761_u4EF6"><span class="toc-number">2.1.</span> <span class="toc-text">需要具备的条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5B89_u88C5_Windows_10_IoT__u6838_u5FC3_u7248_u5DE5_u5177"><span class="toc-number">2.2.</span> <span class="toc-text">安装 Windows 10 IoT 核心版工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5C06_Windows_10_IoT_Core_Insider_Preview__u6620_u50CF_u653E_u7F6E_u5728_SD__u5361_u4E0A"><span class="toc-number">2.3.</span> <span class="toc-text">将 Windows 10 IoT Core Insider Preview 映像放置在 SD 卡上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u8FDE_u63A5_u7535_u8DEF_u677F"><span class="toc-number">2.4.</span> <span class="toc-text">连接电路板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u542F_u52A8_Windows_10_IoT__u6838_u5FC3_u7248"><span class="toc-number">2.5.</span> <span class="toc-text">启动 Windows 10 IoT 核心版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5176_u4ED6_u8D44_u6E90"><span class="toc-number">2.6.</span> <span class="toc-text">其他资源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5F00_u53D1"><span class="toc-number">3.</span> <span class="toc-text">开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Blinky__u793A_u4F8B"><span class="toc-number">3.1.</span> <span class="toc-text">Blinky 示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u5C06_LED__u8FDE_u63A5_u5230_u4F60_u7684_Windows_IoT__u8BBE_u5907"><span class="toc-number">3.1.1.</span> <span class="toc-text">将 LED 连接到你的 Windows IoT 设备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u9002_u7528_u4E8E_Raspberry_Pi_2__28RPi2_29"><span class="toc-number">3.1.2.</span> <span class="toc-text">适用于 Raspberry Pi 2 (RPi2)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u9002_u7528_u4E8E_MinnowBoard_Max__28MBM_29"><span class="toc-number">3.1.3.</span> <span class="toc-text">适用于 MinnowBoard Max (MBM)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u90E8_u7F72_u4F60_u7684_u5E94_u7528"><span class="toc-number">3.1.4.</span> <span class="toc-text">部署你的应用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u6211_u4EEC_u6765_u770B_u770B_u4EE3_u7801"><span class="toc-number">3.1.5.</span> <span class="toc-text">我们来看看代码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#u8BA1_u65F6_u5668_u4EE3_u7801"><span class="toc-number">3.1.5.1.</span> <span class="toc-text">计时器代码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#u521D_u59CB_u5316_GPIO__u5F15_u811A"><span class="toc-number">3.1.5.2.</span> <span class="toc-text">初始化 GPIO 引脚</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#u4FEE_u6539_GPIO__u5F15_u811A_u7684_u72B6_u6001"><span class="toc-number">3.1.5.3.</span> <span class="toc-text">修改 GPIO 引脚的状态</span></a></li></ol></li></ol></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BBE_u7F6E_u7535_u8111"><span class="toc-number">1.</span> <span class="toc-text">设置电脑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u5728_u7535_u8111_u4E0A_u8BBE_u7F6E_Visual_Studio_2015"><span class="toc-number">1.1.</span> <span class="toc-text">在电脑上设置 Visual Studio 2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u8BBE_u7F6E_u4F60_u7684_u8BBE_u5907"><span class="toc-number">2.</span> <span class="toc-text">设置你的设备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#u9700_u8981_u5177_u5907_u7684_u6761_u4EF6"><span class="toc-number">2.1.</span> <span class="toc-text">需要具备的条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5B89_u88C5_Windows_10_IoT__u6838_u5FC3_u7248_u5DE5_u5177"><span class="toc-number">2.2.</span> <span class="toc-text">安装 Windows 10 IoT 核心版工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5C06_Windows_10_IoT_Core_Insider_Preview__u6620_u50CF_u653E_u7F6E_u5728_SD__u5361_u4E0A"><span class="toc-number">2.3.</span> <span class="toc-text">将 Windows 10 IoT Core Insider Preview 映像放置在 SD 卡上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u8FDE_u63A5_u7535_u8DEF_u677F"><span class="toc-number">2.4.</span> <span class="toc-text">连接电路板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u542F_u52A8_Windows_10_IoT__u6838_u5FC3_u7248"><span class="toc-number">2.5.</span> <span class="toc-text">启动 Windows 10 IoT 核心版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u5176_u4ED6_u8D44_u6E90"><span class="toc-number">2.6.</span> <span class="toc-text">其他资源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5F00_u53D1"><span class="toc-number">3.</span> <span class="toc-text">开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Blinky__u793A_u4F8B"><span class="toc-number">3.1.</span> <span class="toc-text">Blinky 示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#u5C06_LED__u8FDE_u63A5_u5230_u4F60_u7684_Windows_IoT__u8BBE_u5907"><span class="toc-number">3.1.1.</span> <span class="toc-text">将 LED 连接到你的 Windows IoT 设备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u9002_u7528_u4E8E_Raspberry_Pi_2__28RPi2_29"><span class="toc-number">3.1.2.</span> <span class="toc-text">适用于 Raspberry Pi 2 (RPi2)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u9002_u7528_u4E8E_MinnowBoard_Max__28MBM_29"><span class="toc-number">3.1.3.</span> <span class="toc-text">适用于 MinnowBoard Max (MBM)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u90E8_u7F72_u4F60_u7684_u5E94_u7528"><span class="toc-number">3.1.4.</span> <span class="toc-text">部署你的应用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#u6211_u4EEC_u6765_u770B_u770B_u4EE3_u7801"><span class="toc-number">3.1.5.</span> <span class="toc-text">我们来看看代码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#u8BA1_u65F6_u5668_u4EE3_u7801"><span class="toc-number">3.1.5.1.</span> <span class="toc-text">计时器代码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#u521D_u59CB_u5316_GPIO__u5F15_u811A"><span class="toc-number">3.1.5.2.</span> <span class="toc-text">初始化 GPIO 引脚</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#u4FEE_u6539_GPIO__u5F15_u811A_u7684_u72B6_u6001"><span class="toc-number">3.1.5.3.</span> <span class="toc-text">修改 GPIO 引脚的状态</span></a></li></ol></li></ol></li></ol></li></ol>
  
   </div>
 
@@ -384,7 +384,13 @@
         
           <li>
             
-            	<a href="http://seay.me" target="_blank" title="主站">主站</a>
+            	<a href="http://seay.me" target="_blank" title="个人站点">个人站点</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://github.com/seayxu" target="_blank" title="github">github</a>
             
           </li>
         
