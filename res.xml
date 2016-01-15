@@ -3,9 +3,9 @@
   <title><![CDATA[SeayXu git blog]]></title>
   
   <link href="/res.xml" rel="self"/>
-  <link href="http://seayxu.github.io/"/>
+  <link href="http://git.seay.me/"/>
   <updated>2016-01-15T05:04:51.146Z</updated>
-  <id>http://seayxu.github.io/</id>
+  <id>http://git.seay.me/</id>
   
   <author>
     <name><![CDATA[SeayXu]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[Windows-IoT-Get-Started-For-Raspberry-Pi2]]></title>
-    <link href="http://seayxu.github.io/2016/01/14/Windows-IoT-Get-Started-For-Raspberry-Pi2.html"/>
-    <id>http://seayxu.github.io/2016/01/14/Windows-IoT-Get-Started-For-Raspberry-Pi2.html</id>
+    <link href="http://git.seay.me/2016/01/14/Windows-IoT-Get-Started-For-Raspberry-Pi2.html"/>
+    <id>http://git.seay.me/2016/01/14/Windows-IoT-Get-Started-For-Raspberry-Pi2.html</id>
     <published>2016-01-14T15:32:55.000Z</published>
     <updated>2016-01-15T05:04:51.146Z</updated>
     <content type="html"><![CDATA[<h2 id="u8BBE_u7F6E_u7535_u8111"><a href="#u8BBE_u7F6E_u7535_u8111" class="headerlink" title="设置电脑"></a><a href="http://ms-iot.github.io/content/zh-CN/win10/SetupPCRPI.htm" target="_blank" rel="external">设置电脑</a></h2><h3 id="u5728_u7535_u8111_u4E0A_u8BBE_u7F6E_Visual_Studio_2015"><a href="#u5728_u7535_u8111_u4E0A_u8BBE_u7F6E_Visual_Studio_2015" class="headerlink" title="在电脑上设置 Visual Studio 2015"></a>在电脑上设置 Visual Studio 2015</h3><p>若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：</p>
@@ -182,15 +182,15 @@
     <![CDATA[<h2 id="u8BBE_u7F6E_u7535_u8111"><a href="#u8BBE_u7F6E_u7535_u8111" class="headerlink" title="设置电脑"></a><a href="http://ms-iot.github.io/con]]>
     </summary>
     
-      <category term="Raspberry Pi 2" scheme="http://seayxu.github.io/tags/Raspberry-Pi-2/"/>
+      <category term="Raspberry Pi 2" scheme="http://git.seay.me/tags/Raspberry-Pi-2/"/>
     
-      <category term="Windows IoT" scheme="http://seayxu.github.io/tags/Windows-IoT/"/>
+      <category term="Windows IoT" scheme="http://git.seay.me/tags/Windows-IoT/"/>
     
-      <category term="树莓派" scheme="http://seayxu.github.io/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+      <category term="树莓派" scheme="http://git.seay.me/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
     
-      <category term="Windows IoT" scheme="http://seayxu.github.io/categories/Windows-IoT/"/>
+      <category term="Windows IoT" scheme="http://git.seay.me/categories/Windows-IoT/"/>
     
-      <category term="Raspberry Pi" scheme="http://seayxu.github.io/categories/Windows-IoT/Raspberry-Pi/"/>
+      <category term="Raspberry Pi" scheme="http://git.seay.me/categories/Windows-IoT/Raspberry-Pi/"/>
     
   </entry>
   
