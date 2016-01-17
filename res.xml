@@ -4,7 +4,7 @@
   
   <link href="/res.xml" rel="self"/>
   <link href="http://git.seay.me/"/>
-  <updated>2016-01-17T11:51:07.437Z</updated>
+  <updated>2016-01-17T11:56:30.298Z</updated>
   <id>http://git.seay.me/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://git.seay.me/2016/01/17/Ubuntu-Shell-WiFi-Setting.html"/>
     <id>http://git.seay.me/2016/01/17/Ubuntu-Shell-WiFi-Setting.html</id>
     <published>2016-01-17T11:16:20.000Z</published>
-    <updated>2016-01-17T11:51:07.437Z</updated>
+    <updated>2016-01-17T11:56:30.298Z</updated>
     <content type="html"><![CDATA[<h1 id="u60C5_u666F_u8BF4_u660E"><a href="#u60C5_u666F_u8BF4_u660E" class="headerlink" title="情景说明"></a>情景说明</h1><blockquote>
 <p>自己买了个<code>Raspberry Pi 2</code>的板子，没有显示器，想利用无线连接通过<code>SSH</code>连接。无奈之下才上网查了下，发现可以利用<code>shell</code>命令设置无线连接，于是，就有了以下的内容。</p>
 </blockquote>
@@ -49,9 +49,9 @@
     
       <category term="树莓派" scheme="http://git.seay.me/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
     
-      <category term="Ubuntu" scheme="http://git.seay.me/categories/Ubuntu/"/>
+      <category term="Raspberry Pi" scheme="http://git.seay.me/categories/Raspberry-Pi/"/>
     
-      <category term="Raspberry Pi" scheme="http://git.seay.me/categories/Ubuntu/Raspberry-Pi/"/>
+      <category term="Ubuntu" scheme="http://git.seay.me/categories/Raspberry-Pi/Ubuntu/"/>
     
   </entry>
   
@@ -60,7 +60,7 @@
     <link href="http://git.seay.me/2016/01/14/Windows-IoT-Get-Started-For-Raspberry-Pi2.html"/>
     <id>http://git.seay.me/2016/01/14/Windows-IoT-Get-Started-For-Raspberry-Pi2.html</id>
     <published>2016-01-14T15:32:55.000Z</published>
-    <updated>2016-01-17T11:53:50.515Z</updated>
+    <updated>2016-01-17T11:56:10.370Z</updated>
     <content type="html"><![CDATA[<h2 id="u8BBE_u7F6E_u7535_u8111"><a href="#u8BBE_u7F6E_u7535_u8111" class="headerlink" title="设置电脑"></a><a href="http://ms-iot.github.io/content/zh-CN/win10/SetupPCRPI.htm" target="_blank" rel="external">设置电脑</a></h2><h3 id="u5728_u7535_u8111_u4E0A_u8BBE_u7F6E_Visual_Studio_2015"><a href="#u5728_u7535_u8111_u4E0A_u8BBE_u7F6E_Visual_Studio_2015" class="headerlink" title="在电脑上设置 Visual Studio 2015"></a>在电脑上设置 Visual Studio 2015</h3><p>若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：</p>
 <ol>
 <li><p><strong>请确保运行的是 Windows 10（版本 10240）的公共版本或更高版本</strong>。可从<a href="http://www.microsoft.com/zh-CN/software-download/windows10" target="_blank" rel="external">此处</a>升级。如果已经运行 Windows 10，可通过单击“开始”按钮、键入“winver”并点击 Enter，查找当前版本号。</p>
@@ -229,9 +229,9 @@
     
       <category term="树莓派" scheme="http://git.seay.me/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
     
-      <category term="Windows IoT" scheme="http://git.seay.me/categories/Windows-IoT/"/>
+      <category term="Raspberry Pi" scheme="http://git.seay.me/categories/Raspberry-Pi/"/>
     
-      <category term="Raspberry Pi" scheme="http://git.seay.me/categories/Windows-IoT/Raspberry-Pi/"/>
+      <category term="Windows IoT" scheme="http://git.seay.me/categories/Raspberry-Pi/Windows-IoT/"/>
     
   </entry>
   
