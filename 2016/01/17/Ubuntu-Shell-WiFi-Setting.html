@@ -31,7 +31,7 @@
 
 设置相关信息
 1add_network #&amp;#25191;&amp;#34892;&amp;#21518;&amp;#20250;&amp;#36">
-<meta property="og:updated_time" content="2016-01-17T11:56:30.298Z">
+<meta property="og:updated_time" content="2016-01-17T12:03:00.812Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu(Shell)命令行下连接到无线网络-使用wpa-cli命令">
 <meta name="twitter:description" content="情景说明
@@ -61,10 +61,6 @@
       
 <div>
 		
-			<div id="imglogo">
-				<a href="/"><img src="/img/logo.png" alt="SeayXu git blog" title="SeayXu git blog"/></a>
-			</div>
-			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="SeayXu git blog">SeayXu git blog</a></h1>
 				<h2 class="blog-motto"></h2>
@@ -128,7 +124,7 @@
 <li><p>在<code>shell</code>中输入<code>wpa_cli</code>命令，进入交互，然后输入以下信息(注：#为注释)</p>
 </li>
 <li><p>设置相关信息</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add_network #&#25191;&#34892;&#21518;&#20250;&#36820;&#22238;&#19968;&#20010;&#25968;&#23383;&#65288;&#19968;&#33324;&#26159;0&#65289;&#10;#network_id&#20026;&#26080;&#32447;&#32593;&#30340;ID&#65292;&#33258;&#24049;&#21462;&#21517;&#10;set_network [network_id] ssid &#39;&#26080;&#32447;&#21517;&#31216;&#39; #&#26681;&#25454;&#20320;&#30340;&#32593;&#32476;&#29615;&#22659;&#22635;&#20889;&#10;set_network [network_id] psk &#39;&#26080;&#32447;&#23494;&#30721;&#39; #&#26080;&#32447;&#23494;&#30721;&#10;enable_network [network_id] #&#21551;&#29992;&#32593;&#32476;&#65292;&#25104;&#21151;&#21518;&#20250;&#36820;&#22238; CONNECT TO XXXX&#30340;&#20449;&#24687;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add_network #&#25191;&#34892;&#21518;&#20250;&#36820;&#22238;&#19968;&#20010;&#25968;&#23383;&#65288;&#19968;&#33324;&#26159;0&#65289;&#10;&#10;#network_id&#20026;&#26080;&#32447;&#32593;&#30340;ID&#65292;&#33258;&#24049;&#21462;&#21517;&#10;&#10;set_network [network_id] ssid &#39;&#26080;&#32447;&#21517;&#31216;&#39; #&#26681;&#25454;&#20320;&#30340;&#32593;&#32476;&#29615;&#22659;&#22635;&#20889;&#10;&#10;set_network [network_id] psk &#39;&#26080;&#32447;&#23494;&#30721;&#39; #&#26080;&#32447;&#23494;&#30721;&#10;&#10;enable_network [network_id] #&#21551;&#29992;&#32593;&#32476;&#65292;&#25104;&#21151;&#21518;&#20250;&#36820;&#22238; CONNECT TO XXXX&#30340;&#20449;&#24687;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>退出交互模式</p>
 <p>输入<code>q</code>退出交互模式。</p>
@@ -137,7 +133,7 @@
 <p>使用 <code>dhclient wlan0</code> 命令获取网络地址。</p>
 </li>
 </ol>
-<h1 id="u793A_u4F8B"><a href="#u793A_u4F8B" class="headerlink" title="示例"></a>示例</h1><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~$ ifconfig #&#26597;&#30475;&#26080;&#32447;&#32593;&#21345;&#21517;&#31216;&#65292;&#20551;&#23450;&#20026;nxthswrw234&#10;root@ubuntu:~$ wpa_cli&#10;add_network&#10;set_network NETID ssid &#39;MyWiFi&#39;&#10;set_network NETID psk &#39;12345678&#39;&#10;enable_network NETID&#10;q&#10;root@ubuntu:~$ dhclient nxthswrw234 #nxthswrw234&#20026;&#26080;&#32447;&#32593;&#21345;&#21517;&#31216;</span><br></pre></td></tr></table></figure>
+<h1 id="u793A_u4F8B"><a href="#u793A_u4F8B" class="headerlink" title="示例"></a>示例</h1>  <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~$ ifconfig #&#26597;&#30475;&#26080;&#32447;&#32593;&#21345;&#21517;&#31216;&#65292;&#20551;&#23450;&#20026;nxthswrw234&#10;&#10;root@ubuntu:~$ wpa_cli&#10;&#10;add_network&#10;&#10;set_network NETID ssid &#39;MyWiFi&#39;&#10;&#10;set_network NETID psk &#39;12345678&#39;&#10;&#10;enable_network NETID&#10;&#10;q&#10;&#10;root@ubuntu:~$ dhclient nxthswrw234 #nxthswrw234&#20026;&#26080;&#32447;&#32593;&#21345;&#21517;&#31216;</span><br></pre></td></tr></table></figure>
 
     <blockquote>
     <div class="license-by">
