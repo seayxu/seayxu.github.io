@@ -4,7 +4,7 @@
   
   <link href="/res.xml" rel="self"/>
   <link href="http://git.seay.me/"/>
-  <updated>2016-01-17T12:04:47.239Z</updated>
+  <updated>2016-01-19T09:37:47.518Z</updated>
   <id>http://git.seay.me/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://git.seay.me/2016/01/17/Ubuntu-Shell-WiFi-Setting.html"/>
     <id>http://git.seay.me/2016/01/17/Ubuntu-Shell-WiFi-Setting.html</id>
     <published>2016-01-17T11:16:20.000Z</published>
-    <updated>2016-01-17T12:04:47.239Z</updated>
+    <updated>2016-01-19T09:37:47.518Z</updated>
     <content type="html"><![CDATA[<h1 id="u60C5_u666F_u8BF4_u660E"><a href="#u60C5_u666F_u8BF4_u660E" class="headerlink" title="情景说明"></a>情景说明</h1><blockquote>
 <p>自己买了个<code>Raspberry Pi 2</code>的板子，没有显示器，想利用无线连接通过<code>SSH</code>连接。无奈之下才上网查了下，发现可以利用<code>shell</code>命令设置无线连接，于是，就有了以下的内容。</p>
 </blockquote>
@@ -49,189 +49,7 @@
     
       <category term="树莓派" scheme="http://git.seay.me/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
     
-      <category term="Raspberry Pi" scheme="http://git.seay.me/categories/Raspberry-Pi/"/>
-    
-      <category term="Ubuntu" scheme="http://git.seay.me/categories/Raspberry-Pi/Ubuntu/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[树莓派(Raspberry Pi2)Windows IoT入门]]></title>
-    <link href="http://git.seay.me/2016/01/14/Windows-IoT-Get-Started-For-Raspberry-Pi2.html"/>
-    <id>http://git.seay.me/2016/01/14/Windows-IoT-Get-Started-For-Raspberry-Pi2.html</id>
-    <published>2016-01-14T15:32:55.000Z</published>
-    <updated>2016-01-17T11:56:10.370Z</updated>
-    <content type="html"><![CDATA[<h2 id="u8BBE_u7F6E_u7535_u8111"><a href="#u8BBE_u7F6E_u7535_u8111" class="headerlink" title="设置电脑"></a><a href="http://ms-iot.github.io/content/zh-CN/win10/SetupPCRPI.htm" target="_blank" rel="external">设置电脑</a></h2><h3 id="u5728_u7535_u8111_u4E0A_u8BBE_u7F6E_Visual_Studio_2015"><a href="#u5728_u7535_u8111_u4E0A_u8BBE_u7F6E_Visual_Studio_2015" class="headerlink" title="在电脑上设置 Visual Studio 2015"></a>在电脑上设置 Visual Studio 2015</h3><p>若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：</p>
-<ol>
-<li><p><strong>请确保运行的是 Windows 10（版本 10240）的公共版本或更高版本</strong>。可从<a href="http://www.microsoft.com/zh-CN/software-download/windows10" target="_blank" rel="external">此处</a>升级。如果已经运行 Windows 10，可通过单击“开始”按钮、键入“winver”并点击 Enter，查找当前版本号。</p>
-</li>
-<li><p>在<a href="http://go.microsoft.com/fwlink/?LinkID=534599" target="_blank" rel="external">此处</a><strong>安装</strong> Visual Studio Community 2015。可从<a href="https://www.visualstudio.com/vs-2015-product-editions" target="_blank" rel="external">此处</a>下载 Visual Studio <code>Professional 2015</code> 和 Visual Studio <code>Enterprise</code> 2015。</p>
-<p> <strong>注意：</strong> 如果选择安装不同版本的 VS 2015，请确保执行“自定义”安装，并依次选中“通用 Windows 应用开发工具”-&gt;“工具和 Windows SDK”复选框。</p>
-</li>
-<li><p>通过依次选择“帮助”&gt;“关于 Microsoft Visual Studio”<strong>验证</strong> Visual Studio <strong>安装</strong>。“Visual Studio”的所需版本是 <code>14.0.23107.0 D14Rel</code>。“用于通用 Windows 应用的 Visual Studio 工具”的所需版本是 <code>14.0.23121.00 D14OOB</code>。</p>
-</li>
-<li><p>确保已按照<a href="https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx" target="_blank" rel="external">这些说明</a>启用了<strong>开发人员模式</strong>。</p>
-</li>
-</ol>
-<h2 id="u8BBE_u7F6E_u4F60_u7684_u8BBE_u5907"><a href="#u8BBE_u7F6E_u4F60_u7684_u8BBE_u5907" class="headerlink" title="设置你的设备"></a><a href="http://ms-iot.github.io/content/zh-CN/win10/SetupRPI.htm" target="_blank" rel="external">设置你的设备</a></h2><h3 id="u9700_u8981_u5177_u5907_u7684_u6761_u4EF6"><a href="#u9700_u8981_u5177_u5907_u7684_u6761_u4EF6" class="headerlink" title="需要具备的条件"></a>需要具备的条件</h3><ol>
-<li><p><strong>运行 Windows 10 的电脑</strong>（在上一步中已准备就绪）</p>
-</li>
-<li><p><strong>Raspberry Pi 2</strong></p>
-</li>
-<li><p><strong>5V 微型 USB 电源</strong> - 使用至少 1.0A 电流。如果计划使用多个高耗电 USB 外围设备，请改用电流较高的电源 (&gt;2.0A)。</p>
-</li>
-<li><p><strong>8GB 微型 SD 卡</strong> - 类 10 或更高。（我们建议使用<a href="http://www.amazon.com/gp/product/B00IVPU786" target="_blank" rel="external">这个</a>或<a href="http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445" target="_blank" rel="external">这个</a>）</p>
-</li>
-<li><p><strong>HDMI 电缆和监视器</strong></p>
-</li>
-<li><p><strong>以太网电缆</strong></p>
-</li>
-<li><p><strong>微型 SD 卡读卡器</strong>（因为大多数内部 SD 卡读卡器均会出现问题，所以我们建议使用外部 USB 卡读卡器，例如<a href="http://www.amazon.com/dp/B009D79VH4" target="_blank" rel="external">这个</a>或<a href="http://www.amazon.com/dp/B0096FB5CW" target="_blank" rel="external">这个</a>）</p>
-</li>
-</ol>
-<h3 id="u5B89_u88C5_Windows_10_IoT__u6838_u5FC3_u7248_u5DE5_u5177"><a href="#u5B89_u88C5_Windows_10_IoT__u6838_u5FC3_u7248_u5DE5_u5177" class="headerlink" title="安装 Windows 10 IoT 核心版工具"></a>安装 Windows 10 IoT 核心版工具</h3><ol>
-<li><p>从 Microsoft 下载中心<a href="http://go.microsoft.com/fwlink/?LinkId=616847" target="_blank" rel="external">下载</a>用于 Raspberry Pi 2 的 ISO。</p>
-</li>
-<li><p>将 ISO 保存到本地文件夹</p>
-<p> <img src="http://ms-iot.github.io/content/images/SetupRPI/Iso.PNG" alt=""></p>
-</li>
-<li><p>双击 ISO（IoT 核心版 RPi.iso）。它将自动将其本身作为虚拟驱动器进行装载，以便你可以访问内容。</p>
-<p> <img src="http://ms-iot.github.io/content/images/SetupRPI/MSI.PNG" alt=""></p>
-</li>
-<li><p>安装 Windows_10_IoT_Core_RPi2.msi。安装完成后，flash.ffu 将位于 C:\Program Files (x86)\Microsoft IoT\FFU\RaspberryPi2</p>
-<p> <img src="http://ms-iot.github.io/content/images/SetupRPI/rpiffu.PNG" alt=""></p>
-</li>
-<li><p>完成后将弹出虚拟 CD</p>
-</li>
-</ol>
-<h3 id="u5C06_Windows_10_IoT_Core_Insider_Preview__u6620_u50CF_u653E_u7F6E_u5728_SD__u5361_u4E0A"><a href="#u5C06_Windows_10_IoT_Core_Insider_Preview__u6620_u50CF_u653E_u7F6E_u5728_SD__u5361_u4E0A" class="headerlink" title="将 Windows 10 IoT Core Insider Preview 映像放置在 SD 卡上"></a>将 Windows 10 IoT Core Insider Preview 映像放置在 SD 卡上</h3><ol>
-<li><p>将微型 SD 卡插入 SD 卡读卡器。</p>
-</li>
-<li><p>使用 IoTCoreImageHelper.exe 切换 SD 卡。从“开始”菜单搜索“WindowsIoT”，并选择快捷方式“WindowsIoTImageHelper”</p>
-<p> <img src="http://ms-iot.github.io/content/images/ImagerHelperSearch.PNG" alt=""></p>
-</li>
-<li><p>该工具将按照显示方式枚举设备。选择希望切换的 SD 卡，然后提供 FFU 的位置并切换映像。<br> <img src="http://ms-iot.github.io/content/images/SetupRPI/ImageHelper.PNG" alt=""></p>
-</li>
-<li><p>单击任务栏中的“安全删除硬件”图标，然后选择你的 USB SD 读卡器以将其从系统中安全删除。如果未正确执行此操作，可能导致映像损坏。</p>
-<p><strong>注意</strong>： 如果希望在使用完 Windows 10 IoT 核心版后将其从 SD 卡中删除，请参阅标题为<strong>如何从 SD 卡中删除 Windows 10 IoT 核心版？</strong>的<a href="http://ms-iot.github.io/content/zh-CN/Faqs.htm" target="_blank" rel="external">常见问题</a>部分。</p>
-<p><strong>注意</strong>： IoTCoreImageHelper.exe 是推荐用来切换 SD 卡的工具。但是，说明可用于直接使用 <a href="http://ms-iot.github.io/content/zh-CN/win10/samples/DISM.htm" target="_blank" rel="external">DISM 命令</a>行工具</p>
-</li>
-</ol>
-<h3 id="u8FDE_u63A5_u7535_u8DEF_u677F"><a href="#u8FDE_u63A5_u7535_u8DEF_u677F" class="headerlink" title="连接电路板"></a>连接电路板</h3><ol>
-<li><p>插入已准备的<strong>微型 SD 卡</strong>（插槽在如下所示的电路板的另一侧）。</p>
-</li>
-<li><p><strong>将网络电缆</strong>从本地网络连接到电路板上的以太网端口。请确保开发电脑在同一网络上。</p>
-<p><strong>注意</strong>： 如果没有本地有线网络，请参阅<a href="http://ms-iot.github.io/content/zh-CN/win10/ConnectToDevice.htm" target="_blank" rel="external">此处</a>获取其他连接选项。</p>
-</li>
-<li><p><strong>将 HDMI 监视器连接到</strong>电路板上的 HDMI 端口。</p>
-</li>
-<li><p><strong>将电源连接到</strong>开发板上的微型 USB 端口。</p>
-<p> <img src="http://ms-iot.github.io/content/images/rpi2.png" alt=""></p>
-</li>
-</ol>
-<h3 id="u542F_u52A8_Windows_10_IoT__u6838_u5FC3_u7248"><a href="#u542F_u52A8_Windows_10_IoT__u6838_u5FC3_u7248" class="headerlink" title="启动 Windows 10 IoT 核心版"></a>启动 Windows 10 IoT 核心版</h3><ol>
-<li><p>连接电源后，Windows 10 IoT 核心版将自动启动。这可能需要几分钟时间。</p>
-</li>
-<li><p>启动设备后，DefaultApp 将启动并显示 RPi2 的 IP 地址。</p>
-<p> <img src="http://ms-iot.github.io/content/images/DefaultAppRpi2.png" alt=""></p>
-</li>
-<li><p>遵循<a href="http://ms-iot.github.io/content/zh-CN/win10/samples/PowerShell.htm" target="_blank" rel="external">此处的 PowerShell 文档</a>，使用 PowerShell 连接到正在运行的设备。也可按照<a href="http://ms-iot.github.io/content/zh-CN/win10/samples/SSH.htm" target="_blank" rel="external">此处</a>的说明使用 SSH 连接到设备。</p>
-</li>
-<li><p><strong>强烈推荐</strong>更新管理员帐户的默认密码。若要执行此操作，请在 PowerShell 连接中发出以下命令：</p>
-<p>使用强密码替换 <code>[new password]</code>：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net user Administrator [new password]</span><br></pre></td></tr></table></figure>
-<p>此操作完成后，将需要使用 psSession 和新凭据重新建立当前会话。</p>
-</li>
-</ol>
-<h3 id="u5176_u4ED6_u8D44_u6E90"><a href="#u5176_u4ED6_u8D44_u6E90" class="headerlink" title="其他资源"></a>其他资源</h3><ul>
-<li><a href="http://ms-iot.github.io/content/zh-CN/win10/SupportedInterfaces.htm" target="_blank" rel="external">受支持的外围接口和设备</a></li>
-</ul>
-<h2 id="u5F00_u53D1"><a href="#u5F00_u53D1" class="headerlink" title="开发"></a><a href="http://ms-iot.github.io/content/zh-CN/win10/samples/Blinky.htm" target="_blank" rel="external">开发</a></h2><h3 id="Blinky__u793A_u4F8B"><a href="#Blinky__u793A_u4F8B" class="headerlink" title="Blinky 示例"></a>Blinky 示例</h3><p>我们将创建一个简单的 LED 闪烁应用并将 LED 连接到你的 Windows 10 IoT Core 设备。</p>
-<p>这是一个有外设的示例。若要更好地了解什么是有外设的模式以及如何将你的设备配置为有外设，请按照<a href="http://ms-iot.github.io/content/zh-CN/win10/HeadlessMode.htm" target="_blank" rel="external">此处</a>的说明操作。</p>
-<p>另外，还请注意 GPIO API 仅在 Windows 10 IoT Core 上可用，因此该示例无法在你的桌面上运行。</p>
-<p>在 Visual Studio 中加载项目</p>
-<p>你可以通过在<a href="https://github.com/ms-iot/samples/archive/develop.zip" target="_blank" rel="external">此处</a>下载所有示例的 zip 并导航到 <code>samples-develop\Blinky</code>，查找此示例的源代码。示例代码可采用 C++ 或 C# 提供，但此处的文档仅详细介绍了 C# 变体。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。</p>
-<h4 id="u5C06_LED__u8FDE_u63A5_u5230_u4F60_u7684_Windows_IoT__u8BBE_u5907"><a href="#u5C06_LED__u8FDE_u63A5_u5230_u4F60_u7684_Windows_IoT__u8BBE_u5907" class="headerlink" title="将 LED 连接到你的 Windows IoT 设备"></a>将 LED 连接到你的 Windows IoT 设备</h4><p>你将会需要一些组件：</p>
-<ul>
-<li><p>一个 LED（你喜欢的任意一种颜色）</p>
-</li>
-<li><p>一个 220 Ω 电阻器</p>
-</li>
-<li><p>一块试验板和几根连接线</p>
-<p>  <img src="http://ms-iot.github.io/content/images/Blinky/components.png" alt=""></p>
-</li>
-</ul>
-<h4 id="u9002_u7528_u4E8E_Raspberry_Pi_2__28RPi2_29"><a href="#u9002_u7528_u4E8E_Raspberry_Pi_2__28RPi2_29" class="headerlink" title="适用于 Raspberry Pi 2 (RPi2)"></a>适用于 Raspberry Pi 2 (RPi2)</h4><p>我们要将 LED 的一端连接到 RPi2 上的 GPIO 5（JP3 扩展头上的引脚 29），将另一端连接到电阻器，并将电阻器连接到 RPi2 上的 3.3 伏电源。请注意 LED 的正负极非常重要。请确保将较短的腿 (-) 连接到 GPIO 5 并将较长的腿 (+) 连接到电阻器，否则它不会点亮。</p>
-<p>下面是 RPi2 的引出线：</p>
-<p><img src="http://ms-iot.github.io/content/images/PinMappings/RP2_Pinout.png" alt=""></p>
-<p><em>使用 <a href="http://fritzing.org/" target="_blank" rel="external">Fritzing</a> 制作的图像</em></p>
-<p>下面是使用电路组装的试验板可能样子的一个示例：</p>
-<p><img src="http://ms-iot.github.io/content/images/Blinky/breadboard_assembled_rpi2.png" alt=""></p>
-<p><em>使用 <a href="http://fritzing.org/" target="_blank" rel="external">Fritzing</a> 制作的图像</em></p>
-<h4 id="u9002_u7528_u4E8E_MinnowBoard_Max__28MBM_29"><a href="#u9002_u7528_u4E8E_MinnowBoard_Max__28MBM_29" class="headerlink" title="适用于 MinnowBoard Max (MBM)"></a>适用于 MinnowBoard Max (MBM)</h4><p>我们要将 LED 的一端连接到 MBM 上的 GPIO 5（JP1 扩展头上的引脚 18），将另一端连接到电阻器，并将电阻器连接到 MBM 上的 3.3 伏电源。请注意 LED 的正负极非常重要。请确保将较短的腿 (-) 连接到 GPIO 5 并将较长的腿 (+) 连接到电阻器，否则它不会点亮。</p>
-<p>以下是 MBM 上的 JP1 连接器：</p>
-<p><img src="http://ms-iot.github.io/content/images/PinMappings/MBM_Pinout.png" alt=""></p>
-<p><em>使用 <a href="http://fritzing.org/" target="_blank" rel="external">Fritzing</a> 制作的图像</em></p>
-<p>下面是使用电路组装的试验板可能样子的一个示例：</p>
-<p><img src="http://ms-iot.github.io/content/images/Blinky/breadboard_assembled.png" alt=""></p>
-<p><em>使用 <a href="http://fritzing.org/" target="_blank" rel="external">Fritzing</a> 制作的图像</em></p>
-<h4 id="u90E8_u7F72_u4F60_u7684_u5E94_u7528"><a href="#u90E8_u7F72_u4F60_u7684_u5E94_u7528" class="headerlink" title="部署你的应用"></a>部署你的应用</h4><ol>
-<li><p>应用程序在 Visual Studio 中打开后，在工具栏下拉列表中设置体系结构。如果针对 MinnowBoard Max 进行生成，请选择 <code>x86</code>。如果针对 Raspberry Pi 2 进行生成，请选择 <code>ARM</code>。</p>
-</li>
-<li><p>接下来，在 Visual Studio 工具栏中，单击<code>Local Machine</code>下拉列表并选择 <code>Remote Machine</code></p>
-<p> <img src="http://ms-iot.github.io/content/images/AppDeployment/cs-remote-machine-debugging.png" alt=""></p>
-</li>
-<li><p>此时，Visual Studio 将显示“远程连接”对话框。如果以前使用过 <a href="http://ms-iot.github.io/content/zh-CN/win10/samples/PowerShell.htm" target="_blank" rel="external">PowerShell</a> 设置设备的唯一名称，可在此处输入该名称（在此示例中，我们使用的是 my-device）。否则，使用 Windows IoT 核心版设备的 IP 地址。输入设备名称/IP 后，选择 <code>None</code> 进行 Windows 身份验证，然后单击“选择”。</p>
-<p> <img src="http://ms-iot.github.io/content/images/AppDeployment/cs-remote-connections.PNG" alt=""></p>
-</li>
-<li><p>可通过导航到项目属性（在解决方案资源管理器中选择“属性”）并在左侧选择 Debug 选项卡来验证或修改这些值：</p>
-<p> <img src="http://ms-iot.github.io/content/images/AppDeployment/cs-debug-project-properties.PNG" alt="项目属性调试选项卡"></p>
-</li>
-</ol>
-<p>完成所有设置后，你应可以在 Visual Studio 中按 F5。Blinky 应用将会部署并在 Windows IoT 设备上启动，此时你应会看到 LED 与屏幕上的模拟图像同步闪烁。</p>
-<p><img src="http://ms-iot.github.io/content/images/Blinky/blinky-screenshot.png" alt=""></p>
-<p>恭喜你！ 你已控制了 Windows IoT 设备上的一个 GPIO 引脚！</p>
-<h4 id="u6211_u4EEC_u6765_u770B_u770B_u4EE3_u7801"><a href="#u6211_u4EEC_u6765_u770B_u770B_u4EE3_u7801" class="headerlink" title="我们来看看代码"></a>我们来看看代码</h4><p>此示例的代码相当简单。我们使用了一个计时器，每当调用“Tick”事件时，都会切换 LED 的状态。</p>
-<h5 id="u8BA1_u65F6_u5668_u4EE3_u7801"><a href="#u8BA1_u65F6_u5668_u4EE3_u7801" class="headerlink" title="计时器代码"></a>计时器代码</h5><p>下面说明如何使用 C# 语言设置计时器：</p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="title">MainPage</span>(<span class="params"></span>)</span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.timer = <span class="keyword">new</span> DispatcherTimer();</span><br><span class="line">    <span class="keyword">this</span>.timer.Interval = TimeSpan.FromMilliseconds(<span class="number">500</span>);</span><br><span class="line">    <span class="keyword">this</span>.timer.Tick += Timer_Tick;</span><br><span class="line">    <span class="keyword">this</span>.timer.Start();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Timer_Tick</span>(<span class="params"><span class="keyword">object</span> sender, <span class="keyword">object</span> e</span>)</span><br><span class="line"></span>&#123;</span><br><span class="line">    FlipLED();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id="u521D_u59CB_u5316_GPIO__u5F15_u811A"><a href="#u521D_u59CB_u5316_GPIO__u5F15_u811A" class="headerlink" title="初始化 GPIO 引脚"></a>初始化 GPIO 引脚</h5><p>为了驱动 GPIO 引脚，首先我们需要对其进行初始化。以下是 C# 代码（请注意我们如何在 Windows.Devices.Gpio 命名空间中利用新 WinRT 类）：</p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> Windows.Devices.Gpio;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">InitGPIO</span>(<span class="params"></span>)</span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> gpio = GpioController.GetDefault();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Show an error if there is no GPIO controller</span></span><br><span class="line">    <span class="keyword">if</span> (gpio == <span class="keyword">null</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        pin = <span class="keyword">null</span>;</span><br><span class="line">        GpioStatus.Text = <span class="string">"There is no GPIO controller on this device."</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    pin = gpio.OpenPin(LED_PIN);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Show an error if the pin wasn't initialized properly</span></span><br><span class="line">    <span class="keyword">if</span> (pin == <span class="keyword">null</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        GpioStatus.Text = <span class="string">"There were problems initializing the GPIO pin."</span>;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    pin.Write(GpioPinValue.High);</span><br><span class="line">    pin.SetDriveMode(GpioPinDriveMode.Output);</span><br><span class="line"></span><br><span class="line">    GpioStatus.Text = <span class="string">"GPIO pin initialized correctly."</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>让让我们稍稍细分一下此过程：</p>
-<ul>
-<li><p>首先，我们使用 <code>GpioController.GetDefault()</code> 获取 GPIO 控制器。</p>
-</li>
-<li><p>如果设备没有 GPIO 控制器，则此函数将返回 <code>null</code>。</p>
-</li>
-<li><p>然后，我们尝试通过使用 <code>LED_PIN</code> 值调用 <code>GpioController.OpenPin()</code> 来打开引脚。</p>
-</li>
-<li><p>获取 <code>pin</code> 后，我们会使用 <code>GpioPin.Write()</code> 函数将它设置为默认的关闭状态（高）。</p>
-</li>
-<li><p>我们还使用了 <code>GpioPin.SetDriveMode()</code> 函数将 <code>pin</code> 设置为以输出模式运行。</p>
-</li>
-</ul>
-<h5 id="u4FEE_u6539_GPIO__u5F15_u811A_u7684_u72B6_u6001"><a href="#u4FEE_u6539_GPIO__u5F15_u811A_u7684_u72B6_u6001" class="headerlink" title="修改 GPIO 引脚的状态"></a>修改 GPIO 引脚的状态</h5><p>在具有<code>GpioOutputPin</code> 实例的访问权限后，没有必要再通过更改引脚状态来打开或关闭 LED。</p>
-<p>若要打开 LED，只需将值 <code>GpioPinValue.Low</code> 写入引脚：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.pin.Write(GpioPinValue.Low);</span><br></pre></td></tr></table></figure>
-<p>当然，写入 <code>GpioPinValue.High</code> 便会关闭 LED：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.pin.Write(GpioPinValue.High);</span><br></pre></td></tr></table></figure>
-<p>记得我们已将 LED 的另一端连接到了 3.3 伏电源，因此，我们需要将引脚驱动到低位，使电流通过 LED。</p>
-<blockquote>
-<p>本文来源:<a href="http://ms-iot.github.io/content/zh-CN/GetStarted.htm" target="_blank" rel="external"><code>微软Windows IoT官网</code></a></p>
-</blockquote>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h2 id="u8BBE_u7F6E_u7535_u8111"><a href="#u8BBE_u7F6E_u7535_u8111" class="headerlink" title="设置电脑"></a><a href="http://ms-iot.github.io/con]]>
-    </summary>
-    
-      <category term="Raspberry Pi 2" scheme="http://git.seay.me/tags/Raspberry-Pi-2/"/>
-    
-      <category term="Windows IoT" scheme="http://git.seay.me/tags/Windows-IoT/"/>
-    
-      <category term="树莓派" scheme="http://git.seay.me/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
-    
-      <category term="Raspberry Pi" scheme="http://git.seay.me/categories/Raspberry-Pi/"/>
-    
-      <category term="Windows IoT" scheme="http://git.seay.me/categories/Raspberry-Pi/Windows-IoT/"/>
+      <category term="Ubuntu" scheme="http://git.seay.me/categories/Ubuntu/"/>
     
   </entry>
   
