@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://git.seay.me/post/2016-01-20-ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html</loc>
+    <lastmod>2016-01-20T16:23:37.992Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://git.seay.me/post/2016-01-20-MySQL-Development-Specification-02.html</loc>
     <lastmod>2016-01-20T03:33:26.098Z</lastmod>
   </url>

@@ -4,7 +4,7 @@
   
   <link href="/res.xml" rel="self"/>
   <link href="http://git.seay.me/"/>
-  <updated>2016-01-20T03:33:26.098Z</updated>
+  <updated>2016-01-20T16:23:37.992Z</updated>
   <id>http://git.seay.me/</id>
   
   <author>
@@ -13,6 +13,85 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0]]></title>
+    <link href="http://git.seay.me/post/2016-01-20-ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html"/>
+    <id>http://git.seay.me/post/2016-01-20-ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html</id>
+    <published>2016-01-20T15:43:30.000Z</published>
+    <updated>2016-01-20T16:23:37.992Z</updated>
+    <content type="html"><![CDATA[<h1 id="u7F18_u7531"><a href="#u7F18_u7531" class="headerlink" title="缘由"></a>缘由</h1><p>  晚上回来就看到有博文说<code>ASP.NET 5</code>已死,其来源出自于<a href="http://www.hanselman.com/blog/ASPNET5IsDeadIntroducingASPNETCore10AndNETCore10.aspx" target="_blank" rel="external">Scott Hanselman</a>的博客，下面是原文。</p>
+<h1 id="u4E2A_u4EBA_u89C2_u70B9_uFF1A"><a href="#u4E2A_u4EBA_u89C2_u70B9_uFF1A" class="headerlink" title="个人观点："></a>个人观点：</h1><blockquote>
+<ol>
+<li><p>命名：由于现在<code>asp.net</code>已开源，并支持跨平台,这是一种新的实现，而且和<code>asp.net 4.6</code>是并行关系，不是在4.6的基础上升级，所以不应该沿用之前的命名。</p>
+</li>
+<li><p>已死：由于<code>asp.net 5</code>是一种新的实现，不是原来版本的升级，已重命名，所以说，<code>asp.net 5</code>算是死了。不过，还是有些人习惯叫:<code>asp.net 5</code>。</p>
+</li>
+</ol>
+</blockquote>
+<h1 id="u539F_u6587"><a href="#u539F_u6587" class="headerlink" title="原文"></a>原文</h1><p><strong> Naming is hard. </strong></p>
+<blockquote>
+<p>There are only two hard things in Computer Science: cache invalidation and naming things. - Phil Karlton</p>
+</blockquote>
+<p>  It’s very easy to armchair quarterback and say that “they should have named it Foo and it would be easy” but very often there’s many players involved in naming things. ASP.NET is a good ‘brand’ that’s been around for 15 years or so. ASP.NET 4.6 is a supported and released product that you can get and use now from <a href="http://get.asp.net" target="_blank" rel="external">http://get.asp.net</a>.</p>
+<p>  However, naming the new, completely written from scratch ASP.NET framework “ASP.NET 5” was a bad idea for a one major reason: 5 &gt; 4.6 makes it seem like ASP.NET 5 is bigger, better, and replaces ASP.NET 4.6. Not so.</p>
+<p>  So we’re changing the name and picking a better version number.</p>
+<p><strong> REINTRODUCING ASP.NET CORE 1.0 AND .NET CORE 1.0 </strong></p>
+<ul>
+<li><p>ASP.NET 5 is now ASP.NET Core 1.0.</p>
+</li>
+<li><p>.NET Core 5 is now .NET Core 1.0.</p>
+</li>
+<li><p>Entity Framework 7 is now Entity Framework Core 1.0 or EF Core 1.0 colloquially.</p>
+<p>Why 1.0? Because these are new. The whole .NET Core concept is new. The <a href="http://www.hanselman.com/blog/ExploringTheNewNETDotnetCommandLineInterfaceCLI.aspx" target="_blank" rel="external">.NET Core 1.0 CLI</a> is very new. Not only that, but .NET Core isn’t as complete as the full .NET Framework 4.6. We’re still exploring server-side graphics libraries. We’re still exploring gaps between ASP.NET 4.6 and ASP.NET Core 1.0.</p>
+<p><img src="http://www.hanselman.com/blog/content/binary/Windows-Live-Writer/Reintroducing-ASP.NET-Core-1.0-and-.NE.0_B840/image_0e978596-bd85-42ed-8d27-c16e119bca5d.png" alt=""></p>
+</li>
+</ul>
+<p><strong> WHICH TO CHOOSE? </strong></p>
+<p>  To be clear, ASP.NET 4.6 is the more mature platform. It’s battle-tested and released and available today. ASP.NET Core 1.0 is a 1.0 release that includes Web API and MVC but doesn’t yet have SignalR or Web Pages. It doesn’t yet support VB or F#. It will have these subsystems some day but not today.</p>
+<p>  We don’t want anyone to think that ASP.NET Core 1.0 is the finish line. It’s a new beginning and a fork in the road, but ASP.NET 4.6 continues on, released and fully supported. There’s lots of great stuff coming, stay tuned!</p>
+<hr>
+<h1 id="u8BD1_u6587"><a href="#u8BD1_u6587" class="headerlink" title="译文"></a>译文</h1><p><strong> 起名真难 </strong></p>
+<blockquote>
+<p>计算机科学中只有两件难事：缓存失效和命名。——Phil Karlton</p>
+</blockquote>
+<p>  “他们就该给它起个名字叫Foo，多简单的事” 纸上谈兵说说很容易，但是起名字这件事经常牵扯到很多因素。ASP.NET 作为一个好“牌子”已经有15年了。ASP.NET 4.6是一个受支持的已发布产品，你可以在 <a href="https://get.asp.net" target="_blank" rel="external">https://get.asp.net</a> 获取。</p>
+<p>  然而，把一个全新的、完全重写的ASP.NET框架命名为 “ASP.NET 5” 不是一个好主意，一个主要原因就是：5 &gt; 4.6 让人觉得 ASP.NET 5 更大、更好，是取代ASP.NET 4.6的。并不是。</p>
+<p>  所以我们重新命名并选了一个更好的版本号。</p>
+<p><strong> 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0 </strong></p>
+<ul>
+<li>ASP.NET 5 现在叫做 ASP.NET Core 1.0</li>
+<li>.NET Core 现在叫做 .NET Core 1.0</li>
+<li><p>Entity Framework 7 现在叫做 Entity Framework Core 1.0 或者简称 EF Core 1.0</p>
+<p>为什么选1.0？因为它们是全新的。整个.NET Core概念就是全新的。.NET Core CLI 是非常新的东西。（译注：.Net Core Command Line Interface ，将取代DNX）</p>
+<p>不仅如此，.NET Core还不像.NET Framework 4.6那样完整。我们仍在完善服务端图形库(server-side grahpics libraries)，我们仍在填补ASP.NET Core 1.0和ASP.NET 4.6之间的缺口。</p>
+<p><img src="http://www.hanselman.com/blog/content/binary/Windows-Live-Writer/Reintroducing-ASP.NET-Core-1.0-and-.NE.0_B840/image_0e978596-bd85-42ed-8d27-c16e119bca5d.png" alt=""></p>
+</li>
+</ul>
+<p><strong> 如何选择？ </strong></p>
+<p>  明确一下，ASP.NET 4.6是更成熟的平台。是经过实战（battle-tested）的目前已发布的可以用版本。</p>
+<p>  ASP.NET Core 1.0则是1.0版本，包括了Web API和MVC，但不包括SinglR和Web Pages。目前还不支持VB和F#。这些都会在将来实现，但目前还没有。</p>
+<p>  我们不想让人认为ASP.NET Core 1.0是个终点线，它是一个新的起点和新的分支。</p>
+<p>  ASP.NET 4.6将继续前行，发布并全面受到支持。别走开，更多精彩内容即将呈现。</p>
+<p>FROM:<a href="http://www.hanselman.com/blog/ASPNET5IsDeadIntroducingASPNETCore10AndNETCore10.aspx" target="_blank" rel="external">Scott Hanselman Blog</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="u7F18_u7531"><a href="#u7F18_u7531" class="headerlink" title="缘由"></a>缘由</h1><p>  晚上回来就看到有博文说<code>ASP.NET 5</code>已死,其来源出自于<a href=]]>
+    </summary>
+    
+      <category term="ASP.NET" scheme="http://git.seay.me/tags/ASP-NET/"/>
+    
+      <category term="ASP.NET 5" scheme="http://git.seay.me/tags/ASP-NET-5/"/>
+    
+      <category term="ASP.NET Core" scheme="http://git.seay.me/tags/ASP-NET-Core/"/>
+    
+      <category term="NET Core" scheme="http://git.seay.me/tags/NET-Core/"/>
+    
+      <category term=".NET" scheme="http://git.seay.me/categories/NET/"/>
+    
+      <category term="ASP.NET" scheme="http://git.seay.me/categories/NET/ASP-NET/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[转载--MySQL开发规范(二)]]></title>
