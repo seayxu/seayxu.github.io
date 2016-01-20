@@ -4,7 +4,7 @@
   
   <link href="/res.xml" rel="self"/>
   <link href="http://git.seay.me/"/>
-  <updated>2016-01-20T16:23:37.992Z</updated>
+  <updated>2016-01-20T16:26:28.717Z</updated>
   <id>http://git.seay.me/</id>
   
   <author>
@@ -19,13 +19,13 @@
     <link href="http://git.seay.me/post/2016-01-20-ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html"/>
     <id>http://git.seay.me/post/2016-01-20-ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html</id>
     <published>2016-01-20T15:43:30.000Z</published>
-    <updated>2016-01-20T16:23:37.992Z</updated>
+    <updated>2016-01-20T16:26:28.717Z</updated>
     <content type="html"><![CDATA[<h1 id="u7F18_u7531"><a href="#u7F18_u7531" class="headerlink" title="缘由"></a>缘由</h1><p>  晚上回来就看到有博文说<code>ASP.NET 5</code>已死,其来源出自于<a href="http://www.hanselman.com/blog/ASPNET5IsDeadIntroducingASPNETCore10AndNETCore10.aspx" target="_blank" rel="external">Scott Hanselman</a>的博客，下面是原文。</p>
 <h1 id="u4E2A_u4EBA_u89C2_u70B9_uFF1A"><a href="#u4E2A_u4EBA_u89C2_u70B9_uFF1A" class="headerlink" title="个人观点："></a>个人观点：</h1><blockquote>
 <ol>
 <li><p>命名：由于现在<code>asp.net</code>已开源，并支持跨平台,这是一种新的实现，而且和<code>asp.net 4.6</code>是并行关系，不是在4.6的基础上升级，所以不应该沿用之前的命名。</p>
 </li>
-<li><p>已死：由于<code>asp.net 5</code>是一种新的实现，不是原来版本的升级，已重命名，所以说，<code>asp.net 5</code>算是死了。不过，还是有些人习惯叫:<code>asp.net 5</code>。</p>
+<li><p>已死：由于<code>asp.net 5</code>是一种新的实现，不是原来版本的升级，已重命名，所以说，<code>asp.net 5</code>算是死了。不过，还是有些人习惯叫<code>asp.net 5</code>。</p>
 </li>
 </ol>
 </blockquote>
