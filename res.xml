@@ -4,7 +4,7 @@
   
   <link href="/res.xml" rel="self"/>
   <link href="http://git.seay.me/"/>
-  <updated>2016-01-20T03:29:46.029Z</updated>
+  <updated>2016-01-20T03:31:56.356Z</updated>
   <id>http://git.seay.me/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://git.seay.me/2016-01-20-MySQL-Development-Specification-02.html"/>
     <id>http://git.seay.me/2016-01-20-MySQL-Development-Specification-02.html</id>
     <published>2016-01-20T03:03:20.000Z</published>
-    <updated>2016-01-20T03:29:46.029Z</updated>
+    <updated>2016-01-20T03:31:56.356Z</updated>
     <content type="html"><![CDATA[<p><strong> MYSQL数据库命名及设计规范 </strong></p>
 <h1 id="1-_u8BBE_u8BA1_u539F_u5219"><a href="#1-_u8BBE_u8BA1_u539F_u5219" class="headerlink" title="1.设计原则"></a>1.设计原则</h1><h2 id="1_29__u6807_u51C6_u5316_u548C_u89C4_u8303_u5316"><a href="#1_29__u6807_u51C6_u5316_u548C_u89C4_u8303_u5316" class="headerlink" title="1) 标准化和规范化"></a>1) 标准化和规范化</h2><pre><code>数据的标准化有助于消除数据库中的数据冗余。标准化有好几种形式，但Third Normal Form（3NF）通常被认为在性能、扩展性和数据完整性方面达到了最好平衡。简单来说，遵守3NF 标准的数据库的表设计原则是：“One Fact in One Place”即某个表只包括其本身基本的属性，当不是它们本身所具有的属性时需进行分解。表之间的关系通过外键相连接。它具有以下特点：有一组表专门存放通过键连接起来的关联数据。
 
@@ -87,7 +87,7 @@
 4) 不要索引常用的小型表
 
   不要为小型数据表设置任何键,假如它们经常有插入和删除操作就更别这样作了.对这些插入和删除操作的索引维护可能比扫描表空间消耗更多的时间.
-</code></pre><h1 id="9-sql_u8BED_u53E5_u89C4_u8303"><a href="#9-sql_u8BED_u53E5_u89C4_u8303" class="headerlink" title="9.sql语句规范"></a>9.sql语句规范</h1><p>  所有sql关键词全部大写,比如SELECT,UPDATE,FROM,ORDER,BY等,所有的表名和库名都要用``包含<br>  如:<br>    <code>SELECT COUNT(*) FROM \</code>cdb_members` WHERE `userName` = ‘aeolus’; `</p>
+</code></pre><h1 id="9-sql_u8BED_u53E5_u89C4_u8303"><a href="#9-sql_u8BED_u53E5_u89C4_u8303" class="headerlink" title="9.sql语句规范"></a>9.sql语句规范</h1><p>  所有sql关键词全部大写,比如SELECT,UPDATE,FROM,ORDER,BY等,所有的表名和库名都要用``包含<br>  如:<br>    <code>SELECT COUNT(*) FROM \`cdb_members\` WHERE \`userName\` = &#39;aeolus&#39;;</code></p>
 <h1 id="10-_u5176_u4ED6_u8BBE_u8BA1_u6280_u5DE7"><a href="#10-_u5176_u4ED6_u8BBE_u8BA1_u6280_u5DE7" class="headerlink" title="10.其他设计技巧"></a>10.其他设计技巧</h1><p>  1) 避免使用触发器</p>
 <pre><code>触发器的功能通常可以用其他方式实现.在调试程序时触发器可能成为干扰.假如你确实需要采用触发器,你最好集中对它文档化.
 </code></pre><p>  2) 使用常用英语(或者其他任何语言)而不要使用编码或者拼音首字母缩写</p>
