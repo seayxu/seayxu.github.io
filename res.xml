@@ -4,7 +4,7 @@
   
   <link href="/res.xml" rel="self"/>
   <link href="http://git.seay.me/"/>
-  <updated>2016-01-20T02:39:59.129Z</updated>
+  <updated>2016-01-20T02:46:51.958Z</updated>
   <id>http://git.seay.me/</id>
   
   <author>
@@ -15,11 +15,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[\[转载\]MySQL开发规范(一)]]></title>
+    <title><![CDATA[转载--MySQL开发规范(一)]]></title>
     <link href="http://git.seay.me/2016-01-20-MySQL-Development-Specification-01.html"/>
     <id>http://git.seay.me/2016-01-20-MySQL-Development-Specification-01.html</id>
     <published>2016-01-20T02:16:20.000Z</published>
-    <updated>2016-01-20T02:39:59.129Z</updated>
+    <updated>2016-01-20T02:46:51.958Z</updated>
     <content type="html"><![CDATA[<h1 id="u4E00_u3001__u8868_u8BBE_u8BA1"><a href="#u4E00_u3001__u8868_u8BBE_u8BA1" class="headerlink" title="一、 表设计"></a>一、 表设计</h1><p>  库名、表名、字段名必须使用小写字母，“_”分割。</p>
 <p>  库名、表名、字段名必须不超过12个字符。</p>
 <p>  库名、表名、字段名见名知意,建议使用名词而不是动词。</p>
