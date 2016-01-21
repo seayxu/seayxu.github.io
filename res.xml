@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[MS SQL Server 数据库分离-SQL语句]]></title>
-    <link href="http://git.seay.me/post/2016/01-21-MSSQL-DB-Detach.html"/>
-    <id>http://git.seay.me/post/2016/01-21-MSSQL-DB-Detach.html</id>
+    <link href="http://git.seay.me/post/2016-01-21-MSSQL-DB-Detach.html"/>
+    <id>http://git.seay.me/post/2016-01-21-MSSQL-DB-Detach.html</id>
     <published>2016-01-21T09:31:30.000Z</published>
     <updated>2016-01-21T09:50:21.002Z</updated>
     <content type="html"><![CDATA[<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>今天在在清理数据库，是<code>MS SQL Server</code>,其中用到分离数据库文件。在这过程中，出现了一个小小的问题：误将数据库日志文件删除了，然后数据就打不开了，除了脱机，其他操作都报错。</p>
@@ -49,8 +49,8 @@
   
   <entry>
     <title><![CDATA[ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0]]></title>
-    <link href="http://git.seay.me/post/2016/01-20-ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html"/>
-    <id>http://git.seay.me/post/2016/01-20-ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html</id>
+    <link href="http://git.seay.me/post/2016-01-20-ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html"/>
+    <id>http://git.seay.me/post/2016-01-20-ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html</id>
     <published>2016-01-20T15:43:30.000Z</published>
     <updated>2016-01-20T16:26:28.717Z</updated>
     <content type="html"><![CDATA[<h1 id="u7F18_u7531"><a href="#u7F18_u7531" class="headerlink" title="缘由"></a>缘由</h1><p>  晚上回来就看到有博文说<code>ASP.NET 5</code>已死,其来源出自于<a href="http://www.hanselman.com/blog/ASPNET5IsDeadIntroducingASPNETCore10AndNETCore10.aspx" target="_blank" rel="external">Scott Hanselman</a>的博客，下面是原文。</p>
@@ -128,8 +128,8 @@
   
   <entry>
     <title><![CDATA[转载--MySQL开发规范(二)]]></title>
-    <link href="http://git.seay.me/post/2016/01-20-MySQL-Development-Specification-02.html"/>
-    <id>http://git.seay.me/post/2016/01-20-MySQL-Development-Specification-02.html</id>
+    <link href="http://git.seay.me/post/2016-01-20-MySQL-Development-Specification-02.html"/>
+    <id>http://git.seay.me/post/2016-01-20-MySQL-Development-Specification-02.html</id>
     <published>2016-01-20T03:03:20.000Z</published>
     <updated>2016-01-20T03:33:26.098Z</updated>
     <content type="html"><![CDATA[<p><strong> MYSQL数据库命名及设计规范 </strong></p>
@@ -241,8 +241,8 @@
   
   <entry>
     <title><![CDATA[转载--MySQL开发规范(一)]]></title>
-    <link href="http://git.seay.me/post/2016/01-20-MySQL-Development-Specification-01.html"/>
-    <id>http://git.seay.me/post/2016/01-20-MySQL-Development-Specification-01.html</id>
+    <link href="http://git.seay.me/post/2016-01-20-MySQL-Development-Specification-01.html"/>
+    <id>http://git.seay.me/post/2016-01-20-MySQL-Development-Specification-01.html</id>
     <published>2016-01-20T02:16:20.000Z</published>
     <updated>2016-01-20T02:46:51.958Z</updated>
     <content type="html"><![CDATA[<h1 id="u4E00_u3001__u8868_u8BBE_u8BA1"><a href="#u4E00_u3001__u8868_u8BBE_u8BA1" class="headerlink" title="一、 表设计"></a>一、 表设计</h1><p>  库名、表名、字段名必须使用小写字母，“_”分割。</p>
@@ -412,8 +412,8 @@ c)  可以将1和2结合起来：ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDAT
   
   <entry>
     <title><![CDATA[Ubuntu(Shell)命令行下连接到无线网络-使用wpa-cli命令]]></title>
-    <link href="http://git.seay.me/post/2016/01-17-Ubuntu-Shell-WiFi-Setting.html"/>
-    <id>http://git.seay.me/post/2016/01-17-Ubuntu-Shell-WiFi-Setting.html</id>
+    <link href="http://git.seay.me/post/2016-01-17-Ubuntu-Shell-WiFi-Setting.html"/>
+    <id>http://git.seay.me/post/2016-01-17-Ubuntu-Shell-WiFi-Setting.html</id>
     <published>2016-01-17T11:16:20.000Z</published>
     <updated>2016-01-19T09:41:19.490Z</updated>
     <content type="html"><![CDATA[<h1 id="u60C5_u666F_u8BF4_u660E"><a href="#u60C5_u666F_u8BF4_u660E" class="headerlink" title="情景说明"></a>情景说明</h1><blockquote>
@@ -451,8 +451,8 @@ c)  可以将1和2结合起来：ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDAT
   
   <entry>
     <title><![CDATA[树莓派(Raspberry Pi2)Windows IoT入门]]></title>
-    <link href="http://git.seay.me/post/2016/01-14-Windows-IoT-Get-Started-For-Raspberry-Pi2.html"/>
-    <id>http://git.seay.me/post/2016/01-14-Windows-IoT-Get-Started-For-Raspberry-Pi2.html</id>
+    <link href="http://git.seay.me/post/2016-01-14-Windows-IoT-Get-Started-For-Raspberry-Pi2.html"/>
+    <id>http://git.seay.me/post/2016-01-14-Windows-IoT-Get-Started-For-Raspberry-Pi2.html</id>
     <published>2016-01-14T15:32:55.000Z</published>
     <updated>2016-01-19T09:41:09.923Z</updated>
     <content type="html"><![CDATA[<h2 id="u8BBE_u7F6E_u7535_u8111"><a href="#u8BBE_u7F6E_u7535_u8111" class="headerlink" title="设置电脑"></a><a href="http://ms-iot.github.io/content/zh-CN/win10/SetupPCRPI.htm" target="_blank" rel="external">设置电脑</a></h2><h3 id="u5728_u7535_u8111_u4E0A_u8BBE_u7F6E_Visual_Studio_2015"><a href="#u5728_u7535_u8111_u4E0A_u8BBE_u7F6E_Visual_Studio_2015" class="headerlink" title="在电脑上设置 Visual Studio 2015"></a>在电脑上设置 Visual Studio 2015</h3><p>若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：</p>

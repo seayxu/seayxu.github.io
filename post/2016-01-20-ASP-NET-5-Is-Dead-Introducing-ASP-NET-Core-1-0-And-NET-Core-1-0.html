@@ -4,49 +4,40 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>MS SQL Server 数据库分离-SQL语句 | SeayXu git blog</title>
+    <title>ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0 | SeayXu git blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="SeayXu">
     
 
     
-    <meta name="description" content="前言今天在在清理数据库，是MS SQL Server,其中用到分离数据库文件。在这过程中，出现了一个小小的问题：误将数据库日志文件删除了，然后数据就打不开了，除了脱机，其他操作都报错。
+    <meta name="description" content="缘由  晚上回来就看到有博文说ASP.NET 5已死,其来源出自于Scott Hanselman的博客，下面是原文。
+个人观点：
 
-数据库分离常规方法此方法是常规惯用的方式，多步骤。
-如图所示：
+命名：由于现在asp.net已开源，并支持跨平台,这是一种新的实现，而且和asp.net 4.6是并行关系，不是在4.6的基础上升级，所以不应该沿用之前的命名。
 
-
-
-粗暴方法此方法简单粗暴，非常实用，一条SQL语句就搞定了。
-SQL语句实现： EXEC sp_detach_db [DatabaseName]">
+已死：由于asp.net 5是一种新的实现，不是原来版本的升级，已重命名，所以说，asp.net 5算是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MS SQL Server 数据库分离-SQL语句">
-<meta property="og:url" content="http://git.seay.me/post/2016/01-21-MSSQL-DB-Detach.html">
+<meta property="og:title" content="ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0">
+<meta property="og:url" content="http://git.seay.me/post/2016-01-20-ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html">
 <meta property="og:site_name" content="SeayXu git blog">
-<meta property="og:description" content="前言今天在在清理数据库，是MS SQL Server,其中用到分离数据库文件。在这过程中，出现了一个小小的问题：误将数据库日志文件删除了，然后数据就打不开了，除了脱机，其他操作都报错。
+<meta property="og:description" content="缘由  晚上回来就看到有博文说ASP.NET 5已死,其来源出自于Scott Hanselman的博客，下面是原文。
+个人观点：
 
-数据库分离常规方法此方法是常规惯用的方式，多步骤。
-如图所示：
+命名：由于现在asp.net已开源，并支持跨平台,这是一种新的实现，而且和asp.net 4.6是并行关系，不是在4.6的基础上升级，所以不应该沿用之前的命名。
 
-
-
-粗暴方法此方法简单粗暴，非常实用，一条SQL语句就搞定了。
-SQL语句实现： EXEC sp_detach_db [DatabaseName]">
-<meta property="og:image" content="http://segmentfault.com/img/bVsoMZ">
-<meta property="og:image" content="http://segmentfault.com/img/bVsoM0">
-<meta property="og:updated_time" content="2016-01-21T09:50:21.002Z">
+已死：由于asp.net 5是一种新的实现，不是原来版本的升级，已重命名，所以说，asp.net 5算是">
+<meta property="og:image" content="http://www.hanselman.com/blog/content/binary/Windows-Live-Writer/Reintroducing-ASP.NET-Core-1.0-and-.NE.0_B840/image_0e978596-bd85-42ed-8d27-c16e119bca5d.png">
+<meta property="og:image" content="http://www.hanselman.com/blog/content/binary/Windows-Live-Writer/Reintroducing-ASP.NET-Core-1.0-and-.NE.0_B840/image_0e978596-bd85-42ed-8d27-c16e119bca5d.png">
+<meta property="og:updated_time" content="2016-01-20T16:26:28.717Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MS SQL Server 数据库分离-SQL语句">
-<meta name="twitter:description" content="前言今天在在清理数据库，是MS SQL Server,其中用到分离数据库文件。在这过程中，出现了一个小小的问题：误将数据库日志文件删除了，然后数据就打不开了，除了脱机，其他操作都报错。
+<meta name="twitter:title" content="ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0">
+<meta name="twitter:description" content="缘由  晚上回来就看到有博文说ASP.NET 5已死,其来源出自于Scott Hanselman的博客，下面是原文。
+个人观点：
 
-数据库分离常规方法此方法是常规惯用的方式，多步骤。
-如图所示：
+命名：由于现在asp.net已开源，并支持跨平台,这是一种新的实现，而且和asp.net 4.6是并行关系，不是在4.6的基础上升级，所以不应该沿用之前的命名。
 
-
-
-粗暴方法此方法简单粗暴，非常实用，一条SQL语句就搞定了。
-SQL语句实现： EXEC sp_detach_db [DatabaseName]">
+已死：由于asp.net 5是一种新的实现，不是原来版本的升级，已重命名，所以说，asp.net 5算是">
 <meta name="twitter:creator" content="@seayxu">
 <link rel="publisher" href="112748204150183690000">
 
@@ -106,14 +97,14 @@ SQL语句实现： EXEC sp_detach_db [DatabaseName]">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/post/2016/01-21-MSSQL-DB-Detach.html" title="MS SQL Server 数据库分离-SQL语句" itemprop="url">MS SQL Server 数据库分离-SQL语句</a>
+      <a href="/post/2016-01-20-ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html" title="ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0" itemprop="url">ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/112748204150183690000?rel=author" title="SeayXu" target="_blank" itemprop="author">SeayXu</a>
 		
   <p class="article-time">
-    <time datetime="2016-01-21T09:31:30.000Z" itemprop="datePublished"> 发表于 2016-01-21</time>
+    <time datetime="2016-01-20T15:43:30.000Z" itemprop="datePublished"> 发表于 2016-01-20</time>
     
   </p>
 </header>
@@ -122,26 +113,70 @@ SQL语句实现： EXEC sp_detach_db [DatabaseName]">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u524D_u8A00"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u6570_u636E_u5E93_u5206_u79BB"><span class="toc-number">2.</span> <span class="toc-text">数据库分离</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5E38_u89C4_u65B9_u6CD5"><span class="toc-number">2.1.</span> <span class="toc-text">常规方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7C97_u66B4_u65B9_u6CD5"><span class="toc-number">2.2.</span> <span class="toc-text">粗暴方法</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u7F18_u7531"><span class="toc-number">1.</span> <span class="toc-text">缘由</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4E2A_u4EBA_u89C2_u70B9_uFF1A"><span class="toc-number">2.</span> <span class="toc-text">个人观点：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u539F_u6587"><span class="toc-number">3.</span> <span class="toc-text">原文</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u8BD1_u6587"><span class="toc-number">4.</span> <span class="toc-text">译文</span></a></li></ol>
 		
 		</div>
 		
-		<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>今天在在清理数据库，是<code>MS SQL Server</code>,其中用到分离数据库文件。在这过程中，出现了一个小小的问题：误将数据库日志文件删除了，然后数据就打不开了，除了脱机，其他操作都报错。</p>
+		<h1 id="u7F18_u7531"><a href="#u7F18_u7531" class="headerlink" title="缘由"></a>缘由</h1><p>  晚上回来就看到有博文说<code>ASP.NET 5</code>已死,其来源出自于<a href="http://www.hanselman.com/blog/ASPNET5IsDeadIntroducingASPNETCore10AndNETCore10.aspx" target="_blank" rel="external">Scott Hanselman</a>的博客，下面是原文。</p>
+<h1 id="u4E2A_u4EBA_u89C2_u70B9_uFF1A"><a href="#u4E2A_u4EBA_u89C2_u70B9_uFF1A" class="headerlink" title="个人观点："></a>个人观点：</h1><blockquote>
+<ol>
+<li><p>命名：由于现在<code>asp.net</code>已开源，并支持跨平台,这是一种新的实现，而且和<code>asp.net 4.6</code>是并行关系，不是在4.6的基础上升级，所以不应该沿用之前的命名。</p>
+</li>
+<li><p>已死：由于<code>asp.net 5</code>是一种新的实现，不是原来版本的升级，已重命名，所以说，<code>asp.net 5</code>算是死了。不过，还是有些人习惯叫<code>asp.net 5</code>。</p>
+</li>
+</ol>
+</blockquote>
+<h1 id="u539F_u6587"><a href="#u539F_u6587" class="headerlink" title="原文"></a>原文</h1><p><strong> Naming is hard. </strong></p>
+<blockquote>
+<p>There are only two hard things in Computer Science: cache invalidation and naming things. - Phil Karlton</p>
+</blockquote>
+<p>  It’s very easy to armchair quarterback and say that “they should have named it Foo and it would be easy” but very often there’s many players involved in naming things. ASP.NET is a good ‘brand’ that’s been around for 15 years or so. ASP.NET 4.6 is a supported and released product that you can get and use now from <a href="http://get.asp.net" target="_blank" rel="external">http://get.asp.net</a>.</p>
+<p>  However, naming the new, completely written from scratch ASP.NET framework “ASP.NET 5” was a bad idea for a one major reason: 5 &gt; 4.6 makes it seem like ASP.NET 5 is bigger, better, and replaces ASP.NET 4.6. Not so.</p>
+<p>  So we’re changing the name and picking a better version number.</p>
+<p><strong> REINTRODUCING ASP.NET CORE 1.0 AND .NET CORE 1.0 </strong></p>
+<ul>
+<li><p>ASP.NET 5 is now ASP.NET Core 1.0.</p>
+</li>
+<li><p>.NET Core 5 is now .NET Core 1.0.</p>
+</li>
+<li><p>Entity Framework 7 is now Entity Framework Core 1.0 or EF Core 1.0 colloquially.</p>
+<p>Why 1.0? Because these are new. The whole .NET Core concept is new. The <a href="http://www.hanselman.com/blog/ExploringTheNewNETDotnetCommandLineInterfaceCLI.aspx" target="_blank" rel="external">.NET Core 1.0 CLI</a> is very new. Not only that, but .NET Core isn’t as complete as the full .NET Framework 4.6. We’re still exploring server-side graphics libraries. We’re still exploring gaps between ASP.NET 4.6 and ASP.NET Core 1.0.</p>
+<p><img src="http://www.hanselman.com/blog/content/binary/Windows-Live-Writer/Reintroducing-ASP.NET-Core-1.0-and-.NE.0_B840/image_0e978596-bd85-42ed-8d27-c16e119bca5d.png" alt=""></p>
+</li>
+</ul>
+<p><strong> WHICH TO CHOOSE? </strong></p>
+<p>  To be clear, ASP.NET 4.6 is the more mature platform. It’s battle-tested and released and available today. ASP.NET Core 1.0 is a 1.0 release that includes Web API and MVC but doesn’t yet have SignalR or Web Pages. It doesn’t yet support VB or F#. It will have these subsystems some day but not today.</p>
+<p>  We don’t want anyone to think that ASP.NET Core 1.0 is the finish line. It’s a new beginning and a fork in the road, but ASP.NET 4.6 continues on, released and fully supported. There’s lots of great stuff coming, stay tuned!</p>
 <hr>
-<h1 id="u6570_u636E_u5E93_u5206_u79BB"><a href="#u6570_u636E_u5E93_u5206_u79BB" class="headerlink" title="数据库分离"></a>数据库分离</h1><h2 id="u5E38_u89C4_u65B9_u6CD5"><a href="#u5E38_u89C4_u65B9_u6CD5" class="headerlink" title="常规方法"></a>常规方法</h2><p>此方法是常规惯用的方式，多步骤。</p>
-<p>如图所示：</p>
-<p><img src="http://segmentfault.com/img/bVsoMZ" alt="图一"></p>
-<p><img src="http://segmentfault.com/img/bVsoM0" alt="图二"></p>
-<hr>
-<h2 id="u7C97_u66B4_u65B9_u6CD5"><a href="#u7C97_u66B4_u65B9_u6CD5" class="headerlink" title="粗暴方法"></a>粗暴方法</h2><p>此方法简单粗暴，非常实用，一条<code>SQL</code>语句就搞定了。</p>
-<p>SQL语句实现： <code>EXEC sp_detach_db [DatabaseName]</code></p>
-<p>示例：<code>EXEC sp_detach_db OA</code></p>
+<h1 id="u8BD1_u6587"><a href="#u8BD1_u6587" class="headerlink" title="译文"></a>译文</h1><p><strong> 起名真难 </strong></p>
+<blockquote>
+<p>计算机科学中只有两件难事：缓存失效和命名。——Phil Karlton</p>
+</blockquote>
+<p>  “他们就该给它起个名字叫Foo，多简单的事” 纸上谈兵说说很容易，但是起名字这件事经常牵扯到很多因素。ASP.NET 作为一个好“牌子”已经有15年了。ASP.NET 4.6是一个受支持的已发布产品，你可以在 <a href="https://get.asp.net" target="_blank" rel="external">https://get.asp.net</a> 获取。</p>
+<p>  然而，把一个全新的、完全重写的ASP.NET框架命名为 “ASP.NET 5” 不是一个好主意，一个主要原因就是：5 &gt; 4.6 让人觉得 ASP.NET 5 更大、更好，是取代ASP.NET 4.6的。并不是。</p>
+<p>  所以我们重新命名并选了一个更好的版本号。</p>
+<p><strong> 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0 </strong></p>
+<ul>
+<li>ASP.NET 5 现在叫做 ASP.NET Core 1.0</li>
+<li>.NET Core 现在叫做 .NET Core 1.0</li>
+<li><p>Entity Framework 7 现在叫做 Entity Framework Core 1.0 或者简称 EF Core 1.0</p>
+<p>为什么选1.0？因为它们是全新的。整个.NET Core概念就是全新的。.NET Core CLI 是非常新的东西。（译注：.Net Core Command Line Interface ，将取代DNX）</p>
+<p>不仅如此，.NET Core还不像.NET Framework 4.6那样完整。我们仍在完善服务端图形库(server-side grahpics libraries)，我们仍在填补ASP.NET Core 1.0和ASP.NET 4.6之间的缺口。</p>
+<p><img src="http://www.hanselman.com/blog/content/binary/Windows-Live-Writer/Reintroducing-ASP.NET-Core-1.0-and-.NE.0_B840/image_0e978596-bd85-42ed-8d27-c16e119bca5d.png" alt=""></p>
+</li>
+</ul>
+<p><strong> 如何选择？ </strong></p>
+<p>  明确一下，ASP.NET 4.6是更成熟的平台。是经过实战（battle-tested）的目前已发布的可以用版本。</p>
+<p>  ASP.NET Core 1.0则是1.0版本，包括了Web API和MVC，但不包括SinglR和Web Pages。目前还不支持VB和F#。这些都会在将来实现，但目前还没有。</p>
+<p>  我们不想让人认为ASP.NET Core 1.0是个终点线，它是一个新的起点和新的分支。</p>
+<p>  ASP.NET 4.6将继续前行，发布并全面受到支持。别走开，更多精彩内容即将呈现。</p>
+<p>FROM:<a href="http://www.hanselman.com/blog/ASPNET5IsDeadIntroducingASPNETCore10AndNETCore10.aspx" target="_blank" rel="external">Scott Hanselman Blog</a></p>
 
     <blockquote>
     <div class="license-by">
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />本作品由<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">SeayXu</span>创作，采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="http://git.seay.me" rel="dct:source">http://git.seay.me</a>上的作品创作。<br />
   可自由转载、引用，但需署名作者且注明文章出处，并以相同方式共享。<br />
-  本文链接:<a href="">MS SQL Server 数据库分离-SQL语句</a>
+  本文链接:<a href="">ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0</a>
     </div>
   </blockquote>
 
@@ -151,13 +186,13 @@ SQL语句实现： EXEC sp_detach_db [DatabaseName]">
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Database/">Database</a>►<a class="article-category-link" href="/categories/Database/MSSQL/">MSSQL</a>
+  <a class="article-category-link" href="/categories/NET/">.NET</a>►<a class="article-category-link" href="/categories/NET/ASP-NET/">ASP.NET</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Database/">Database</a><a href="/tags/MSSQL/">MSSQL</a><a href="/tags/数据库/">数据库</a>
+  <span></span> <a href="/tags/ASP-NET/">ASP.NET</a><a href="/tags/ASP-NET-5/">ASP.NET 5</a><a href="/tags/ASP-NET-Core/">ASP.NET Core</a><a href="/tags/NET-Core/">NET Core</a>
   </div>
 
 </div>
@@ -166,7 +201,7 @@ SQL语句实现： EXEC sp_detach_db [DatabaseName]">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://git.seay.me/post/2016/01-21-MSSQL-DB-Detach.html" data-title="MS SQL Server 数据库分离-SQL语句 | SeayXu git blog" data-tsina="5600137615" class="share clearfix">
+	  <div data-url="http://git.seay.me/post/2016-01-20-ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html" data-title="ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0 | SeayXu git blog" data-tsina="5600137615" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -178,11 +213,19 @@ SQL语句实现： EXEC sp_detach_db [DatabaseName]">
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/post/2016-01-21-MSSQL-DB-Detach.html" title="MS SQL Server 数据库分离-SQL语句">
+  <strong>上一篇：</strong><br/>
+  <span>
+  MS SQL Server 数据库分离-SQL语句</span>
+</a>
+</div>
+
 
 <div class="next">
-<a href="/post/2016/01-20-ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html"  title="ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0">
+<a href="/post/2016-01-20-MySQL-Development-Specification-02.html"  title="转载--MySQL开发规范(二)">
  <strong>下一篇：</strong><br/>
- <span>ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0
+ <span>转载--MySQL开发规范(二)
 </span>
 </a>
 </div>
@@ -199,7 +242,7 @@ SQL语句实现： EXEC sp_detach_db [DatabaseName]">
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u524D_u8A00"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u6570_u636E_u5E93_u5206_u79BB"><span class="toc-number">2.</span> <span class="toc-text">数据库分离</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5E38_u89C4_u65B9_u6CD5"><span class="toc-number">2.1.</span> <span class="toc-text">常规方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7C97_u66B4_u65B9_u6CD5"><span class="toc-number">2.2.</span> <span class="toc-text">粗暴方法</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u7F18_u7531"><span class="toc-number">1.</span> <span class="toc-text">缘由</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4E2A_u4EBA_u89C2_u70B9_uFF1A"><span class="toc-number">2.</span> <span class="toc-text">个人观点：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u539F_u6587"><span class="toc-number">3.</span> <span class="toc-text">原文</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u8BD1_u6587"><span class="toc-number">4.</span> <span class="toc-text">译文</span></a></li></ol>
  
   </div>
 
