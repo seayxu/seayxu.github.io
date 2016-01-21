@@ -4,7 +4,7 @@
   
   <link href="/res.xml" rel="self"/>
   <link href="http://git.seay.me/"/>
-  <updated>2016-01-21T09:45:28.035Z</updated>
+  <updated>2016-01-21T09:50:21.002Z</updated>
   <id>http://git.seay.me/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://git.seay.me/post/2016/01-21-MSSQL-DB-Detach.html"/>
     <id>http://git.seay.me/post/2016/01-21-MSSQL-DB-Detach.html</id>
     <published>2016-01-21T09:31:30.000Z</published>
-    <updated>2016-01-21T09:45:28.035Z</updated>
+    <updated>2016-01-21T09:50:21.002Z</updated>
     <content type="html"><![CDATA[<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>今天在在清理数据库，是<code>MS SQL Server</code>,其中用到分离数据库文件。在这过程中，出现了一个小小的问题：误将数据库日志文件删除了，然后数据就打不开了，除了脱机，其他操作都报错。</p>
 <hr>
 <h1 id="u6570_u636E_u5E93_u5206_u79BB"><a href="#u6570_u636E_u5E93_u5206_u79BB" class="headerlink" title="数据库分离"></a>数据库分离</h1><h2 id="u5E38_u89C4_u65B9_u6CD5"><a href="#u5E38_u89C4_u65B9_u6CD5" class="headerlink" title="常规方法"></a>常规方法</h2><p>此方法是常规惯用的方式，多步骤。</p>
