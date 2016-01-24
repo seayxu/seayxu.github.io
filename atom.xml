@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://git.seay.me/"/>
-  <updated>2016-01-21T09:59:14.045Z</updated>
+  <updated>2016-01-24T14:28:28.108Z</updated>
   <id>http://git.seay.me/</id>
   
   <author>
@@ -13,6 +13,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Hexo主题实现多级分类显示]]></title>
+    <link href="http://git.seay.me/post/2016/01-24-Hexo-Theme-MutilLevel-Category-Display.html"/>
+    <id>http://git.seay.me/post/2016/01-24-Hexo-Theme-MutilLevel-Category-Display.html</id>
+    <published>2016-01-24T13:46:07.000Z</published>
+    <updated>2016-01-24T14:28:28.108Z</updated>
+    <content type="html"><![CDATA[<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>  最近在搞一个博客，是托管在<a href="https://github.com" target="_blank" rel="external">github</a>和<a href="https://gitcafe.com" target="_blank" rel="external">gitcafe</a>上的，利用<a href="https://hexo.io" target="_blank" rel="external">Hexo</a>生成的。<br>  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示<code>多级分类，</code>层次分明`的那样。</p>
+<h1 id="u95EE_u9898"><a href="#u95EE_u9898" class="headerlink" title="问题"></a>问题</h1><blockquote>
+<p>基本主题自带的分类显示都是一级的，如何显示多级?</p>
+</blockquote>
+<h1 id="u89E3_u51B3_u65B9_u6848"><a href="#u89E3_u51B3_u65B9_u6848" class="headerlink" title="解决方案"></a>解决方案</h1><p>  所以，研究了一下，找到了理想的方法，方法如下:</p>
+<pre><code>1. 利用系统的[list_categories([categories], [options])][4]辅助函数生成分类列表;
+
+2. 利用css实现样式.
+</code></pre><h1 id="u793A_u4F8B"><a href="#u793A_u4F8B" class="headerlink" title="示例"></a>示例</h1><p>  说明：我使用的是<a href="https://github.com/wuchong/jacman" target="_blank" rel="external">jacman</a>主题，以这个主题为例说明。</p>
+<ol>
+<li><p>在主题文件夹下找到<code>layout/_widget/category.ejs</code>文件,内容如下:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (<span class="attribute">site.categories.length</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"categorieslist"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"asidetitle"</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">__</span>('<span class="attribute">categories</span>') %&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">%</span> <span class="attribute">site.categories.sort</span>('<span class="attribute">name</span>')<span class="attribute">.each</span>(<span class="attribute">function</span>(<span class="attribute">item</span>)&#123; %&gt;</span></span><br><span class="line">		  <span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span>(<span class="attribute">item.posts.length</span>)&#123; %&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"&lt;%- config.root %&gt;&lt;%- item.path %&gt;"</span> <span class="attribute">title</span>=<span class="value">"&lt;%= item.name %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">item.name</span> %&gt;</span><span class="tag">&lt;<span class="title">sup</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">item.posts.length</span> %&gt;</span><span class="tag">&lt;/<span class="title">sup</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">		  <span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">%</span> &#125;); %&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改内容,利用上面提到的<code>list_categories([categories], [options])</code>辅助函数:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (<span class="attribute">site.categories.length</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"category-block"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"asidetitle"</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">__</span>('<span class="attribute">categories</span>') %&gt;</span><span class="tag">&lt;/<span class="title">h3</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="title">%-</span> <span class="attribute">list_categories</span>(<span class="attribute">site.categories</span>) %&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改样式文件</p>
+</li>
+</ol>
+<ul>
+<li><p>在主题文件夹下找到<code>source/css/_partial/aside.styl</code>文件,其他的也可能是<code>source/css/_partial/sidebar.styl</code>。反正，能在页面显示即可。</p>
+</li>
+<li><p>添加新的样式，我的如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">//categories</span><br><span class="line">.category-block&gt;ul&gt;li</span><br><span class="line">  border-bottom 1px solid #ccc</span><br><span class="line">.category-block li</span><br><span class="line">  margin-bottom 8px</span><br><span class="line">.category-list</span><br><span class="line">  @media mini</span><br><span class="line">    width 45%</span><br><span class="line">    float left</span><br><span class="line">    margin 0 5% 0 0</span><br><span class="line">  @media tablet</span><br><span class="line">    width 100%</span><br><span class="line">    float none</span><br><span class="line">    margin .5em 0 0</span><br><span class="line">  .categoriy-list-item</span><br><span class="line">    padding .5em 5%</span><br><span class="line">  .category-list-count</span><br><span class="line">    top -.5em</span><br><span class="line">    padding-left .3em</span><br><span class="line">    font-size 75%</span><br><span class="line">    line-height 0</span><br><span class="line">    position relative</span><br><span class="line">    vertical-align baseline</span><br><span class="line">  ul, ol, dl</span><br><span class="line">    list-style none</span><br><span class="line">  ul, ol, dl</span><br><span class="line">    background-color #f9f9fa</span><br><span class="line">    margin-left 20px</span><br><span class="line">    li</span><br><span class="line">      border-bottom 1px dashed #ccc</span><br><span class="line">  .category-list-child</span><br><span class="line">    border-top 1px dashed #ccc</span><br><span class="line">    margin-bottom 8px</span><br></pre></td></tr></table></figure>
+<p>想实现不同的样式，自己可以修改。</p>
+</li>
+</ul>
+<h1 id="u6548_u679C_u56FE"><a href="#u6548_u679C_u56FE" class="headerlink" title="效果图"></a>效果图</h1><p>  <img src="/static/images/20160124214658.png" alt="效果图"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>  最近在搞一个博客，是托管在<a href="https://github.com" target="]]>
+    </summary>
+    
+      <category term="Hexo" scheme="http://git.seay.me/tags/Hexo/"/>
+    
+      <category term="前端" scheme="http://git.seay.me/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="前端" scheme="http://git.seay.me/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="Hexo" scheme="http://git.seay.me/categories/%E5%89%8D%E7%AB%AF/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[MS SQL Server 数据库分离--SQL语句]]></title>
@@ -415,7 +464,7 @@ c)  可以将1和2结合起来：ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDAT
     <link href="http://git.seay.me/post/2016/01-17-Ubuntu-Shell-WiFi-Setting.html"/>
     <id>http://git.seay.me/post/2016/01-17-Ubuntu-Shell-WiFi-Setting.html</id>
     <published>2016-01-17T11:16:20.000Z</published>
-    <updated>2016-01-19T09:41:19.490Z</updated>
+    <updated>2016-01-24T11:58:47.054Z</updated>
     <content type="html"><![CDATA[<h1 id="u60C5_u666F_u8BF4_u660E"><a href="#u60C5_u666F_u8BF4_u660E" class="headerlink" title="情景说明"></a>情景说明</h1><blockquote>
 <p>自己买了个<code>Raspberry Pi 2</code>的板子，没有显示器，想利用无线连接通过<code>SSH</code>连接。无奈之下才上网查了下，发现可以利用<code>shell</code>命令设置无线连接，于是，就有了以下的内容。</p>
 </blockquote>
@@ -445,7 +494,11 @@ c)  可以将1和2结合起来：ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDAT
     
       <category term="树莓派" scheme="http://git.seay.me/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
     
-      <category term="Ubuntu" scheme="http://git.seay.me/categories/Ubuntu/"/>
+      <category term="System" scheme="http://git.seay.me/categories/System/"/>
+    
+      <category term="Linux" scheme="http://git.seay.me/categories/System/Linux/"/>
+    
+      <category term="Ubuntu" scheme="http://git.seay.me/categories/System/Linux/Ubuntu/"/>
     
   </entry>
   
