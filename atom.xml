@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://git.seay.me/"/>
-  <updated>2016-01-24T14:28:28.108Z</updated>
+  <updated>2016-01-24T15:18:24.446Z</updated>
   <id>http://git.seay.me/</id>
   
   <author>
@@ -19,8 +19,8 @@
     <link href="http://git.seay.me/post/2016/01-24-Hexo-Theme-MutilLevel-Category-Display.html"/>
     <id>http://git.seay.me/post/2016/01-24-Hexo-Theme-MutilLevel-Category-Display.html</id>
     <published>2016-01-24T13:46:07.000Z</published>
-    <updated>2016-01-24T14:28:28.108Z</updated>
-    <content type="html"><![CDATA[<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>  最近在搞一个博客，是托管在<a href="https://github.com" target="_blank" rel="external">github</a>和<a href="https://gitcafe.com" target="_blank" rel="external">gitcafe</a>上的，利用<a href="https://hexo.io" target="_blank" rel="external">Hexo</a>生成的。<br>  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示<code>多级分类，</code>层次分明`的那样。</p>
+    <updated>2016-01-24T15:18:24.446Z</updated>
+    <content type="html"><![CDATA[<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>  最近在搞一个博客，是托管在<a href="https://github.com" target="_blank" rel="external">github</a>和<a href="https://gitcafe.com" target="_blank" rel="external">gitcafe</a>上的，利用<a href="https://hexo.io" target="_blank" rel="external">Hexo</a>生成的。<br>  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示<code>多级分类</code>,层次分明`的那样。</p>
 <h1 id="u95EE_u9898"><a href="#u95EE_u9898" class="headerlink" title="问题"></a>问题</h1><blockquote>
 <p>基本主题自带的分类显示都是一级的，如何显示多级?</p>
 </blockquote>
