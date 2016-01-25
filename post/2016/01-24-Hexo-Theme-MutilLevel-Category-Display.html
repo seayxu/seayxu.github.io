@@ -16,7 +16,8 @@
 基本主题自带的分类显示都是一级的，如何显示多级?
 
 解决方案  所以，研究了一下，找到了理想的方法，方法如下:
-1. 利用系统的[list_categories([categories], [options])">
+
+利用系统的list_categories([categories], [options])辅助函">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo主题实现多级分类显示">
 <meta property="og:url" content="http://git.seay.me/post/2016/01-24-Hexo-Theme-MutilLevel-Category-Display.html">
@@ -26,9 +27,10 @@
 基本主题自带的分类显示都是一级的，如何显示多级?
 
 解决方案  所以，研究了一下，找到了理想的方法，方法如下:
-1. 利用系统的[list_categories([categories], [options])">
+
+利用系统的list_categories([categories], [options])辅助函">
 <meta property="og:image" content="http://git.seay.me/static/images/20160124214658.png">
-<meta property="og:updated_time" content="2016-01-24T15:18:24.446Z">
+<meta property="og:updated_time" content="2016-01-25T03:02:50.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo主题实现多级分类显示">
 <meta name="twitter:description" content="前言  最近在搞一个博客，是托管在github和gitcafe上的，利用Hexo生成的。  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示多级分类,层次分明`的那样。
@@ -36,7 +38,8 @@
 基本主题自带的分类显示都是一级的，如何显示多级?
 
 解决方案  所以，研究了一下，找到了理想的方法，方法如下:
-1. 利用系统的[list_categories([categories], [options])">
+
+利用系统的list_categories([categories], [options])辅助函">
 <meta name="twitter:creator" content="@seayxu">
 <link rel="publisher" href="112748204150183690000">
 
@@ -121,10 +124,13 @@
 <p>基本主题自带的分类显示都是一级的，如何显示多级?</p>
 </blockquote>
 <h1 id="u89E3_u51B3_u65B9_u6848"><a href="#u89E3_u51B3_u65B9_u6848" class="headerlink" title="解决方案"></a>解决方案</h1><p>  所以，研究了一下，找到了理想的方法，方法如下:</p>
-<pre><code>1. 利用系统的[list_categories([categories], [options])][4]辅助函数生成分类列表;
-
-2. 利用css实现样式.
-</code></pre><h1 id="u793A_u4F8B"><a href="#u793A_u4F8B" class="headerlink" title="示例"></a>示例</h1><p>  说明：我使用的是<a href="https://github.com/wuchong/jacman" target="_blank" rel="external">jacman</a>主题，以这个主题为例说明。</p>
+<ol>
+<li><p>利用系统的<a href="https://hexo.io/zh-cn/docs/helpers.html" target="_blank" rel="external">list_categories([categories], [options])</a>辅助函数生成分类列表;</p>
+</li>
+<li><p>利用css实现样式.</p>
+</li>
+</ol>
+<h1 id="u793A_u4F8B"><a href="#u793A_u4F8B" class="headerlink" title="示例"></a>示例</h1><p>  说明：我使用的是<a href="https://github.com/wuchong/jacman" target="_blank" rel="external">jacman</a>主题，以这个主题为例说明。</p>
 <ol>
 <li><p>在主题文件夹下找到<code>layout/_widget/category.ejs</code>文件,内容如下:</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (<span class="attribute">site.categories.length</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"categorieslist"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"asidetitle"</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">__</span>('<span class="attribute">categories</span>') %&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">%</span> <span class="attribute">site.categories.sort</span>('<span class="attribute">name</span>')<span class="attribute">.each</span>(<span class="attribute">function</span>(<span class="attribute">item</span>)&#123; %&gt;</span></span><br><span class="line">		  <span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span>(<span class="attribute">item.posts.length</span>)&#123; %&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"&lt;%- config.root %&gt;&lt;%- item.path %&gt;"</span> <span class="attribute">title</span>=<span class="value">"&lt;%= item.name %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">item.name</span> %&gt;</span><span class="tag">&lt;<span class="title">sup</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">item.posts.length</span> %&gt;</span><span class="tag">&lt;/<span class="title">sup</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">		  <span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">%</span> &#125;); %&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
