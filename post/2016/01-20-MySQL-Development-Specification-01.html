@@ -56,6 +56,9 @@
     <link rel="apple-touch-icon-precomposed" href="/img/apple.jpg">
     
     <link rel="stylesheet" href="/css/style.css" type="text/css">
+    
+    <link rel="stylesheet" href="/css/ua-parser.css" type="text/css">
+    
 </head>
 
   <body>
@@ -109,9 +112,10 @@
 		
   <p class="article-time">
     <time datetime="2016-01-20T02:16:20.000Z" itemprop="datePublished"> 发表于 2016-01-20</time>
-    
+
   </p>
 </header>
+
 	<div class="article-content">
 		
 		<div id="toc" class="toc-article">
@@ -284,7 +288,7 @@ c)  可以将1和2结合起来：ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDAT
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Database/">Database</a>►<a class="article-category-link" href="/categories/Database/MySQL/">MySQL</a>
+  <a class="article-category-link" href="/categories/Database/">Database<span class="article-category-count">3</span></a>►<a class="article-category-link" href="/categories/Database/MySQL/">MySQL<span class="article-category-count">2</span></a>
 </div>
 
 
@@ -294,7 +298,6 @@ c)  可以将1和2结合起来：ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDAT
   </div>
 
 </div>
-
 
 
 	<div class="article-share" id="share">
@@ -332,9 +335,11 @@ c)  可以将1和2结合起来：ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDAT
 
 
 	
+<script src="http://faisalman.github.io/ua-parser-js/src/ua-parser.min.js"></script>
 <section id="comments" class="comment">
 	<div class="ds-thread" data-thread-key="post/2016/01-20-MySQL-Development-Specification-01.html" data-title="转载--MySQL开发规范(一)" data-url="http://git.seay.me/post/2016/01-20-MySQL-Development-Specification-01.html"></div>
 </section>
+
 
 
 </div>
@@ -776,6 +781,28 @@ $(document).ready(function(){
     ds.charset = 'UTF-8';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
   })();
+</script>
+<script type="text/javascript">
+    if (typeof DUOSHUO !== 'undefined')hookDUOSHUO_tp();
+    else $('[src="http://static.duoshuo.com/embed.js"]')[0].onload=hookDUOSHUO_tp;
+    var hookDUOSHUO_bl=false;
+    function hookDUOSHUO_tp(){
+        if(hookDUOSHUO_bl)return;
+        else hookDUOSHUO_bl=true;
+        var _D_post=DUOSHUO.templates.post;
+        DUOSHUO.templates.post=function (e,t){
+            var rs=_D_post(e,t);
+            if(e.agent&&/^Mozilla/.test(e.agent))rs=rs.replace(/<\/div><p>/,show_ua(e.agent)+'</div><p>');
+            return rs;
+        }
+    }
+    function show_ua(string){
+        console.log(string)
+        $.ua.set(string);
+        var sua=$.ua;
+        if(sua.os.version=='x86_64')sua.os.version='x64';
+        return '<span class="this_ua platform '+sua.os.name+'">'+sua.os.name+' '+sua.os.version+'</span><span class="this_ua browser '+sua.browser.name+'">'+sua.browser.name+'|'+sua.browser.version+'</span>';
+    }
 </script>
 <!-- 多说公共JS代码 end -->
 
