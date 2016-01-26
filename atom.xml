@@ -467,7 +467,7 @@ c)  可以将1和2结合起来：ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDAT
     <link href="http://git.seay.me/post/2016/01-17-Ubuntu-Shell-WiFi-Setting.html"/>
     <id>http://git.seay.me/post/2016/01-17-Ubuntu-Shell-WiFi-Setting.html</id>
     <published>2016-01-17T11:16:20.000Z</published>
-    <updated>2016-01-24T11:58:47.054Z</updated>
+    <updated>2016-01-25T10:08:18.312Z</updated>
     <content type="html"><![CDATA[<h1 id="u60C5_u666F_u8BF4_u660E"><a href="#u60C5_u666F_u8BF4_u660E" class="headerlink" title="情景说明"></a>情景说明</h1><blockquote>
 <p>自己买了个<code>Raspberry Pi 2</code>的板子，没有显示器，想利用无线连接通过<code>SSH</code>连接。无奈之下才上网查了下，发现可以利用<code>shell</code>命令设置无线连接，于是，就有了以下的内容。</p>
 </blockquote>
