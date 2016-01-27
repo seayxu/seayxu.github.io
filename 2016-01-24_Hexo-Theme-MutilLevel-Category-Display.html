@@ -4,44 +4,42 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Ubuntu(Shell)命令行下连接到无线网络-使用wpa-cli命令 | SeayXu git blog</title>
+    <title>Hexo主题实现多级分类显示 | SeayXu git blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="SeayXu">
     
 
     
-    <meta name="description" content="情景说明
-自己买了个Raspberry Pi 2的板子，没有显示器，想利用无线连接通过SSH连接。无奈之下才上网查了下，发现可以利用shell命令设置无线连接，于是，就有了以下的内容。
+    <meta name="description" content="前言  最近在搞一个博客，是托管在github和gitcafe上的，利用Hexo生成的。  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示多级分类,层次分明`的那样。
+问题
+基本主题自带的分类显示都是一级的，如何显示多级?
 
-动手实施步骤
-在shell中输入wpa_cli命令，进入交互，然后输入以下信息(注：#为注释)
+解决方案  所以，研究了一下，找到了理想的方法，方法如下:
 
-设置相关信息
-1add_network #&amp;#25191;&amp;#34892;&amp;#21518;&amp;#20250;&amp;#36">
+利用系统的list_categories([categories], [options])辅助函">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu(Shell)命令行下连接到无线网络-使用wpa-cli命令">
-<meta property="og:url" content="http://git.seay.me/post/2016/01-17-Ubuntu-Shell-WiFi-Setting.html">
+<meta property="og:title" content="Hexo主题实现多级分类显示">
+<meta property="og:url" content="http://git.seay.me/2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html">
 <meta property="og:site_name" content="SeayXu git blog">
-<meta property="og:description" content="情景说明
-自己买了个Raspberry Pi 2的板子，没有显示器，想利用无线连接通过SSH连接。无奈之下才上网查了下，发现可以利用shell命令设置无线连接，于是，就有了以下的内容。
+<meta property="og:description" content="前言  最近在搞一个博客，是托管在github和gitcafe上的，利用Hexo生成的。  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示多级分类,层次分明`的那样。
+问题
+基本主题自带的分类显示都是一级的，如何显示多级?
 
-动手实施步骤
-在shell中输入wpa_cli命令，进入交互，然后输入以下信息(注：#为注释)
+解决方案  所以，研究了一下，找到了理想的方法，方法如下:
 
-设置相关信息
-1add_network #&amp;#25191;&amp;#34892;&amp;#21518;&amp;#20250;&amp;#36">
-<meta property="og:updated_time" content="2016-01-25T10:08:18.312Z">
+利用系统的list_categories([categories], [options])辅助函">
+<meta property="og:image" content="http://git.seay.me/static/images/20160124214658.png">
+<meta property="og:updated_time" content="2016-01-25T03:02:50.094Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu(Shell)命令行下连接到无线网络-使用wpa-cli命令">
-<meta name="twitter:description" content="情景说明
-自己买了个Raspberry Pi 2的板子，没有显示器，想利用无线连接通过SSH连接。无奈之下才上网查了下，发现可以利用shell命令设置无线连接，于是，就有了以下的内容。
+<meta name="twitter:title" content="Hexo主题实现多级分类显示">
+<meta name="twitter:description" content="前言  最近在搞一个博客，是托管在github和gitcafe上的，利用Hexo生成的。  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示多级分类,层次分明`的那样。
+问题
+基本主题自带的分类显示都是一级的，如何显示多级?
 
-动手实施步骤
-在shell中输入wpa_cli命令，进入交互，然后输入以下信息(注：#为注释)
+解决方案  所以，研究了一下，找到了理想的方法，方法如下:
 
-设置相关信息
-1add_network #&amp;#25191;&amp;#34892;&amp;#21518;&amp;#20250;&amp;#36">
+利用系统的list_categories([categories], [options])辅助函">
 <meta name="twitter:creator" content="@seayxu">
 <link rel="publisher" href="112748204150183690000">
 
@@ -104,14 +102,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/post/2016/01-17-Ubuntu-Shell-WiFi-Setting.html" title="Ubuntu(Shell)命令行下连接到无线网络-使用wpa-cli命令" itemprop="url">Ubuntu(Shell)命令行下连接到无线网络-使用wpa-cli命令</a>
+      <a href="/2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html" title="Hexo主题实现多级分类显示" itemprop="url">Hexo主题实现多级分类显示</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/112748204150183690000?rel=author" title="SeayXu" target="_blank" itemprop="author">SeayXu</a>
 		
   <p class="article-time">
-    <time datetime="2016-01-17T11:16:20.000Z" itemprop="datePublished"> 发表于 2016-01-17</time>
+    <time datetime="2016-01-24T13:46:07.000Z" itemprop="datePublished"> 发表于 2016-01-24</time>
 
   </p>
 </header>
@@ -121,33 +119,47 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u60C5_u666F_u8BF4_u660E"><span class="toc-number">1.</span> <span class="toc-text">情景说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u52A8_u624B_u5B9E_u65BD"><span class="toc-number">2.</span> <span class="toc-text">动手实施</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u6B65_u9AA4"><span class="toc-number">2.1.</span> <span class="toc-text">步骤</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u793A_u4F8B"><span class="toc-number">3.</span> <span class="toc-text">示例</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u524D_u8A00"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u95EE_u9898"><span class="toc-number">2.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u89E3_u51B3_u65B9_u6848"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u793A_u4F8B"><span class="toc-number">4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u6548_u679C_u56FE"><span class="toc-number">5.</span> <span class="toc-text">效果图</span></a></li></ol>
 		
 		</div>
 		
-		<h1 id="u60C5_u666F_u8BF4_u660E"><a href="#u60C5_u666F_u8BF4_u660E" class="headerlink" title="情景说明"></a>情景说明</h1><blockquote>
-<p>自己买了个<code>Raspberry Pi 2</code>的板子，没有显示器，想利用无线连接通过<code>SSH</code>连接。无奈之下才上网查了下，发现可以利用<code>shell</code>命令设置无线连接，于是，就有了以下的内容。</p>
+		<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>  最近在搞一个博客，是托管在<a href="https://github.com" target="_blank" rel="external">github</a>和<a href="https://gitcafe.com" target="_blank" rel="external">gitcafe</a>上的，利用<a href="https://hexo.io" target="_blank" rel="external">Hexo</a>生成的。<br>  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示<code>多级分类</code>,层次分明`的那样。</p>
+<h1 id="u95EE_u9898"><a href="#u95EE_u9898" class="headerlink" title="问题"></a>问题</h1><blockquote>
+<p>基本主题自带的分类显示都是一级的，如何显示多级?</p>
 </blockquote>
-<h1 id="u52A8_u624B_u5B9E_u65BD"><a href="#u52A8_u624B_u5B9E_u65BD" class="headerlink" title="动手实施"></a>动手实施</h1><h2 id="u6B65_u9AA4"><a href="#u6B65_u9AA4" class="headerlink" title="步骤"></a>步骤</h2><ol>
-<li><p>在<code>shell</code>中输入<code>wpa_cli</code>命令，进入交互，然后输入以下信息(注：#为注释)</p>
+<h1 id="u89E3_u51B3_u65B9_u6848"><a href="#u89E3_u51B3_u65B9_u6848" class="headerlink" title="解决方案"></a>解决方案</h1><p>  所以，研究了一下，找到了理想的方法，方法如下:</p>
+<ol>
+<li><p>利用系统的<a href="https://hexo.io/zh-cn/docs/helpers.html" target="_blank" rel="external">list_categories([categories], [options])</a>辅助函数生成分类列表;</p>
 </li>
-<li><p>设置相关信息</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add_network #&#25191;&#34892;&#21518;&#20250;&#36820;&#22238;&#19968;&#20010;&#25968;&#23383;&#65288;&#19968;&#33324;&#26159;0&#65289;&#10;#network_id&#20026;&#26080;&#32447;&#32593;&#30340;ID&#65292;&#33258;&#24049;&#21462;&#21517;&#10;set_network [network_id] ssid &#39;&#26080;&#32447;&#21517;&#31216;&#39; #&#26681;&#25454;&#20320;&#30340;&#32593;&#32476;&#29615;&#22659;&#22635;&#20889;&#10;set_network [network_id] psk &#39;&#26080;&#32447;&#23494;&#30721;&#39; #&#26080;&#32447;&#23494;&#30721;&#10;enable_network [network_id] #&#21551;&#29992;&#32593;&#32476;&#65292;&#25104;&#21151;&#21518;&#20250;&#36820;&#22238; CONNECT TO XXXX&#30340;&#20449;&#24687;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>退出交互模式</p>
-<p>输入<code>q</code>退出交互模式。</p>
-</li>
-<li><p>连接网络</p>
-<p>使用 <code>dhclient wlan0</code> 命令获取网络地址。</p>
+<li><p>利用css实现样式.</p>
 </li>
 </ol>
-<h1 id="u793A_u4F8B"><a href="#u793A_u4F8B" class="headerlink" title="示例"></a>示例</h1>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:~$ ifconfig #&#26597;&#30475;&#26080;&#32447;&#32593;&#21345;&#21517;&#31216;&#65292;&#20551;&#23450;&#20026;nxthswrw234&#10;root@ubuntu:~$ wpa_cli&#10;add_network&#10;set_network NETID ssid &#39;MyWiFi&#39;&#10;set_network NETID psk &#39;12345678&#39;&#10;enable_network NETID&#10;q&#10;root@ubuntu:~$ dhclient nxthswrw234 #nxthswrw234&#20026;&#26080;&#32447;&#32593;&#21345;&#21517;&#31216;</span><br></pre></td></tr></table></figure>
+<h1 id="u793A_u4F8B"><a href="#u793A_u4F8B" class="headerlink" title="示例"></a>示例</h1><p>  说明：我使用的是<a href="https://github.com/wuchong/jacman" target="_blank" rel="external">jacman</a>主题，以这个主题为例说明。</p>
+<ol>
+<li><p>在主题文件夹下找到<code>layout/_widget/category.ejs</code>文件,内容如下:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (<span class="attribute">site.categories.length</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"categorieslist"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"asidetitle"</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">__</span>('<span class="attribute">categories</span>') %&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">%</span> <span class="attribute">site.categories.sort</span>('<span class="attribute">name</span>')<span class="attribute">.each</span>(<span class="attribute">function</span>(<span class="attribute">item</span>)&#123; %&gt;</span></span><br><span class="line">		  <span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span>(<span class="attribute">item.posts.length</span>)&#123; %&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"&lt;%- config.root %&gt;&lt;%- item.path %&gt;"</span> <span class="attribute">title</span>=<span class="value">"&lt;%= item.name %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">item.name</span> %&gt;</span><span class="tag">&lt;<span class="title">sup</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">item.posts.length</span> %&gt;</span><span class="tag">&lt;/<span class="title">sup</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">		  <span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">%</span> &#125;); %&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改内容,利用上面提到的<code>list_categories([categories], [options])</code>辅助函数:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (<span class="attribute">site.categories.length</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"category-block"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"asidetitle"</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">__</span>('<span class="attribute">categories</span>') %&gt;</span><span class="tag">&lt;/<span class="title">h3</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="title">%-</span> <span class="attribute">list_categories</span>(<span class="attribute">site.categories</span>) %&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改样式文件</p>
+</li>
+</ol>
+<ul>
+<li><p>在主题文件夹下找到<code>source/css/_partial/aside.styl</code>文件,其他的也可能是<code>source/css/_partial/sidebar.styl</code>。反正，能在页面显示即可。</p>
+</li>
+<li><p>添加新的样式，我的如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">//categories</span><br><span class="line">.category-block&gt;ul&gt;li</span><br><span class="line">  border-bottom 1px solid #ccc</span><br><span class="line">.category-block li</span><br><span class="line">  margin-bottom 8px</span><br><span class="line">.category-list</span><br><span class="line">  @media mini</span><br><span class="line">    width 45%</span><br><span class="line">    float left</span><br><span class="line">    margin 0 5% 0 0</span><br><span class="line">  @media tablet</span><br><span class="line">    width 100%</span><br><span class="line">    float none</span><br><span class="line">    margin .5em 0 0</span><br><span class="line">  .categoriy-list-item</span><br><span class="line">    padding .5em 5%</span><br><span class="line">  .category-list-count</span><br><span class="line">    top -.5em</span><br><span class="line">    padding-left .3em</span><br><span class="line">    font-size 75%</span><br><span class="line">    line-height 0</span><br><span class="line">    position relative</span><br><span class="line">    vertical-align baseline</span><br><span class="line">  ul, ol, dl</span><br><span class="line">    list-style none</span><br><span class="line">  ul, ol, dl</span><br><span class="line">    background-color #f9f9fa</span><br><span class="line">    margin-left 20px</span><br><span class="line">    li</span><br><span class="line">      border-bottom 1px dashed #ccc</span><br><span class="line">  .category-list-child</span><br><span class="line">    border-top 1px dashed #ccc</span><br><span class="line">    margin-bottom 8px</span><br></pre></td></tr></table></figure>
+<p>想实现不同的样式，自己可以修改。</p>
+</li>
+</ul>
+<h1 id="u6548_u679C_u56FE"><a href="#u6548_u679C_u56FE" class="headerlink" title="效果图"></a>效果图</h1><p>  <img src="/static/images/20160124214658.png" alt="效果图"></p>
 
     <blockquote>
     <div class="license-by">
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />本作品由<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">SeayXu</span>创作，采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="http://git.seay.me" rel="dct:source">http://git.seay.me</a>上的作品创作。<br />
   可自由转载、引用，但需署名作者且注明文章出处，并以相同方式共享。<br />
-  本文链接:<a href="">Ubuntu(Shell)命令行下连接到无线网络-使用wpa-cli命令</a>
+  本文链接:<a href="">Hexo主题实现多级分类显示</a>
     </div>
   </blockquote>
 
@@ -157,13 +169,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/System/">System<span class="article-category-count">1</span></a>►<a class="article-category-link" href="/categories/System/Linux/">Linux<span class="article-category-count">1</span></a>►<a class="article-category-link" href="/categories/System/Linux/Ubuntu/">Ubuntu<span class="article-category-count">1</span></a>
+  <a class="article-category-link" href="/categories/前端/">前端<span class="article-category-count">2</span></a>►<a class="article-category-link" href="/categories/前端/Hexo/">Hexo<span class="article-category-count">1</span></a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Raspberry-Pi-2/">Raspberry Pi 2</a><a href="/tags/Ubuntu/">Ubuntu</a><a href="/tags/树莓派/">树莓派</a>
+  <span></span> <a href="/tags/Hexo/">Hexo</a><a href="/tags/前端/">前端</a>
   </div>
 
 </div>
@@ -171,7 +183,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://git.seay.me/post/2016/01-17-Ubuntu-Shell-WiFi-Setting.html" data-title="Ubuntu(Shell)命令行下连接到无线网络-使用wpa-cli命令 | SeayXu git blog" data-tsina="5600137615" class="share clearfix">
+	  <div data-url="http://git.seay.me/2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html" data-title="Hexo主题实现多级分类显示 | SeayXu git blog" data-tsina="5600137615" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -184,18 +196,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/post/2016/01-20-MySQL-Development-Specification-01.html" title="转载--MySQL开发规范(一)">
+ <a href="/2016-01-27_DuoShuo-UA-Parser-Display.html" title="多说使用ua-parser-js显示浏览器和系统信息">
   <strong>上一篇：</strong><br/>
   <span>
-  转载--MySQL开发规范(一)</span>
+  多说使用ua-parser-js显示浏览器和系统信息</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/post/2016/01-14-Windows-IoT-Get-Started-For-Raspberry-Pi2.html"  title="树莓派(Raspberry Pi2)Windows IoT入门">
+<a href="/2016-01-21_MSSQL-DB-Detach.html"  title="MS SQL Server 数据库分离--SQL语句">
  <strong>下一篇：</strong><br/>
- <span>树莓派(Raspberry Pi2)Windows IoT入门
+ <span>MS SQL Server 数据库分离--SQL语句
 </span>
 </a>
 </div>
@@ -205,7 +217,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="post/2016/01-17-Ubuntu-Shell-WiFi-Setting.html" data-title="Ubuntu(Shell)命令行下连接到无线网络-使用wpa-cli命令" data-url="http://git.seay.me/post/2016/01-17-Ubuntu-Shell-WiFi-Setting.html"></div>
+	<div class="ds-thread" data-thread-key="2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html" data-title="Hexo主题实现多级分类显示" data-url="http://git.seay.me/2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html"></div>
 </section>
 
 
@@ -217,7 +229,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u60C5_u666F_u8BF4_u660E"><span class="toc-number">1.</span> <span class="toc-text">情景说明</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u52A8_u624B_u5B9E_u65BD"><span class="toc-number">2.</span> <span class="toc-text">动手实施</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u6B65_u9AA4"><span class="toc-number">2.1.</span> <span class="toc-text">步骤</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u793A_u4F8B"><span class="toc-number">3.</span> <span class="toc-text">示例</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u524D_u8A00"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u95EE_u9898"><span class="toc-number">2.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u89E3_u51B3_u65B9_u6848"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u793A_u4F8B"><span class="toc-number">4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u6548_u679C_u56FE"><span class="toc-number">5.</span> <span class="toc-text">效果图</span></a></li></ol>
  
   </div>
 
@@ -325,10 +337,6 @@
 			
 		
 			
-				<li><a href="/tags/树莓派/" title="树莓派">树莓派<sup>2</sup></a></li>
-			
-		
-			
 				<li><a href="/tags/MySQL/" title="MySQL">MySQL<sup>2</sup></a></li>
 			
 		
@@ -337,15 +345,11 @@
 			
 		
 			
-				<li><a href="/tags/Windows-IoT/" title="Windows IoT">Windows IoT<sup>1</sup></a></li>
+				<li><a href="/tags/树莓派/" title="树莓派">树莓派<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/MSSQL/" title="MSSQL">MSSQL<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/Ubuntu/" title="Ubuntu">Ubuntu<sup>1</sup></a></li>
+				<li><a href="/tags/多说/" title="多说">多说<sup>1</sup></a></li>
 			
 		
 			
@@ -354,14 +358,6 @@
 		
 			
 				<li><a href="/tags/工具/" title="工具">工具<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/多说/" title="多说">多说<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/ASP-NET/" title="ASP.NET">ASP.NET<sup>1</sup></a></li>
 			
 		
 			
@@ -374,6 +370,22 @@
 		
 			
 				<li><a href="/tags/NET-Core/" title="NET Core">NET Core<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Ubuntu/" title="Ubuntu">Ubuntu<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Windows-IoT/" title="Windows IoT">Windows IoT<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MSSQL/" title="MSSQL">MSSQL<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ASP-NET/" title="ASP.NET">ASP.NET<sup>1</sup></a></li>
 			
 		
 		</ul>
