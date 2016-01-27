@@ -4,42 +4,49 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hexo主题实现多级分类显示 | SeayXu git blog</title>
+    <title>MS SQL Server 数据库分离--SQL语句 | SeayXu git blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="SeayXu">
     
 
     
-    <meta name="description" content="前言  最近在搞一个博客，是托管在github和gitcafe上的，利用Hexo生成的。  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示多级分类,层次分明`的那样。
-问题
-基本主题自带的分类显示都是一级的，如何显示多级?
+    <meta name="description" content="前言今天在在清理数据库，是MS SQL Server,其中用到分离数据库文件。在这过程中，出现了一个小小的问题：误将数据库日志文件删除了，然后数据就打不开了，除了脱机，其他操作都报错。
 
-解决方案  所以，研究了一下，找到了理想的方法，方法如下:
+数据库分离常规方法此方法是常规惯用的方式，多步骤。
+如图所示：
 
-利用系统的list_categories([categories], [options])辅助函">
+
+
+粗暴方法此方法简单粗暴，非常实用，一条SQL语句就搞定了。
+SQL语句实现： EXEC sp_detach_db [DatabaseName]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo主题实现多级分类显示">
-<meta property="og:url" content="http://git.seay.me/2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html">
+<meta property="og:title" content="MS SQL Server 数据库分离--SQL语句">
+<meta property="og:url" content="http://git.seay.me/post/2016-01-21_MSSQL-DB-Detach.html">
 <meta property="og:site_name" content="SeayXu git blog">
-<meta property="og:description" content="前言  最近在搞一个博客，是托管在github和gitcafe上的，利用Hexo生成的。  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示多级分类,层次分明`的那样。
-问题
-基本主题自带的分类显示都是一级的，如何显示多级?
+<meta property="og:description" content="前言今天在在清理数据库，是MS SQL Server,其中用到分离数据库文件。在这过程中，出现了一个小小的问题：误将数据库日志文件删除了，然后数据就打不开了，除了脱机，其他操作都报错。
 
-解决方案  所以，研究了一下，找到了理想的方法，方法如下:
+数据库分离常规方法此方法是常规惯用的方式，多步骤。
+如图所示：
 
-利用系统的list_categories([categories], [options])辅助函">
-<meta property="og:image" content="http://git.seay.me/static/images/20160124214658.png">
-<meta property="og:updated_time" content="2016-01-25T03:02:50.094Z">
+
+
+粗暴方法此方法简单粗暴，非常实用，一条SQL语句就搞定了。
+SQL语句实现： EXEC sp_detach_db [DatabaseName]">
+<meta property="og:image" content="http://segmentfault.com/img/bVsoMZ">
+<meta property="og:image" content="http://segmentfault.com/img/bVsoM0">
+<meta property="og:updated_time" content="2016-01-21T09:59:14.045Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo主题实现多级分类显示">
-<meta name="twitter:description" content="前言  最近在搞一个博客，是托管在github和gitcafe上的，利用Hexo生成的。  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示多级分类,层次分明`的那样。
-问题
-基本主题自带的分类显示都是一级的，如何显示多级?
+<meta name="twitter:title" content="MS SQL Server 数据库分离--SQL语句">
+<meta name="twitter:description" content="前言今天在在清理数据库，是MS SQL Server,其中用到分离数据库文件。在这过程中，出现了一个小小的问题：误将数据库日志文件删除了，然后数据就打不开了，除了脱机，其他操作都报错。
 
-解决方案  所以，研究了一下，找到了理想的方法，方法如下:
+数据库分离常规方法此方法是常规惯用的方式，多步骤。
+如图所示：
 
-利用系统的list_categories([categories], [options])辅助函">
+
+
+粗暴方法此方法简单粗暴，非常实用，一条SQL语句就搞定了。
+SQL语句实现： EXEC sp_detach_db [DatabaseName]">
 <meta name="twitter:creator" content="@seayxu">
 <link rel="publisher" href="112748204150183690000">
 
@@ -102,14 +109,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html" title="Hexo主题实现多级分类显示" itemprop="url">Hexo主题实现多级分类显示</a>
+      <a href="/post/2016-01-21_MSSQL-DB-Detach.html" title="MS SQL Server 数据库分离--SQL语句" itemprop="url">MS SQL Server 数据库分离--SQL语句</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/112748204150183690000?rel=author" title="SeayXu" target="_blank" itemprop="author">SeayXu</a>
 		
   <p class="article-time">
-    <time datetime="2016-01-24T13:46:07.000Z" itemprop="datePublished"> 发表于 2016-01-24</time>
+    <time datetime="2016-01-21T09:31:30.000Z" itemprop="datePublished"> 发表于 2016-01-21</time>
 
   </p>
 </header>
@@ -119,47 +126,26 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u524D_u8A00"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u95EE_u9898"><span class="toc-number">2.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u89E3_u51B3_u65B9_u6848"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u793A_u4F8B"><span class="toc-number">4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u6548_u679C_u56FE"><span class="toc-number">5.</span> <span class="toc-text">效果图</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u524D_u8A00"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u6570_u636E_u5E93_u5206_u79BB"><span class="toc-number">2.</span> <span class="toc-text">数据库分离</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5E38_u89C4_u65B9_u6CD5"><span class="toc-number">2.1.</span> <span class="toc-text">常规方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7C97_u66B4_u65B9_u6CD5"><span class="toc-number">2.2.</span> <span class="toc-text">粗暴方法</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>  最近在搞一个博客，是托管在<a href="https://github.com" target="_blank" rel="external">github</a>和<a href="https://gitcafe.com" target="_blank" rel="external">gitcafe</a>上的，利用<a href="https://hexo.io" target="_blank" rel="external">Hexo</a>生成的。<br>  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示<code>多级分类</code>,层次分明`的那样。</p>
-<h1 id="u95EE_u9898"><a href="#u95EE_u9898" class="headerlink" title="问题"></a>问题</h1><blockquote>
-<p>基本主题自带的分类显示都是一级的，如何显示多级?</p>
-</blockquote>
-<h1 id="u89E3_u51B3_u65B9_u6848"><a href="#u89E3_u51B3_u65B9_u6848" class="headerlink" title="解决方案"></a>解决方案</h1><p>  所以，研究了一下，找到了理想的方法，方法如下:</p>
-<ol>
-<li><p>利用系统的<a href="https://hexo.io/zh-cn/docs/helpers.html" target="_blank" rel="external">list_categories([categories], [options])</a>辅助函数生成分类列表;</p>
-</li>
-<li><p>利用css实现样式.</p>
-</li>
-</ol>
-<h1 id="u793A_u4F8B"><a href="#u793A_u4F8B" class="headerlink" title="示例"></a>示例</h1><p>  说明：我使用的是<a href="https://github.com/wuchong/jacman" target="_blank" rel="external">jacman</a>主题，以这个主题为例说明。</p>
-<ol>
-<li><p>在主题文件夹下找到<code>layout/_widget/category.ejs</code>文件,内容如下:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (<span class="attribute">site.categories.length</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"categorieslist"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"asidetitle"</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">__</span>('<span class="attribute">categories</span>') %&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">%</span> <span class="attribute">site.categories.sort</span>('<span class="attribute">name</span>')<span class="attribute">.each</span>(<span class="attribute">function</span>(<span class="attribute">item</span>)&#123; %&gt;</span></span><br><span class="line">		  <span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span>(<span class="attribute">item.posts.length</span>)&#123; %&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"&lt;%- config.root %&gt;&lt;%- item.path %&gt;"</span> <span class="attribute">title</span>=<span class="value">"&lt;%= item.name %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">item.name</span> %&gt;</span><span class="tag">&lt;<span class="title">sup</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">item.posts.length</span> %&gt;</span><span class="tag">&lt;/<span class="title">sup</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">		  <span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">%</span> &#125;); %&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改内容,利用上面提到的<code>list_categories([categories], [options])</code>辅助函数:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (<span class="attribute">site.categories.length</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"category-block"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"asidetitle"</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">__</span>('<span class="attribute">categories</span>') %&gt;</span><span class="tag">&lt;/<span class="title">h3</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="title">%-</span> <span class="attribute">list_categories</span>(<span class="attribute">site.categories</span>) %&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改样式文件</p>
-</li>
-</ol>
-<ul>
-<li><p>在主题文件夹下找到<code>source/css/_partial/aside.styl</code>文件,其他的也可能是<code>source/css/_partial/sidebar.styl</code>。反正，能在页面显示即可。</p>
-</li>
-<li><p>添加新的样式，我的如下：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">//categories</span><br><span class="line">.category-block&gt;ul&gt;li</span><br><span class="line">  border-bottom 1px solid #ccc</span><br><span class="line">.category-block li</span><br><span class="line">  margin-bottom 8px</span><br><span class="line">.category-list</span><br><span class="line">  @media mini</span><br><span class="line">    width 45%</span><br><span class="line">    float left</span><br><span class="line">    margin 0 5% 0 0</span><br><span class="line">  @media tablet</span><br><span class="line">    width 100%</span><br><span class="line">    float none</span><br><span class="line">    margin .5em 0 0</span><br><span class="line">  .categoriy-list-item</span><br><span class="line">    padding .5em 5%</span><br><span class="line">  .category-list-count</span><br><span class="line">    top -.5em</span><br><span class="line">    padding-left .3em</span><br><span class="line">    font-size 75%</span><br><span class="line">    line-height 0</span><br><span class="line">    position relative</span><br><span class="line">    vertical-align baseline</span><br><span class="line">  ul, ol, dl</span><br><span class="line">    list-style none</span><br><span class="line">  ul, ol, dl</span><br><span class="line">    background-color #f9f9fa</span><br><span class="line">    margin-left 20px</span><br><span class="line">    li</span><br><span class="line">      border-bottom 1px dashed #ccc</span><br><span class="line">  .category-list-child</span><br><span class="line">    border-top 1px dashed #ccc</span><br><span class="line">    margin-bottom 8px</span><br></pre></td></tr></table></figure>
-<p>想实现不同的样式，自己可以修改。</p>
-</li>
-</ul>
-<h1 id="u6548_u679C_u56FE"><a href="#u6548_u679C_u56FE" class="headerlink" title="效果图"></a>效果图</h1><p>  <img src="/static/images/20160124214658.png" alt="效果图"></p>
+		<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>今天在在清理数据库，是<code>MS SQL Server</code>,其中用到分离数据库文件。在这过程中，出现了一个小小的问题：误将数据库日志文件删除了，然后数据就打不开了，除了脱机，其他操作都报错。</p>
+<hr>
+<h1 id="u6570_u636E_u5E93_u5206_u79BB"><a href="#u6570_u636E_u5E93_u5206_u79BB" class="headerlink" title="数据库分离"></a>数据库分离</h1><h2 id="u5E38_u89C4_u65B9_u6CD5"><a href="#u5E38_u89C4_u65B9_u6CD5" class="headerlink" title="常规方法"></a>常规方法</h2><p>此方法是常规惯用的方式，多步骤。</p>
+<p>如图所示：</p>
+<p><img src="http://segmentfault.com/img/bVsoMZ" alt="图一"></p>
+<p><img src="http://segmentfault.com/img/bVsoM0" alt="图二"></p>
+<hr>
+<h2 id="u7C97_u66B4_u65B9_u6CD5"><a href="#u7C97_u66B4_u65B9_u6CD5" class="headerlink" title="粗暴方法"></a>粗暴方法</h2><p>此方法简单粗暴，非常实用，一条<code>SQL</code>语句就搞定了。</p>
+<p>SQL语句实现： <code>EXEC sp_detach_db [DatabaseName]</code></p>
+<p>示例：<code>EXEC sp_detach_db OA</code></p>
 
     <blockquote>
     <div class="license-by">
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />本作品由<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">SeayXu</span>创作，采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="http://git.seay.me" rel="dct:source">http://git.seay.me</a>上的作品创作。<br />
   可自由转载、引用，但需署名作者且注明文章出处，并以相同方式共享。<br />
-  本文链接:<a href="">Hexo主题实现多级分类显示</a>
+  本文链接:<a href="">MS SQL Server 数据库分离--SQL语句</a>
     </div>
   </blockquote>
 
@@ -169,13 +155,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/前端/">前端<span class="article-category-count">2</span></a>►<a class="article-category-link" href="/categories/前端/Hexo/">Hexo<span class="article-category-count">1</span></a>
+  <a class="article-category-link" href="/categories/Database/">Database<span class="article-category-count">3</span></a>►<a class="article-category-link" href="/categories/Database/MSSQL/">MSSQL<span class="article-category-count">1</span></a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Hexo/">Hexo</a><a href="/tags/前端/">前端</a>
+  <span></span> <a href="/tags/Database/">Database</a><a href="/tags/MSSQL/">MSSQL</a><a href="/tags/数据库/">数据库</a>
   </div>
 
 </div>
@@ -183,7 +169,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://git.seay.me/2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html" data-title="Hexo主题实现多级分类显示 | SeayXu git blog" data-tsina="5600137615" class="share clearfix">
+	  <div data-url="http://git.seay.me/post/2016-01-21_MSSQL-DB-Detach.html" data-title="MS SQL Server 数据库分离--SQL语句 | SeayXu git blog" data-tsina="5600137615" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -196,18 +182,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016-01-27_DuoShuo-UA-Parser-Display.html" title="多说使用ua-parser-js显示浏览器和系统信息">
+ <a href="/post/2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html" title="Hexo主题实现多级分类显示">
   <strong>上一篇：</strong><br/>
   <span>
-  多说使用ua-parser-js显示浏览器和系统信息</span>
+  Hexo主题实现多级分类显示</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016-01-21_MSSQL-DB-Detach.html"  title="MS SQL Server 数据库分离--SQL语句">
+<a href="/post/2016-01-20_ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html"  title="ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0">
  <strong>下一篇：</strong><br/>
- <span>MS SQL Server 数据库分离--SQL语句
+ <span>ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0
 </span>
 </a>
 </div>
@@ -217,7 +203,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html" data-title="Hexo主题实现多级分类显示" data-url="http://git.seay.me/2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html"></div>
+	<div class="ds-thread" data-thread-key="post/2016-01-21_MSSQL-DB-Detach.html" data-title="MS SQL Server 数据库分离--SQL语句" data-url="http://git.seay.me/post/2016-01-21_MSSQL-DB-Detach.html"></div>
 </section>
 
 
@@ -229,7 +215,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u524D_u8A00"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u95EE_u9898"><span class="toc-number">2.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u89E3_u51B3_u65B9_u6848"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u793A_u4F8B"><span class="toc-number">4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u6548_u679C_u56FE"><span class="toc-number">5.</span> <span class="toc-text">效果图</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u524D_u8A00"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u6570_u636E_u5E93_u5206_u79BB"><span class="toc-number">2.</span> <span class="toc-text">数据库分离</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5E38_u89C4_u65B9_u6CD5"><span class="toc-number">2.1.</span> <span class="toc-text">常规方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u7C97_u66B4_u65B9_u6CD5"><span class="toc-number">2.2.</span> <span class="toc-text">粗暴方法</span></a></li></ol></li></ol>
  
   </div>
 

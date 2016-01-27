@@ -4,26 +4,40 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>转载--MySQL开发规范(二) | SeayXu git blog</title>
+    <title>ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0 | SeayXu git blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="SeayXu">
     
 
     
-    <meta name="description" content="MYSQL数据库命名及设计规范 
-1.设计原则1) 标准化和规范化数据的标准化有助于消除数据库中的数据冗余。标准化有好几种形式，但Third Normal Form（3NF）通常被认为在性能、扩展性和数据完整性方面达到了最好平衡。简单来说，遵守3NF 标准的数据库的表设计原则是：“One Fact in One Place”即某个表只包括其本身基本的属性，当不是它们本身所具有的属性时需进行分解。表">
+    <meta name="description" content="缘由  晚上回来就看到有博文说ASP.NET 5已死,其来源出自于Scott Hanselman的博客，下面是原文。
+个人观点：
+
+命名：由于现在asp.net已开源，并支持跨平台,这是一种新的实现，而且和asp.net 4.6是并行关系，不是在4.6的基础上升级，所以不应该沿用之前的命名。
+
+已死：由于asp.net 5是一种新的实现，不是原来版本的升级，已重命名，所以说，asp.net 5算是">
 <meta property="og:type" content="article">
-<meta property="og:title" content="转载--MySQL开发规范(二)">
-<meta property="og:url" content="http://git.seay.me/2016-01-20_MySQL-Development-Specification-02.html">
+<meta property="og:title" content="ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0">
+<meta property="og:url" content="http://git.seay.me/post/2016-01-20_ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html">
 <meta property="og:site_name" content="SeayXu git blog">
-<meta property="og:description" content="MYSQL数据库命名及设计规范 
-1.设计原则1) 标准化和规范化数据的标准化有助于消除数据库中的数据冗余。标准化有好几种形式，但Third Normal Form（3NF）通常被认为在性能、扩展性和数据完整性方面达到了最好平衡。简单来说，遵守3NF 标准的数据库的表设计原则是：“One Fact in One Place”即某个表只包括其本身基本的属性，当不是它们本身所具有的属性时需进行分解。表">
-<meta property="og:updated_time" content="2016-01-20T03:33:26.098Z">
+<meta property="og:description" content="缘由  晚上回来就看到有博文说ASP.NET 5已死,其来源出自于Scott Hanselman的博客，下面是原文。
+个人观点：
+
+命名：由于现在asp.net已开源，并支持跨平台,这是一种新的实现，而且和asp.net 4.6是并行关系，不是在4.6的基础上升级，所以不应该沿用之前的命名。
+
+已死：由于asp.net 5是一种新的实现，不是原来版本的升级，已重命名，所以说，asp.net 5算是">
+<meta property="og:image" content="http://www.hanselman.com/blog/content/binary/Windows-Live-Writer/Reintroducing-ASP.NET-Core-1.0-and-.NE.0_B840/image_0e978596-bd85-42ed-8d27-c16e119bca5d.png">
+<meta property="og:image" content="http://www.hanselman.com/blog/content/binary/Windows-Live-Writer/Reintroducing-ASP.NET-Core-1.0-and-.NE.0_B840/image_0e978596-bd85-42ed-8d27-c16e119bca5d.png">
+<meta property="og:updated_time" content="2016-01-20T16:26:28.717Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="转载--MySQL开发规范(二)">
-<meta name="twitter:description" content="MYSQL数据库命名及设计规范 
-1.设计原则1) 标准化和规范化数据的标准化有助于消除数据库中的数据冗余。标准化有好几种形式，但Third Normal Form（3NF）通常被认为在性能、扩展性和数据完整性方面达到了最好平衡。简单来说，遵守3NF 标准的数据库的表设计原则是：“One Fact in One Place”即某个表只包括其本身基本的属性，当不是它们本身所具有的属性时需进行分解。表">
+<meta name="twitter:title" content="ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0">
+<meta name="twitter:description" content="缘由  晚上回来就看到有博文说ASP.NET 5已死,其来源出自于Scott Hanselman的博客，下面是原文。
+个人观点：
+
+命名：由于现在asp.net已开源，并支持跨平台,这是一种新的实现，而且和asp.net 4.6是并行关系，不是在4.6的基础上升级，所以不应该沿用之前的命名。
+
+已死：由于asp.net 5是一种新的实现，不是原来版本的升级，已重命名，所以说，asp.net 5算是">
 <meta name="twitter:creator" content="@seayxu">
 <link rel="publisher" href="112748204150183690000">
 
@@ -86,14 +100,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016-01-20_MySQL-Development-Specification-02.html" title="转载--MySQL开发规范(二)" itemprop="url">转载--MySQL开发规范(二)</a>
+      <a href="/post/2016-01-20_ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html" title="ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0" itemprop="url">ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/112748204150183690000?rel=author" title="SeayXu" target="_blank" itemprop="author">SeayXu</a>
 		
   <p class="article-time">
-    <time datetime="2016-01-20T03:03:20.000Z" itemprop="datePublished"> 发表于 2016-01-20</time>
+    <time datetime="2016-01-20T15:43:30.000Z" itemprop="datePublished"> 发表于 2016-01-20</time>
 
   </p>
 </header>
@@ -103,105 +117,70 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-_u8BBE_u8BA1_u539F_u5219"><span class="toc-number">1.</span> <span class="toc-text">1.设计原则</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1_29__u6807_u51C6_u5316_u548C_u89C4_u8303_u5316"><span class="toc-number">1.1.</span> <span class="toc-text">1) 标准化和规范化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2_29__u6570_u636E_u9A71_u52A8"><span class="toc-number">1.2.</span> <span class="toc-text">2) 数据驱动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3_29__u8003_u8651_u5404_u79CD_u53D8_u5316"><span class="toc-number">1.3.</span> <span class="toc-text">3) 考虑各种变化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-_u6570_u636E_u5E93_u6D89_u53CA_u5B57_u7B26_u89C4_u8303"><span class="toc-number">2.</span> <span class="toc-text">2.数据库涉及字符规范</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-_u6570_u636E_u5E93_u547D_u540D_u89C4_u8303"><span class="toc-number">3.</span> <span class="toc-text">3.数据库命名规范</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-_u6570_u636E_u5E93_u8868_u547D_u540D_u89C4_u8303"><span class="toc-number">4.</span> <span class="toc-text">4.数据库表命名规范</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-_u5B57_u6BB5_u547D_u540D_u89C4_u8303"><span class="toc-number">5.</span> <span class="toc-text">5.字段命名规范</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-_u5B57_u6BB5_u7C7B_u578B_u89C4_u8303"><span class="toc-number">6.</span> <span class="toc-text">6.字段类型规范</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-_u6570_u636E_u5E93_u8BBE_u8BA1_u6587_u6863_u89C4_u8303"><span class="toc-number">7.</span> <span class="toc-text">7.数据库设计文档规范</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-_u7D22_u5F15_u4F7F_u7528_u539F_u5219_uFF1A"><span class="toc-number">8.</span> <span class="toc-text">8.索引使用原则：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-sql_u8BED_u53E5_u89C4_u8303"><span class="toc-number">9.</span> <span class="toc-text">9.sql语句规范</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-_u5176_u4ED6_u8BBE_u8BA1_u6280_u5DE7"><span class="toc-number">10.</span> <span class="toc-text">10.其他设计技巧</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u7F18_u7531"><span class="toc-number">1.</span> <span class="toc-text">缘由</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4E2A_u4EBA_u89C2_u70B9_uFF1A"><span class="toc-number">2.</span> <span class="toc-text">个人观点：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u539F_u6587"><span class="toc-number">3.</span> <span class="toc-text">原文</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u8BD1_u6587"><span class="toc-number">4.</span> <span class="toc-text">译文</span></a></li></ol>
 		
 		</div>
 		
-		<p><strong> MYSQL数据库命名及设计规范 </strong></p>
-<h1 id="1-_u8BBE_u8BA1_u539F_u5219"><a href="#1-_u8BBE_u8BA1_u539F_u5219" class="headerlink" title="1.设计原则"></a>1.设计原则</h1><h2 id="1_29__u6807_u51C6_u5316_u548C_u89C4_u8303_u5316"><a href="#1_29__u6807_u51C6_u5316_u548C_u89C4_u8303_u5316" class="headerlink" title="1) 标准化和规范化"></a>1) 标准化和规范化</h2><pre><code>数据的标准化有助于消除数据库中的数据冗余。标准化有好几种形式，但Third Normal Form（3NF）通常被认为在性能、扩展性和数据完整性方面达到了最好平衡。简单来说，遵守3NF 标准的数据库的表设计原则是：“One Fact in One Place”即某个表只包括其本身基本的属性，当不是它们本身所具有的属性时需进行分解。表之间的关系通过外键相连接。它具有以下特点：有一组表专门存放通过键连接起来的关联数据。
-
-举例：某个存放客户及其有关定单的3NF 数据库就可能有两个表：Customer和Order。Order表不包含定单关联客户的任何信息，但表内会存放一个键值，该键指向Customer表里包含该客户信息的那一行。
-
-事实上，为了效率的缘故，对表不进行标准化有时也是必要的。
-</code></pre><h2 id="2_29__u6570_u636E_u9A71_u52A8"><a href="#2_29__u6570_u636E_u9A71_u52A8" class="headerlink" title="2) 数据驱动"></a>2) 数据驱动</h2><pre><code>采用数据驱动而非硬编码的方式，许多策略变更和维护都会方便得多，大大增强系统的灵活性和扩展性。
-
-举例，假如用户界面要访问外部数据源（文件、XML 文档、其他数据库等），不妨把相应的连接和路径信息存储在用户界面支持表里。还有，如果用户界面执行工作流之类的任务（发送邮件、打印信笺、修改记录状态等），那么产生工作流的数据也可以存放在数据库里。角色权限管理也可以通过数据驱动来完成。事实上，如果过程是数据驱动的，你就可以把相当大的责任推给用户，由用户来维护自己的工作流过程。
-</code></pre><h2 id="3_29__u8003_u8651_u5404_u79CD_u53D8_u5316"><a href="#3_29__u8003_u8651_u5404_u79CD_u53D8_u5316" class="headerlink" title="3) 考虑各种变化"></a>3) 考虑各种变化</h2><pre><code>在设计数据库的时候考虑到哪些数据字段将来可能会发生变更。
-
-举例，姓氏就是如此（注意是西方人的姓氏，比如女性结婚后从夫姓等）。所以，在建立系统存储客户信息时，在单独的一个数据表里存储姓氏字段，而且还附加起始日和终止日等字段，这样就可以跟踪这一数据条目的变化。
-</code></pre><h1 id="2-_u6570_u636E_u5E93_u6D89_u53CA_u5B57_u7B26_u89C4_u8303"><a href="#2-_u6570_u636E_u5E93_u6D89_u53CA_u5B57_u7B26_u89C4_u8303" class="headerlink" title="2.数据库涉及字符规范"></a>2.数据库涉及字符规范</h1><p>  采用26个英文字母(区分大小写)和0-9这十个自然数,加上下划线’_’组成,共63个字符.不能出现其他字符(注释除外).</p>
-<p>  注意事项:</p>
-<pre><code>1) 以上命名都不得超过30个字符的系统限制.变量名的长度限制为29(不包括标识字符@).
-
-2) 数据对象、变量的命名都采用英文字符,禁止使用中文命名.绝对不要在对象名的字符之间留空格.
-
-3) 小心保留词,要保证你的字段名没有和保留词、数据库系统或者常用访问方法冲突
-
-4) 保持字段名和类型的一致性,在命名字段并为其指定数据类型的时候一定要保证一致性.假如数据类型在一个表里是整数,那在另一个表里可就别变成字符型了.
-</code></pre><h1 id="3-_u6570_u636E_u5E93_u547D_u540D_u89C4_u8303"><a href="#3-_u6570_u636E_u5E93_u547D_u540D_u89C4_u8303" class="headerlink" title="3.数据库命名规范"></a>3.数据库命名规范</h1><p>  数据库,数据表一律使用前缀</p>
-<p>  正式数据库名使用小写英文以及下划线组成,尽量说明是那个应用或者系统在使用的.比如:</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">web_19floor_net&#10;&#10;web_car</span><br></pre></td></tr></table></figure>
-<p>  备份数据库名使用正式库名加上备份时间组成,如:</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">web_19floor_net_20070403&#10;&#10;web_car_20070403</span><br></pre></td></tr></table></figure>
-<h1 id="4-_u6570_u636E_u5E93_u8868_u547D_u540D_u89C4_u8303"><a href="#4-_u6570_u636E_u5E93_u8868_u547D_u540D_u89C4_u8303" class="headerlink" title="4.数据库表命名规范"></a>4.数据库表命名规范</h1><p>  数据表名使用小写英文以及下划线组成,尽量说明是那个应用或者系统在使用的.</p>
-<p>  相关应用的数据表使用同一前缀,如论坛的表使用cdb<em>前缀,博客的数据表使用supe</em>前缀,前缀名称一般不超过5字</p>
-<p>  比如:</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">web_user&#10;&#10;web_group&#10;&#10;supe_userspace</span><br></pre></td></tr></table></figure>
-<p>  备份数据表名使用正式表名加上备份时间组成,如:</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">web_user_20070403&#10;&#10;web_group_20070403&#10;&#10;supe_userspace_20070403</span><br></pre></td></tr></table></figure>
-<h1 id="5-_u5B57_u6BB5_u547D_u540D_u89C4_u8303"><a href="#5-_u5B57_u6BB5_u547D_u540D_u89C4_u8303" class="headerlink" title="5.字段命名规范"></a>5.字段命名规范</h1><p>  字段名称使用单词组合完成,首字母小写,后面单词的首字母大写,最好是带表名前缀.</p>
-<p>  如<code>web_user</code>表的字段:</p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">userId&#10;&#10;userName&#10;&#10;userPassword</span><br></pre></td></tr></table></figure>
-<p>  表与表之间的相关联字段要用统一名称</p>
-<p>  如<code>web_user</code>表里面的<code>userId</code>和<code>web_group</code>表里面的<code>userId</code>相对应</p>
-<h1 id="6-_u5B57_u6BB5_u7C7B_u578B_u89C4_u8303"><a href="#6-_u5B57_u6BB5_u7C7B_u578B_u89C4_u8303" class="headerlink" title="6.字段类型规范"></a>6.字段类型规范</h1><pre><code>规则:用尽量少的存储空间来存数一个字段的数据.
-
-比如能用int的就不用char或者varchar
-
-能用tinyint的就不用int
-
-能用varchar(20)的就不用varchar(255)
-
-时间戳字段尽量用int型，如created:表示从&apos;1970-01-01 08:00:00&apos;开始的int秒数，采用英文单词的过去式；gmtCreated:表示datetime类型的时间，即形如&apos;1980-01-01 00:00:00&apos;的时间串，Java中对应的类型为Timestamp
-</code></pre><h1 id="7-_u6570_u636E_u5E93_u8BBE_u8BA1_u6587_u6863_u89C4_u8303"><a href="#7-_u6570_u636E_u5E93_u8BBE_u8BA1_u6587_u6863_u89C4_u8303" class="headerlink" title="7.数据库设计文档规范"></a>7.数据库设计文档规范</h1><p>  所有数据库设计要写成文档,文档以模块化形式表达.大致格式如下：</p>
-<pre><code>&apos;-------------------------------------------
-&apos;    表名：    web_user
-&apos;    作者：    Aeolus(傻鱼)
-&apos;    日期：    2007-04-11
-&apos;    版本：    1.0
-&apos;    描述：    保存用户资料
-&apos;    具体内容：
-&apos;    UserID  int,自动增量  用户代码
-&apos;    UserName char(12)  用户名字
-&apos;    ......
-&apos;--------------------------------------------
-</code></pre><h1 id="8-_u7D22_u5F15_u4F7F_u7528_u539F_u5219_uFF1A"><a href="#8-_u7D22_u5F15_u4F7F_u7528_u539F_u5219_uFF1A" class="headerlink" title="8.索引使用原则："></a>8.索引使用原则：</h1><pre><code>1) 逻辑主键使用唯一的成组索引,对系统键(作为存储过程)采用唯一的非成组索引,对任何外键列采用非成组索引.考虑数据库的空间有多大,表如何进行访问,还有这些访问是否主要用作读写.
-
-2) 大多数数据库都索引自动创建的主键字段,但是可别忘了索引外键,它们也是经常使用的键,比如运行查询显示主表和所有关联表的某条记录就用得上.
-
-3) 不要索引blob/text等字段,不要索引大型字段(有很多字符),这样作会让索引占用太多的存储空间.
-
-4) 不要索引常用的小型表
-
-  不要为小型数据表设置任何键,假如它们经常有插入和删除操作就更别这样作了.对这些插入和删除操作的索引维护可能比扫描表空间消耗更多的时间.
-</code></pre><h1 id="9-sql_u8BED_u53E5_u89C4_u8303"><a href="#9-sql_u8BED_u53E5_u89C4_u8303" class="headerlink" title="9.sql语句规范"></a>9.sql语句规范</h1><p>  所有sql关键词全部大写,比如SELECT,UPDATE,FROM,ORDER,BY等,所有的表名和库名都要用``包含<br>  如:<br>    <code>SELECT COUNT(*) FROM `cdb_members` WHERE `userName` = &#39;aeolus&#39;;</code></p>
-<h1 id="10-_u5176_u4ED6_u8BBE_u8BA1_u6280_u5DE7"><a href="#10-_u5176_u4ED6_u8BBE_u8BA1_u6280_u5DE7" class="headerlink" title="10.其他设计技巧"></a>10.其他设计技巧</h1><p>  1) 避免使用触发器</p>
-<pre><code>触发器的功能通常可以用其他方式实现.在调试程序时触发器可能成为干扰.假如你确实需要采用触发器,你最好集中对它文档化.
-</code></pre><p>  2) 使用常用英语(或者其他任何语言)而不要使用编码或者拼音首字母缩写</p>
-<pre><code>在创建下拉菜单、列表、报表时最好按照英语名排序.假如需要编码或者拼音首字母缩写,可以在旁边附上用户知道的英语.
-</code></pre><p>  3) 保存常用信息</p>
-<pre><code>让一个表专门存放一般数据库信息非常有用.在这个表里存放数据库当前版本、最近检查/修复(对Access)、关联设计文档的名称、客户等信息.这样可以实现一种简单机制跟踪数据库,当客户抱怨他们的数据库没有达到希望的要求而与你联系时,这样做对非客户机/服务器环境特别有用.
-</code></pre><p>  4) 包含版本机制</p>
-<pre><code>在数据库中引入版本控制机制来确定使用中的数据库的版本.时间一长,用户的需求总是会改变的.最终可能会要求修改数据库结构.把版本信息直接存放到数据库中更为方便.
-</code></pre><p>  5) 编制文档</p>
-<pre><code>对所有的快捷方式、命名规范、限制和函数都要编制文档.
-
-采用给表、列、触发器等加注释的数据库工具.对开发、支持和跟踪修改非常有用.
-
-对数据库文档化,或者在数据库自身的内部或者单独建立文档.这样,当过了一年多时间后再回过头来做第2 个版本,犯错的机会将大大减少.
-</code></pre><p>  6) 测试、测试、反复测试</p>
-<pre><code>建立或者修订数据库之后,必须用用户新输入的数据测试数据字段.最重要的是,让用户进行测试并且同用户一道保证选择的数据类型满足商业要求.测试需要在把新数据库投入实际服务之前完成.
-</code></pre><p>  7) 检查设计</p>
-<pre><code>在开发期间检查数据库设计的常用技术是通过其所支持的应用程序原型检查数据库.换句话说,针对每一种最终表达数据的原型应用,保证你检查了数据模型并且查看如何取出数据.
-</code></pre><blockquote>
-<p>来自：<a href="http://www.phpboke.com/mysql-fuifan.html" target="_blank" rel="external">http://www.phpboke.com/mysql-fuifan.html</a></p>
+		<h1 id="u7F18_u7531"><a href="#u7F18_u7531" class="headerlink" title="缘由"></a>缘由</h1><p>  晚上回来就看到有博文说<code>ASP.NET 5</code>已死,其来源出自于<a href="http://www.hanselman.com/blog/ASPNET5IsDeadIntroducingASPNETCore10AndNETCore10.aspx" target="_blank" rel="external">Scott Hanselman</a>的博客，下面是原文。</p>
+<h1 id="u4E2A_u4EBA_u89C2_u70B9_uFF1A"><a href="#u4E2A_u4EBA_u89C2_u70B9_uFF1A" class="headerlink" title="个人观点："></a>个人观点：</h1><blockquote>
+<ol>
+<li><p>命名：由于现在<code>asp.net</code>已开源，并支持跨平台,这是一种新的实现，而且和<code>asp.net 4.6</code>是并行关系，不是在4.6的基础上升级，所以不应该沿用之前的命名。</p>
+</li>
+<li><p>已死：由于<code>asp.net 5</code>是一种新的实现，不是原来版本的升级，已重命名，所以说，<code>asp.net 5</code>算是死了。不过，还是有些人习惯叫<code>asp.net 5</code>。</p>
+</li>
+</ol>
 </blockquote>
+<h1 id="u539F_u6587"><a href="#u539F_u6587" class="headerlink" title="原文"></a>原文</h1><p><strong> Naming is hard. </strong></p>
+<blockquote>
+<p>There are only two hard things in Computer Science: cache invalidation and naming things. - Phil Karlton</p>
+</blockquote>
+<p>  It’s very easy to armchair quarterback and say that “they should have named it Foo and it would be easy” but very often there’s many players involved in naming things. ASP.NET is a good ‘brand’ that’s been around for 15 years or so. ASP.NET 4.6 is a supported and released product that you can get and use now from <a href="http://get.asp.net" target="_blank" rel="external">http://get.asp.net</a>.</p>
+<p>  However, naming the new, completely written from scratch ASP.NET framework “ASP.NET 5” was a bad idea for a one major reason: 5 &gt; 4.6 makes it seem like ASP.NET 5 is bigger, better, and replaces ASP.NET 4.6. Not so.</p>
+<p>  So we’re changing the name and picking a better version number.</p>
+<p><strong> REINTRODUCING ASP.NET CORE 1.0 AND .NET CORE 1.0 </strong></p>
+<ul>
+<li><p>ASP.NET 5 is now ASP.NET Core 1.0.</p>
+</li>
+<li><p>.NET Core 5 is now .NET Core 1.0.</p>
+</li>
+<li><p>Entity Framework 7 is now Entity Framework Core 1.0 or EF Core 1.0 colloquially.</p>
+<p>Why 1.0? Because these are new. The whole .NET Core concept is new. The <a href="http://www.hanselman.com/blog/ExploringTheNewNETDotnetCommandLineInterfaceCLI.aspx" target="_blank" rel="external">.NET Core 1.0 CLI</a> is very new. Not only that, but .NET Core isn’t as complete as the full .NET Framework 4.6. We’re still exploring server-side graphics libraries. We’re still exploring gaps between ASP.NET 4.6 and ASP.NET Core 1.0.</p>
+<p><img src="http://www.hanselman.com/blog/content/binary/Windows-Live-Writer/Reintroducing-ASP.NET-Core-1.0-and-.NE.0_B840/image_0e978596-bd85-42ed-8d27-c16e119bca5d.png" alt=""></p>
+</li>
+</ul>
+<p><strong> WHICH TO CHOOSE? </strong></p>
+<p>  To be clear, ASP.NET 4.6 is the more mature platform. It’s battle-tested and released and available today. ASP.NET Core 1.0 is a 1.0 release that includes Web API and MVC but doesn’t yet have SignalR or Web Pages. It doesn’t yet support VB or F#. It will have these subsystems some day but not today.</p>
+<p>  We don’t want anyone to think that ASP.NET Core 1.0 is the finish line. It’s a new beginning and a fork in the road, but ASP.NET 4.6 continues on, released and fully supported. There’s lots of great stuff coming, stay tuned!</p>
+<hr>
+<h1 id="u8BD1_u6587"><a href="#u8BD1_u6587" class="headerlink" title="译文"></a>译文</h1><p><strong> 起名真难 </strong></p>
+<blockquote>
+<p>计算机科学中只有两件难事：缓存失效和命名。——Phil Karlton</p>
+</blockquote>
+<p>  “他们就该给它起个名字叫Foo，多简单的事” 纸上谈兵说说很容易，但是起名字这件事经常牵扯到很多因素。ASP.NET 作为一个好“牌子”已经有15年了。ASP.NET 4.6是一个受支持的已发布产品，你可以在 <a href="https://get.asp.net" target="_blank" rel="external">https://get.asp.net</a> 获取。</p>
+<p>  然而，把一个全新的、完全重写的ASP.NET框架命名为 “ASP.NET 5” 不是一个好主意，一个主要原因就是：5 &gt; 4.6 让人觉得 ASP.NET 5 更大、更好，是取代ASP.NET 4.6的。并不是。</p>
+<p>  所以我们重新命名并选了一个更好的版本号。</p>
+<p><strong> 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0 </strong></p>
+<ul>
+<li>ASP.NET 5 现在叫做 ASP.NET Core 1.0</li>
+<li>.NET Core 现在叫做 .NET Core 1.0</li>
+<li><p>Entity Framework 7 现在叫做 Entity Framework Core 1.0 或者简称 EF Core 1.0</p>
+<p>为什么选1.0？因为它们是全新的。整个.NET Core概念就是全新的。.NET Core CLI 是非常新的东西。（译注：.Net Core Command Line Interface ，将取代DNX）</p>
+<p>不仅如此，.NET Core还不像.NET Framework 4.6那样完整。我们仍在完善服务端图形库(server-side grahpics libraries)，我们仍在填补ASP.NET Core 1.0和ASP.NET 4.6之间的缺口。</p>
+<p><img src="http://www.hanselman.com/blog/content/binary/Windows-Live-Writer/Reintroducing-ASP.NET-Core-1.0-and-.NE.0_B840/image_0e978596-bd85-42ed-8d27-c16e119bca5d.png" alt=""></p>
+</li>
+</ul>
+<p><strong> 如何选择？ </strong></p>
+<p>  明确一下，ASP.NET 4.6是更成熟的平台。是经过实战（battle-tested）的目前已发布的可以用版本。</p>
+<p>  ASP.NET Core 1.0则是1.0版本，包括了Web API和MVC，但不包括SinglR和Web Pages。目前还不支持VB和F#。这些都会在将来实现，但目前还没有。</p>
+<p>  我们不想让人认为ASP.NET Core 1.0是个终点线，它是一个新的起点和新的分支。</p>
+<p>  ASP.NET 4.6将继续前行，发布并全面受到支持。别走开，更多精彩内容即将呈现。</p>
+<p>FROM:<a href="http://www.hanselman.com/blog/ASPNET5IsDeadIntroducingASPNETCore10AndNETCore10.aspx" target="_blank" rel="external">Scott Hanselman Blog</a></p>
 
     <blockquote>
     <div class="license-by">
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />本作品由<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">SeayXu</span>创作，采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="http://git.seay.me" rel="dct:source">http://git.seay.me</a>上的作品创作。<br />
   可自由转载、引用，但需署名作者且注明文章出处，并以相同方式共享。<br />
-  本文链接:<a href="">转载--MySQL开发规范(二)</a>
+  本文链接:<a href="">ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0</a>
     </div>
   </blockquote>
 
@@ -211,13 +190,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/Database/">Database<span class="article-category-count">3</span></a>►<a class="article-category-link" href="/categories/Database/MySQL/">MySQL<span class="article-category-count">2</span></a>
+  <a class="article-category-link" href="/categories/NET/">.NET<span class="article-category-count">1</span></a>►<a class="article-category-link" href="/categories/NET/ASP-NET/">ASP.NET<span class="article-category-count">1</span></a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Database/">Database</a><a href="/tags/MySQL/">MySQL</a><a href="/tags/数据库/">数据库</a>
+  <span></span> <a href="/tags/ASP-NET/">ASP.NET</a><a href="/tags/ASP-NET-5/">ASP.NET 5</a><a href="/tags/ASP-NET-Core/">ASP.NET Core</a><a href="/tags/NET-Core/">NET Core</a>
   </div>
 
 </div>
@@ -225,7 +204,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://git.seay.me/2016-01-20_MySQL-Development-Specification-02.html" data-title="转载--MySQL开发规范(二) | SeayXu git blog" data-tsina="5600137615" class="share clearfix">
+	  <div data-url="http://git.seay.me/post/2016-01-20_ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html" data-title="ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0 | SeayXu git blog" data-tsina="5600137615" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -238,18 +217,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016-01-20_ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html" title="ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0">
+ <a href="/post/2016-01-21_MSSQL-DB-Detach.html" title="MS SQL Server 数据库分离--SQL语句">
   <strong>上一篇：</strong><br/>
   <span>
-  ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0</span>
+  MS SQL Server 数据库分离--SQL语句</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016-01-20_MySQL-Development-Specification-01.html"  title="转载--MySQL开发规范(一)">
+<a href="/post/2016-01-20_MySQL-Development-Specification-02.html"  title="转载--MySQL开发规范(二)">
  <strong>下一篇：</strong><br/>
- <span>转载--MySQL开发规范(一)
+ <span>转载--MySQL开发规范(二)
 </span>
 </a>
 </div>
@@ -259,7 +238,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016-01-20_MySQL-Development-Specification-02.html" data-title="转载--MySQL开发规范(二)" data-url="http://git.seay.me/2016-01-20_MySQL-Development-Specification-02.html"></div>
+	<div class="ds-thread" data-thread-key="post/2016-01-20_ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html" data-title="ASP.NET 5 已死 隆重介绍 ASP.NET Core 1.0 和 .NET Core 1.0" data-url="http://git.seay.me/post/2016-01-20_ASP-NET-5-Is-Dead-Introducing-ASP-NET-Core-1-0-And-NET-Core-1-0.html"></div>
 </section>
 
 
@@ -271,7 +250,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-_u8BBE_u8BA1_u539F_u5219"><span class="toc-number">1.</span> <span class="toc-text">1.设计原则</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1_29__u6807_u51C6_u5316_u548C_u89C4_u8303_u5316"><span class="toc-number">1.1.</span> <span class="toc-text">1) 标准化和规范化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2_29__u6570_u636E_u9A71_u52A8"><span class="toc-number">1.2.</span> <span class="toc-text">2) 数据驱动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3_29__u8003_u8651_u5404_u79CD_u53D8_u5316"><span class="toc-number">1.3.</span> <span class="toc-text">3) 考虑各种变化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-_u6570_u636E_u5E93_u6D89_u53CA_u5B57_u7B26_u89C4_u8303"><span class="toc-number">2.</span> <span class="toc-text">2.数据库涉及字符规范</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-_u6570_u636E_u5E93_u547D_u540D_u89C4_u8303"><span class="toc-number">3.</span> <span class="toc-text">3.数据库命名规范</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-_u6570_u636E_u5E93_u8868_u547D_u540D_u89C4_u8303"><span class="toc-number">4.</span> <span class="toc-text">4.数据库表命名规范</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-_u5B57_u6BB5_u547D_u540D_u89C4_u8303"><span class="toc-number">5.</span> <span class="toc-text">5.字段命名规范</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#6-_u5B57_u6BB5_u7C7B_u578B_u89C4_u8303"><span class="toc-number">6.</span> <span class="toc-text">6.字段类型规范</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#7-_u6570_u636E_u5E93_u8BBE_u8BA1_u6587_u6863_u89C4_u8303"><span class="toc-number">7.</span> <span class="toc-text">7.数据库设计文档规范</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#8-_u7D22_u5F15_u4F7F_u7528_u539F_u5219_uFF1A"><span class="toc-number">8.</span> <span class="toc-text">8.索引使用原则：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#9-sql_u8BED_u53E5_u89C4_u8303"><span class="toc-number">9.</span> <span class="toc-text">9.sql语句规范</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#10-_u5176_u4ED6_u8BBE_u8BA1_u6280_u5DE7"><span class="toc-number">10.</span> <span class="toc-text">10.其他设计技巧</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u7F18_u7531"><span class="toc-number">1.</span> <span class="toc-text">缘由</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u4E2A_u4EBA_u89C2_u70B9_uFF1A"><span class="toc-number">2.</span> <span class="toc-text">个人观点：</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u539F_u6587"><span class="toc-number">3.</span> <span class="toc-text">原文</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u8BD1_u6587"><span class="toc-number">4.</span> <span class="toc-text">译文</span></a></li></ol>
  
   </div>
 
