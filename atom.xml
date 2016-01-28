@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[SeayXu git blog]]></title>
-  
+  <title><![CDATA[Seay前端博客]]></title>
+  <subtitle><![CDATA[seay git blog]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://git.seay.me/"/>
   <updated>2016-01-27T17:32:14.032Z</updated>
   <id>http://git.seay.me/</id>
   
   <author>
-    <name><![CDATA[SeayXu]]></name>
+    <name><![CDATA[Seay]]></name>
     
   </author>
   
