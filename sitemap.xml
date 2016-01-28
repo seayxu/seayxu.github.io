@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://git.seay.me/README.html</loc>
+    <lastmod>2016-01-28T12:39:57.795Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://git.seay.me/post/2016-01-27_DuoShuo-UA-Parser-Display.html</loc>
     <lastmod>2016-01-27T17:32:14.032Z</lastmod>
   </url>
@@ -49,11 +54,6 @@
   <url>
     <loc>http://git.seay.me/post/2016-01-20_MySQL-Development-Specification-01.html</loc>
     <lastmod>2016-01-20T02:46:51.958Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://git.seay.me/README.html</loc>
-    <lastmod>2016-01-15T09:54:23.806Z</lastmod>
   </url>
   
   <url>

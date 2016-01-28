@@ -1,2 +1,2 @@
-# SeayXu’s git blog
+# Seay前端博客
 wellcome!
