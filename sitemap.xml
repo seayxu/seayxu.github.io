@@ -2,6 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://git.seay.me/code/donate.html</loc>
+    <lastmod>2016-01-30T15:40:04.218Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://git.seay.me/code/loading.html</loc>
+    <lastmod>2016-01-30T15:29:29.180Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://git.seay.me/code/index.html</loc>
+    <lastmod>2016-01-30T15:26:52.208Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://git.seay.me/README.html</loc>
     <lastmod>2016-01-28T12:39:57.795Z</lastmod>
   </url>
@@ -27,18 +42,8 @@
   </url>
   
   <url>
-    <loc>http://git.seay.me/code/index.html</loc>
-    <lastmod>2016-01-22T13:35:43.605Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://git.seay.me/post/2016-01-21_MSSQL-DB-Detach.html</loc>
     <lastmod>2016-01-21T09:59:14.045Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://git.seay.me/code/loading.html</loc>
-    <lastmod>2016-01-21T05:22:58.064Z</lastmod>
   </url>
   
   <url>
