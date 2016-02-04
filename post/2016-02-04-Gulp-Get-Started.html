@@ -4,42 +4,83 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hexo主题实现多级分类显示 | Seay前端博客</title>
+    <title>Gulp.js基础入门教程 | Seay前端博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Seay">
     
 
     
-    <meta name="description" content="前言  最近在搞一个博客，是托管在github和gitcafe上的，利用Hexo生成的。  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示多级分类,层次分明`的那样。
-问题
-基本主题自带的分类显示都是一级的，如何显示多级?
+    <meta name="description" content="安装 Node 去 nodejs.org 根据系统选择性按照教程安装Node。
+创建项目
+创建项目文件夹
 
-解决方案  所以，研究了一下，找到了理想的方法，方法如下:
+进入项目文件夹
 
-利用系统的list_categories([categories], [options])辅助函">
+初始化项目
+ 使用npm命令:npm init,根据提示完成。
+
+
+安装 Gulp
+进入项目文件夹,使用Node的包管理命令npm进行安装.
+
+
+全局安装
+
+1npm install -g gulp
+
+项目依赖中安装
+
+1npm install --save-dev gul">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo主题实现多级分类显示">
-<meta property="og:url" content="http://git.seay.me/post/2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html">
+<meta property="og:title" content="Gulp.js基础入门教程">
+<meta property="og:url" content="http://git.seay.me/post/2016-02-04-Gulp-Get-Started.html">
 <meta property="og:site_name" content="Seay前端博客">
-<meta property="og:description" content="前言  最近在搞一个博客，是托管在github和gitcafe上的，利用Hexo生成的。  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示多级分类,层次分明`的那样。
-问题
-基本主题自带的分类显示都是一级的，如何显示多级?
+<meta property="og:description" content="安装 Node 去 nodejs.org 根据系统选择性按照教程安装Node。
+创建项目
+创建项目文件夹
 
-解决方案  所以，研究了一下，找到了理想的方法，方法如下:
+进入项目文件夹
 
-利用系统的list_categories([categories], [options])辅助函">
-<meta property="og:image" content="http://git.seay.me/static/images/20160124214658.png">
-<meta property="og:updated_time" content="2016-01-25T03:02:50.094Z">
+初始化项目
+ 使用npm命令:npm init,根据提示完成。
+
+
+安装 Gulp
+进入项目文件夹,使用Node的包管理命令npm进行安装.
+
+
+全局安装
+
+1npm install -g gulp
+
+项目依赖中安装
+
+1npm install --save-dev gul">
+<meta property="og:updated_time" content="2016-02-04T15:56:00.441Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo主题实现多级分类显示">
-<meta name="twitter:description" content="前言  最近在搞一个博客，是托管在github和gitcafe上的，利用Hexo生成的。  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示多级分类,层次分明`的那样。
-问题
-基本主题自带的分类显示都是一级的，如何显示多级?
+<meta name="twitter:title" content="Gulp.js基础入门教程">
+<meta name="twitter:description" content="安装 Node 去 nodejs.org 根据系统选择性按照教程安装Node。
+创建项目
+创建项目文件夹
 
-解决方案  所以，研究了一下，找到了理想的方法，方法如下:
+进入项目文件夹
 
-利用系统的list_categories([categories], [options])辅助函">
+初始化项目
+ 使用npm命令:npm init,根据提示完成。
+
+
+安装 Gulp
+进入项目文件夹,使用Node的包管理命令npm进行安装.
+
+
+全局安装
+
+1npm install -g gulp
+
+项目依赖中安装
+
+1npm install --save-dev gul">
 <meta name="twitter:creator" content="@seayxu">
 <link rel="publisher" href="112748204150183690000">
 
@@ -102,14 +143,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/post/2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html" title="Hexo主题实现多级分类显示" itemprop="url">Hexo主题实现多级分类显示</a>
+      <a href="/post/2016-02-04-Gulp-Get-Started.html" title="Gulp.js基础入门教程" itemprop="url">Gulp.js基础入门教程</a>
   </h1>
   <p class="article-author">By
        
 		<a href="https://plus.google.com/112748204150183690000?rel=author" title="Seay" target="_blank" itemprop="author">Seay</a>
 		
   <p class="article-time">
-    <time datetime="2016-01-24T13:46:07.000Z" itemprop="datePublished"> 发表于 2016-01-24</time>
+    <time datetime="2016-02-04T15:25:29.000Z" itemprop="datePublished"> 发表于 2016-02-04</time>
 
   </p>
 </header>
@@ -119,47 +160,47 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u524D_u8A00"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u95EE_u9898"><span class="toc-number">2.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u89E3_u51B3_u65B9_u6848"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u793A_u4F8B"><span class="toc-number">4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u6548_u679C_u56FE"><span class="toc-number">5.</span> <span class="toc-text">效果图</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u5B89_u88C5_Node"><span class="toc-number">1.</span> <span class="toc-text">安装 Node</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u521B_u5EFA_u9879_u76EE"><span class="toc-number">2.</span> <span class="toc-text">创建项目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5B89_u88C5_Gulp"><span class="toc-number">3.</span> <span class="toc-text">安装 Gulp</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u521B_u5EFAGulp_u914D_u7F6E_u6587_u4EF6"><span class="toc-number">4.</span> <span class="toc-text">创建Gulp配置文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u8BBE_u7F6E_u914D_u7F6E_u4FE1_u606F"><span class="toc-number">5.</span> <span class="toc-text">设置配置信息</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5B8C_u6574_u914D_u7F6E_u6587_u4EF6_3A"><span class="toc-number">5.1.</span> <span class="toc-text">完整配置文件:</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<h1 id="u524D_u8A00"><a href="#u524D_u8A00" class="headerlink" title="前言"></a>前言</h1><p>  最近在搞一个博客，是托管在<a href="https://github.com" target="_blank" rel="external">github</a>和<a href="https://gitcafe.com" target="_blank" rel="external">gitcafe</a>上的，利用<a href="https://hexo.io" target="_blank" rel="external">Hexo</a>生成的。<br>  之后，发现一个问题，显示的分类都是一级的。而我想要的是：能显示<code>多级分类</code>,层次分明`的那样。</p>
-<h1 id="u95EE_u9898"><a href="#u95EE_u9898" class="headerlink" title="问题"></a>问题</h1><blockquote>
-<p>基本主题自带的分类显示都是一级的，如何显示多级?</p>
-</blockquote>
-<h1 id="u89E3_u51B3_u65B9_u6848"><a href="#u89E3_u51B3_u65B9_u6848" class="headerlink" title="解决方案"></a>解决方案</h1><p>  所以，研究了一下，找到了理想的方法，方法如下:</p>
-<ol>
-<li><p>利用系统的<a href="https://hexo.io/zh-cn/docs/helpers.html" target="_blank" rel="external">list_categories([categories], [options])</a>辅助函数生成分类列表;</p>
+		<h1 id="u5B89_u88C5_Node"><a href="#u5B89_u88C5_Node" class="headerlink" title="安装 Node"></a>安装 Node</h1><p> 去 <a href="http://nodejs.org" target="_blank" rel="external">nodejs.org</a> 根据系统选择性按照教程安装Node。</p>
+<h1 id="u521B_u5EFA_u9879_u76EE"><a href="#u521B_u5EFA_u9879_u76EE" class="headerlink" title="创建项目"></a>创建项目</h1><ul>
+<li><p>创建项目文件夹</p>
 </li>
-<li><p>利用css实现样式.</p>
+<li><p>进入项目文件夹</p>
 </li>
-</ol>
-<h1 id="u793A_u4F8B"><a href="#u793A_u4F8B" class="headerlink" title="示例"></a>示例</h1><p>  说明：我使用的是<a href="https://github.com/wuchong/jacman" target="_blank" rel="external">jacman</a>主题，以这个主题为例说明。</p>
-<ol>
-<li><p>在主题文件夹下找到<code>layout/_widget/category.ejs</code>文件,内容如下:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (<span class="attribute">site.categories.length</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"categorieslist"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="title">p</span> <span class="attribute">class</span>=<span class="value">"asidetitle"</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">__</span>('<span class="attribute">categories</span>') %&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">ul</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">%</span> <span class="attribute">site.categories.sort</span>('<span class="attribute">name</span>')<span class="attribute">.each</span>(<span class="attribute">function</span>(<span class="attribute">item</span>)&#123; %&gt;</span></span><br><span class="line">		  <span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span>(<span class="attribute">item.posts.length</span>)&#123; %&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"&lt;%- config.root %&gt;&lt;%- item.path %&gt;"</span> <span class="attribute">title</span>=<span class="value">"&lt;%= item.name %&gt;"</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">item.name</span> %&gt;</span><span class="tag">&lt;<span class="title">sup</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">item.posts.length</span> %&gt;</span><span class="tag">&lt;/<span class="title">sup</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">		  <span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="title">%</span> &#125;); %&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改内容,利用上面提到的<code>list_categories([categories], [options])</code>辅助函数:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">%</span> <span class="attribute">if</span> (<span class="attribute">site.categories.length</span>)&#123; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"category-block"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="title">h3</span> <span class="attribute">class</span>=<span class="value">"asidetitle"</span>&gt;</span><span class="tag">&lt;<span class="title">%=</span> <span class="attribute">__</span>('<span class="attribute">categories</span>') %&gt;</span><span class="tag">&lt;/<span class="title">h3</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="title">%-</span> <span class="attribute">list_categories</span>(<span class="attribute">site.categories</span>) %&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改样式文件</p>
-</li>
-</ol>
-<ul>
-<li><p>在主题文件夹下找到<code>source/css/_partial/aside.styl</code>文件,其他的也可能是<code>source/css/_partial/sidebar.styl</code>。反正，能在页面显示即可。</p>
-</li>
-<li><p>添加新的样式，我的如下：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">//categories</span><br><span class="line">.category-block&gt;ul&gt;li</span><br><span class="line">  border-bottom 1px solid #ccc</span><br><span class="line">.category-block li</span><br><span class="line">  margin-bottom 8px</span><br><span class="line">.category-list</span><br><span class="line">  @media mini</span><br><span class="line">    width 45%</span><br><span class="line">    float left</span><br><span class="line">    margin 0 5% 0 0</span><br><span class="line">  @media tablet</span><br><span class="line">    width 100%</span><br><span class="line">    float none</span><br><span class="line">    margin .5em 0 0</span><br><span class="line">  .categoriy-list-item</span><br><span class="line">    padding .5em 5%</span><br><span class="line">  .category-list-count</span><br><span class="line">    top -.5em</span><br><span class="line">    padding-left .3em</span><br><span class="line">    font-size 75%</span><br><span class="line">    line-height 0</span><br><span class="line">    position relative</span><br><span class="line">    vertical-align baseline</span><br><span class="line">  ul, ol, dl</span><br><span class="line">    list-style none</span><br><span class="line">  ul, ol, dl</span><br><span class="line">    background-color #f9f9fa</span><br><span class="line">    margin-left 20px</span><br><span class="line">    li</span><br><span class="line">      border-bottom 1px dashed #ccc</span><br><span class="line">  .category-list-child</span><br><span class="line">    border-top 1px dashed #ccc</span><br><span class="line">    margin-bottom 8px</span><br></pre></td></tr></table></figure>
-<p>想实现不同的样式，自己可以修改。</p>
+<li><p>初始化项目</p>
+<p> 使用npm命令:<code>npm init</code>,根据提示完成。</p>
 </li>
 </ul>
-<h1 id="u6548_u679C_u56FE"><a href="#u6548_u679C_u56FE" class="headerlink" title="效果图"></a>效果图</h1><p>  <img src="/static/images/20160124214658.png" alt="效果图"></p>
+<h1 id="u5B89_u88C5_Gulp"><a href="#u5B89_u88C5_Gulp" class="headerlink" title="安装 Gulp"></a>安装 Gulp</h1><blockquote>
+<p>进入项目文件夹,使用Node的包管理命令npm进行安装.</p>
+</blockquote>
+<ul>
+<li>全局安装</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g gulp</span><br></pre></td></tr></table></figure>
+<ul>
+<li>项目依赖中安装</li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev gulp</span><br></pre></td></tr></table></figure>
+<h1 id="u521B_u5EFAGulp_u914D_u7F6E_u6587_u4EF6"><a href="#u521B_u5EFAGulp_u914D_u7F6E_u6587_u4EF6" class="headerlink" title="创建Gulp配置文件"></a>创建Gulp配置文件</h1><ul>
+<li>在项目根目录新建配置文件<code>gulpfile.js</code></li>
+</ul>
+<h1 id="u8BBE_u7F6E_u914D_u7F6E_u4FE1_u606F"><a href="#u8BBE_u7F6E_u914D_u7F6E_u4FE1_u606F" class="headerlink" title="设置配置信息"></a>设置配置信息</h1><blockquote>
+<p>以常见的Gulp插件为例,如下：</p>
+</blockquote>
+<p>  js代码校验(gulp-jshint)<br>  合并js文件(gulp-concat)<br>  压缩js代码(gulp-uglify)<br>  sass的编译(gulp-sass)<br>  less的编译(gulp-less)<br>  压缩css(gulp-minify-css)<br>  重命名(gulp-rename)</p>
+<p>这些插件的安装命令如下:</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install gulp-jshint gulp-concat gulp-uglify gulp-sass gulp-less gulp-minify-css gulp-rename --save-dev</span><br></pre></td></tr></table></figure>
+<h2 id="u5B8C_u6574_u914D_u7F6E_u6587_u4EF6_3A"><a href="#u5B8C_u6574_u914D_u7F6E_u6587_u4EF6_3A" class="headerlink" title="完整配置文件:"></a>完整配置文件:</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">// &#24341;&#20837; gulp&#10;var gulp = require(&#39;gulp&#39;);&#10;&#10;// &#24341;&#20837;&#32452;&#20214;&#10;var jshint = require(&#39;gulp-jshint&#39;);&#10;var concat = require(&#39;gulp-concat&#39;);&#10;var uglify = require(&#39;gulp-uglify&#39;);&#10;var sass = require(&#39;gulp-sass&#39;);&#10;var less = require(&#39;gulp-less&#39;);&#10;var minifycss = require(&#39;gulp-minify-css&#39;);&#10;var rename = require(&#39;gulp-rename&#39;);&#10;&#10;// &#26816;&#26597;js&#33050;&#26412;&#10;gulp.task(&#39;lint&#39;, function() &#123;&#10;    gulp.src(&#39;./src/js/*.js&#39;)&#10;        .pipe(jshint())&#10;        .pipe(jshint.reporter(&#39;default&#39;));&#10;&#125;);&#10;&#10;// &#21512;&#24182;,&#21387;&#32553;js&#25991;&#20214;&#10;gulp.task(&#39;scripts&#39;, function() &#123;&#10;    gulp.src(&#39;./src/js/*.js&#39;)&#10;        //&#21512;&#24182;js&#25991;&#20214;&#10;        .pipe(concat(&#39;all.js&#39;))&#10;        //&#32473;&#25991;&#20214;&#28155;&#21152;.min&#21518;&#32512;&#10;        .pipe(rename(&#123; suffix: &#39;.min&#39; &#125;))&#10;        //&#21387;&#32553;&#33050;&#26412;&#25991;&#20214;&#10;        .pipe(uglify())&#10;        .pipe(gulp.dest(&#39;./dist/js&#39;));&#10;&#125;);&#10;&#10;// &#32534;&#35793;sass&#10;gulp.task(&#39;sass&#39;, function() &#123;&#10;    gulp.src(&#39;./src/scss/*.scss&#39;)&#10;        .pipe(sass())&#10;        .pipe(gulp.dest(&#39;./css&#39;));&#10;&#125;);&#10;&#10;// &#32534;&#35793;less&#10;gulp.task(&#39;sass&#39;, function() &#123;&#10;    gulp.src(&#39;./src/less/*.less&#39;)&#10;        .pipe(less())&#10;        .pipe(gulp.dest(&#39;./css&#39;));&#10;&#125;);&#10;&#10;// &#21387;&#32553;css&#10;gulp.task(&#39;style&#39;, function() &#123;&#10;    gulp.src(&#39;./src/css/*.css&#39;)&#10;        .pipe(gulp.dest(&#39;./dist/style&#39;))&#10;        .pipe(rename(&#39;all.min.css&#39;))&#10;        .pipe(minifycss())&#10;        .pipe(gulp.dest(&#39;./dist/style&#39;));&#10;&#125;);&#10;&#10;// &#40664;&#35748;&#20219;&#21153;&#10;gulp.task(&#39;default&#39;, function()&#123;&#10;    gulp.run(&#39;lint&#39;, &#39;sass&#39;, &#39;scripts&#39;);&#10;&#10;    // &#30417;&#21548;&#25991;&#20214;&#21464;&#21270;&#10;    gulp.watch(&#39;./src/js/*.js&#39;, function()&#123;&#10;        gulp.run(&#39;lint&#39;, &#39;scripts&#39;);&#10;    &#125;);&#10;    gulp.watch(&#39;./src/sass/*.scss&#39;, function()&#123;&#10;        gulp.run(&#39;sass&#39;);&#10;    &#125;);&#10;    gulp.watch(&#39;./src/css/*.css&#39;, function()&#123;&#10;        gulp.run(&#39;style&#39;);&#10;    &#125;);&#10;&#125;);</span><br></pre></td></tr></table></figure>
 
     <blockquote>
     <div class="license-by">
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />本作品由<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">SeayXu</span>创作，采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="http://git.seay.me" rel="dct:source">http://git.seay.me</a>上的作品创作。<br />
   可自由转载、引用，但需署名作者且注明文章出处，并以相同方式共享。<br />
-  本文链接:<a href="">Hexo主题实现多级分类显示</a>
+  本文链接:<a href="">Gulp.js基础入门教程</a>
     </div>
   </blockquote>
 
@@ -169,13 +210,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/前端/">前端<span class="article-category-count">3</span></a>►<a class="article-category-link" href="/categories/前端/Hexo/">Hexo<span class="article-category-count">1</span></a>
+  <a class="article-category-link" href="/categories/前端/">前端<span class="article-category-count">3</span></a>►<a class="article-category-link" href="/categories/前端/Gulp/">Gulp<span class="article-category-count">1</span></a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Hexo/">Hexo</a><a href="/tags/前端/">前端</a>
+  <span></span> <a href="/tags/Gulp/">Gulp</a><a href="/tags/前端/">前端</a>
   </div>
 
 </div>
@@ -183,7 +224,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://git.seay.me/post/2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html" data-title="Hexo主题实现多级分类显示 | Seay前端博客" data-tsina="5600137615" class="share clearfix">
+	  <div data-url="http://git.seay.me/post/2016-02-04-Gulp-Get-Started.html" data-title="Gulp.js基础入门教程 | Seay前端博客" data-tsina="5600137615" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -195,19 +236,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/post/2016-01-27_DuoShuo-UA-Parser-Display.html" title="多说使用ua-parser-js显示浏览器和系统信息">
-  <strong>上一篇：</strong><br/>
-  <span>
-  多说使用ua-parser-js显示浏览器和系统信息</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/post/2016-01-21_MSSQL-DB-Detach.html"  title="MS SQL Server 数据库分离--SQL语句">
+<a href="/post/2016-01-27_DuoShuo-UA-Parser-Display.html"  title="多说使用ua-parser-js显示浏览器和系统信息">
  <strong>下一篇：</strong><br/>
- <span>MS SQL Server 数据库分离--SQL语句
+ <span>多说使用ua-parser-js显示浏览器和系统信息
 </span>
 </a>
 </div>
@@ -217,7 +250,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="post/2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html" data-title="Hexo主题实现多级分类显示" data-url="http://git.seay.me/post/2016-01-24_Hexo-Theme-MutilLevel-Category-Display.html"></div>
+	<div class="ds-thread" data-thread-key="post/2016-02-04-Gulp-Get-Started.html" data-title="Gulp.js基础入门教程" data-url="http://git.seay.me/post/2016-02-04-Gulp-Get-Started.html"></div>
 </section>
 
 
@@ -229,7 +262,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u524D_u8A00"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u95EE_u9898"><span class="toc-number">2.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u89E3_u51B3_u65B9_u6848"><span class="toc-number">3.</span> <span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u793A_u4F8B"><span class="toc-number">4.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u6548_u679C_u56FE"><span class="toc-number">5.</span> <span class="toc-text">效果图</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#u5B89_u88C5_Node"><span class="toc-number">1.</span> <span class="toc-text">安装 Node</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u521B_u5EFA_u9879_u76EE"><span class="toc-number">2.</span> <span class="toc-text">创建项目</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u5B89_u88C5_Gulp"><span class="toc-number">3.</span> <span class="toc-text">安装 Gulp</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u521B_u5EFAGulp_u914D_u7F6E_u6587_u4EF6"><span class="toc-number">4.</span> <span class="toc-text">创建Gulp配置文件</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#u8BBE_u7F6E_u914D_u7F6E_u4FE1_u606F"><span class="toc-number">5.</span> <span class="toc-text">设置配置信息</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#u5B8C_u6574_u914D_u7F6E_u6587_u4EF6_3A"><span class="toc-number">5.1.</span> <span class="toc-text">完整配置文件:</span></a></li></ol></li></ol>
  
   </div>
 

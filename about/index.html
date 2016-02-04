@@ -352,11 +352,12 @@ $(document).ready(function(){
   })();
 </script >
 <!-- 多说公共JS代码 end -->
-
+// <script src="/js/embed-15.11.15.0.min.js"></script>
+// <script src="/js/ua-parser.min.js"></script>
 <!-- 多说 ua-parser-js start -->
 <script type="text/javascript">
   if (typeof DUOSHUO !== 'undefined')hookDUOSHUO_tp();
-  else $('[src="http://static.duoshuo.com/embed.js"]')[0].onload=hookDUOSHUO_tp;
+  else $('[src="/js/embed-15.11.15.js"]')[0].onload=hookDUOSHUO_tp;
   function hookDUOSHUO_tp(){
     var _D_post=DUOSHUO.templates.post
     DUOSHUO.templates.post=function (e,t){
