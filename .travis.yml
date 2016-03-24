@@ -1,34 +1,28 @@
 language: node_js
-
 sudo: false
-
 node_js:
 - '4'
-
 branches:
   only:
   - dev
-
 cache:
   directories:
   - node_modules
-
 before_install:
-- openssl aes-256-cbc -K $encrypted_6f0a1427bcb7_key -iv $encrypted_6f0a1427bcb7_iv -in .travis/id_rsa_travis.enc -out ~/.ssh/id_rsa -d
+- npm install hexo-cli -g
+- openssl aes-256-cbc -K $encrypted_6f0a1427bcb7_key -iv $encrypted_6f0a1427bcb7_iv
+  -in .travis/id_rsa_blog_travis.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/id_rsa
 - cp .travis/ssh_config ~/.ssh/config
 - git config --global user.name "SeayXu"
 - git config --global user.email SeayXu@163.com
-
 install:
-- npm install hexo-cli -g
 - npm install
 - npm install hexo-generator-feed --save
 - npm install hexo-deployer-git --save
 - npm install hexo-generator-sitemap --save
-
 script:
 - hexo clean
 - hexo generate
