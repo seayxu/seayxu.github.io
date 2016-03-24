@@ -25,6 +25,5 @@ install:
 - npm install hexo-generator-sitemap --save
 script:
 - hexo clean
-- hexo generate
-after_success:
-- hexo deploy --silent
+- hexo g
+- hexo d
