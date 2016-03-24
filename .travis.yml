@@ -12,10 +12,10 @@ branches:
 before_install:
 #注意将xxxx内容修改为你之前获得的解密参数
 - openssl aes-256-cbc -K $encrypted_6f0a1427bcb7_key -iv $encrypted_6f0a1427bcb7_iv
-  -in id_rsa.enc -out ~/.ssh/id_rsa_seayxu.blog.git -d
+  -in id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa_seayxu.blog.git //修改目录权限
 - eval $(ssh-agent)//将密钥加入系统
-- ssh-add ~/.ssh/id_rsa_seayxu.blog.git
+- ssh-add ~/.ssh/id_rsa
 - cp ssh_config ~/.ssh/config //修改 git 信息
 - git config --global user.name "SeayXu"
 - git config --global user.email SeayXu@gmail.com
