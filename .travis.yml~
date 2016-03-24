@@ -1,24 +1,25 @@
 language: node_js
 node_js:
-- '0.12'
+- '4.4.1'
 branches:
   only:
-  - master
+  - dev
 before_install:
 - openssl aes-256-cbc -K $encrypted_6f0a1427bcb7_key -iv $encrypted_6f0a1427bcb7_iv
-  -in id_rsa_blog.enc -out ~/.ssh/id_rsa -d
-- chmod 600 ~/.ssh/id_rsa
+  -in id_rsa_blog.enc -out id_rsa_blog -d
+- chmod 600 ~/.ssh/id_rsa_seayxu.blog.git
 - eval $(ssh-agent)
-- ssh-add ~/.ssh/id_rsa
+- ssh-add ~/.ssh/id_rsa_blog
 - cp ssh_config ~/.ssh/config
 - git config --global user.name "SeayXu"
-- git config --global user.email SeayXu@163.com
+- git config --global user.email SeayXu@gmail.com
 install:
 - npm install hexo-cli -g
 - npm install
 - npm install hexo-generator-feed --save
-- npm install hexo-deployer-git --save
 - npm install hexo-generator-sitemap --save
+- npm install hexo-deployer-git --save
 script:
-- hexo generate
-- hexo deploy
+- hexo clean
+- hexo g
+- hexo d
