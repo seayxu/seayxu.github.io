@@ -9,15 +9,17 @@ cache:
   directories:
   - node_modules
 before_install:
+- npm install hexo -g
 - npm install hexo-cli -g
-- openssl aes-256-cbc -K $encrypted_6f0a1427bcb7_key -iv $encrypted_6f0a1427bcb7_iv
-  -in .travis/id_rsa_blog_travis.enc -out ~/.ssh/id_rsa -d
-- chmod 600 ~/.ssh/id_rsa
-- eval $(ssh-agent)
-- ssh-add ~/.ssh/id_rsa
-- cp .travis/ssh_config ~/.ssh/config
+#- openssl aes-256-cbc -K $encrypted_6f0a1427bcb7_key -iv $encrypted_6f0a1427bcb7_iv -in .travis/id_rsa_blog_travis.enc -out ~/.ssh/id_rsa -d
+#- chmod 600 ~/.ssh/id_rsa
+#- eval $(ssh-agent)
+#- ssh-add ~/.ssh/id_rsa
+#- cp .travis/ssh_config ~/.ssh/config
+before_script:
 - git config --global user.name "SeayXu"
 - git config --global user.email SeayXu@163.com
+- sed -i'' "s~git@github.com:SeayXu/seayxu.github.io.git~https://${DEPLOY_REPO}:x-oauth-basic@github.com/seayxu.github.io.git~" _config.yml
 install:
 - npm install
 - npm install hexo-generator-feed --save
@@ -26,4 +28,6 @@ install:
 script:
 - hexo clean
 - hexo generate
-- hexo deploy
+#- hexo deploy
+after_success:
+- hexo deploy --silent
