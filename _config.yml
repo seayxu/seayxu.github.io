@@ -84,4 +84,5 @@ theme: jacman
 deploy:
 - type: git
   repo: git@github.com:SeayXu/seayxu.github.io.git
-  branch: gh-pages
+  branch: master
+  message: "Last updated: %s"
