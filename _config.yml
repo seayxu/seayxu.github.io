@@ -85,4 +85,3 @@ deploy:
   type: git
   repo: git@github.com:SeayXu/seayxu.github.io.git
   branch: master
-  message: "Last updated: %s"
