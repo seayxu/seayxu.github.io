@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: seay前端博客
-subtitle: seay front-end blog
-description: Seay front-end blog,SeayXu,powsered by hexo
-author: Seay
-language: zh-CN
-timezone: Asia/Shanghai
+title: Hexo
+subtitle:
+description:
+author: John Doe
+language:
+timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://git.seay.me
+url: http://yoursite.com
 root: /
-permalink: post/:title.html
+permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
@@ -25,7 +25,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: ['README.md','code**.html']
+skip_render:
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -44,7 +44,7 @@ highlight:
   tab_replace:
 
 # Category & Tag
-default_category: default
+default_category: uncategorized
 category_map:
 tag_map:
 
@@ -62,26 +62,10 @@ pagination_dir: page
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-plugins:
-  hexo-generator-feed
-  hexo-generator-sitemap
-
-#sitemap
-sitemap:
-  path: sitemap.xml
-
-#feed
-atom:
-  type: atom
-  path: atom.xml
-  limit: 20
-
 ## Themes: https://hexo.io/themes/
-theme: jacman
+theme: landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-- type: git
-  repo: git@github.com:SeayXu/seayxu.github.io.git
-  branch: gh-pages
+  type:

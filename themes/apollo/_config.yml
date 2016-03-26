@@ -1,0 +1,28 @@
+menu:
+    Blog: /
+    Archive: /archives/
+    Weibo: http://weibo.com/5600137615
+    GitHub: https://github.com/seayxu
+    Rss: /atom.xml
+
+favicon: /favicon.png
+logo: /favicon.png
+
+# Comment
+# e.g disqus: seansun
+disqus:
+duoshuo: git-seay
+
+# Analytics
+# google-analytics:
+ga:
+# baidu-analytics:
+ba:
+
+# Copyright Infomation
+startyear: 2015
+
+# Font CDN
+#true : use google fonts api, not stable for chinese visitor sometimes, caused by force majeure factor
+#false: use useso fonts api instead of google's, great response speed for chinese visitor
+googlefonts: true

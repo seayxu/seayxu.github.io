@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: seay前端博客
-subtitle: seay front-end blog
-description: Seay front-end blog,SeayXu,powsered by hexo
+title: Seay front-end blog
+subtitle: seay git blog
+description: Seay front-end blog,SeayXu git blog,powsered by hexo
 author: Seay
 language: zh-CN
 timezone: Asia/Shanghai
@@ -25,7 +25,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: ['README.md','code**.html']
+skip_render:
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -44,7 +44,7 @@ highlight:
   tab_replace:
 
 # Category & Tag
-default_category: default
+default_category: uncategorized
 category_map:
 tag_map:
 
@@ -65,6 +65,12 @@ pagination_dir: page
 plugins:
   hexo-generator-feed
   hexo-generator-sitemap
+
+archive_generator:
+  per_page: 4
+  yearly: true
+  monthly: true 
+  daily: true
 
 #sitemap
 sitemap:

@@ -1,11 +1,7 @@
-# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
-
 # Site
-title: seay前端博客
-subtitle: seay front-end blog
-description: Seay front-end blog,SeayXu,powsered by hexo
+title: Seay front-end blog
+subtitle: seay git blog
+description: Seay front-end blog,SeayXu git blog,powsered by hexo
 author: Seay
 language: zh-CN
 timezone: Asia/Shanghai
@@ -25,7 +21,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render: ['README.md','code**.html']
+skip_render:
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -63,8 +59,14 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 plugins:
-  hexo-generator-feed
-  hexo-generator-sitemap
+- hexo-generator-feed
+- hexo-generator-sitemap
+
+archive_generator:
+  per_page: 10
+  yearly: false
+  monthly: false
+  daily: false
 
 #sitemap
 sitemap:
@@ -77,7 +79,10 @@ atom:
   limit: 20
 
 ## Themes: https://hexo.io/themes/
-theme: jacman
+#theme: landscape
+theme: apollo
+stylus:
+  compress: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -85,3 +90,4 @@ deploy:
 - type: git
   repo: git@github.com:SeayXu/seayxu.github.io.git
   branch: gh-pages
+#message: "Last updated: %s"
