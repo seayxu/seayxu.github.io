@@ -1,13 +1,9 @@
 language: node_js
-sudo: false
 node_js:
 - '4'
 branches:
   only:
   - dev
-cache:
-  directories:
-  - node_modules
 env:
   global:
     secure: IgkOm63D6/hHOclY1f84dB/MNeUG1JJNbts0KuXD1wlLw13CGGel9w5odLw6Z/SYzXEXLWRKsYJUEUbyqq7oR96TadwELba14u2a+RpcQIKzAqJ54r+1SjIyHyzt0lHxNSd/5sju5Iu5XwP0CNRuEhFGobajeAc84zdJkRjXWBLArchXE2YWemFcYfLFyvuOjtfS3g8cRl6nm8KsqoRuy+lqcybCXt+leIVMMJX8AuEhu3ThdyEvZBr/P/tUkUVZF1UIdnrzq5lk8tieP5J54tLcHnXSVjwPrto0t1+DwUjuPOPMqWc2W/2Ov81FoQJ6kfl+u1PWWipGTaVFbkZitKuxBYsvJc5r3yMlasaFT9UjWZyAJIZnerDd18bdKkpiY/M5TJbkXkMnEUe7+1vP9UX146OCpmmq6P5nmsabaBJhEDgxeLOOtZtpDXt8LZfyW75dP29Anbxl4RW3Pp+mIjliH7poHcVGUBXMYeRaKdbN5qSzKpqzTHO/xo8q4pdFYGo99NuQI5KYKeqaPmFyyjD5+N5Je8iEoVsE9AZBSpS7v1j7D6dhel9gJFHC58am9uEE973dNDN48BsNobPHDN13ih2n35L9M5eGcVN50vgfb6S2ImG/NVOp6pn+olcbtfbHFz2cr5daXsgNJNqPSlyFNfJsxBKO8SpaNI8CvPg=
@@ -22,6 +18,6 @@ install:
 - npm install
 script:
 - hexo clean
-- hexo generate
+- hexo g
 after_success:
-- hexo deploy
+- hexo d
