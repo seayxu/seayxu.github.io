@@ -24,4 +24,4 @@ script:
 - hexo clean
 - hexo generate
 after_success:
-- hexo deploy --silent
+- hexo deploy
