@@ -50,7 +50,7 @@ touch .travis.yml
 language: node_js
 branches:
   only:
-  - master
+  - master #源码分支名称
 before_install:
 - npm install -g hexo
 - npm install -g hexo-cli
