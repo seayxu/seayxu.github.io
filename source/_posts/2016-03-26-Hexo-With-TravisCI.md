@@ -1,5 +1,5 @@
 ---
-title: Travs自动化部署Hexo
+title: Travis自动化部署Hexo
 categories:
 - 前端
 - Hexo
@@ -14,7 +14,7 @@ date: 2016-03-26 20:55:29
 >**本文介绍Hexo利用Travis CI自动化生成并发布,亲测可用.**
 
 # 开通Travis CI
-利用 GitHub账号登录 ** [Travis CI](https://travis-ci.org/) **
+利用 GitHub账号登录 [Travis CI](https://travis-ci.org/)
 
 # 项目开启Travis CI
 
