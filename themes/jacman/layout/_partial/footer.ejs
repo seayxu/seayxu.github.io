@@ -56,20 +56,41 @@
 		<% } %>
 		</p>
 
-	<div class="icons cc-license">
-				<%  Array.prototype.S=String.fromCharCode(2);
-				  Array.prototype.in_array=function(e){
-	    			var r=new RegExp(this.S+e+this.S);
-	    			return (r.test(this.S+this.join(this.S)+this.S));
-					};
-					var cc = new Array('by','by-nc','by-nc-nd','by-nc-sa','by-nd','by-sa','zero'); %>
-			<% if (cc.in_array(theme.creative_commons) ) { %>
-	          <a href="http://creativecommons.org/licenses/<%= theme.creative_commons %>/4.0" class="cc-opacity" target="_blank">
-	            <img src="<%- config.root %>img/cc-<%= theme.creative_commons %>.svg" alt="Creative Commons" />
-	          </a>
-	    <% } %>
-				<!-- Analytics Begin -->
-				<%- partial('analytics') %>
-				<!-- Analytics End -->
-	</div>
+		<div class="icons cc-license">
+					<%  Array.prototype.S=String.fromCharCode(2);
+					  Array.prototype.in_array=function(e){
+		    			var r=new RegExp(this.S+e+this.S);
+		    			return (r.test(this.S+this.join(this.S)+this.S));
+						};
+						var cc = new Array('by','by-nc','by-nc-nd','by-nc-sa','by-nd','by-sa','zero'); %>
+				<% if (cc.in_array(theme.creative_commons) ) { %>
+		          <a href="http://creativecommons.org/licenses/<%= theme.creative_commons %>/4.0" class="cc-opacity" target="_blank">
+		            <img src="<%- config.root %>img/cc-<%= theme.creative_commons %>.svg" alt="Creative Commons" />
+		          </a>
+		    <% } %>
+					<!-- Analytics Begin -->
+					<%- partial('analytics') %>
+					<!-- Analytics End -->
+		</div>
+		<% if (theme.beian.enable) { %>
+		<div class="beian">
+			<% if (theme.beian.ga.enable) { %>
+			<p>
+				<img src="<%= theme.beian.ga.img %>" />
+				<span><%= theme.beian.ga.area %>公网安备:</span>
+				<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=<%= theme.beian.ga.no %>">
+					<span><%= theme.beian.ga.no %>号</span>
+				</a>
+			</p>
+			<% }%>
+			<% if (theme.beian.domain.enable) { %>
+			<p>
+				<span>工信部备案：</span>
+				<a target="_blank" href="http://www.miitbeian.gov.cn/">
+					<%= theme.beian.domain.no %>
+				</a>
+			</p>
+			<% }%>
+		</div>
+		<% } %>
 </div>

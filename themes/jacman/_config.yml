@@ -75,6 +75,18 @@ author:
   douban:     ## e.g. wuchong1014 or your id for https://www.douban.com/people/wuchong1014
 ## if you set them, the corresponding  share button will show on the footer
 
+### beian info
+beian:
+  enable: true
+  ga:
+    enable: true
+    area: 鄂
+    no: 42011102000087
+    img: http://beian.gov.cn/img/ghs.png
+  domain:
+    enable: true
+    no: 鄂ICP备13012446号-2
+
 #### Toc
 toc:
   article: true   ## show contents in article.
@@ -86,7 +98,6 @@ toc:
 links:
   个人站点: http://seay.me
   Github: https://github.com/seayxu
-  Gitcafe: https://gitcafe.com/seay
   博客园: http://www.cnblogs.com/seayxu
   Feed: /atom.xml
   SiteMap: /sitemap.xml
