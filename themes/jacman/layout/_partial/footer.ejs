@@ -10,7 +10,7 @@
 		<p> <%= theme.author.intro_line1 %> <br/>
 			<%= theme.author.intro_line2 %></p>
 	</section>
-	 <% } %>
+	<% } %>
 	<div class="social-font" class="clearfix">
 		<% if(theme.author.weibo){ %>
 		<a href="http://weibo.com/<%= theme.author.weibo %>" target="_blank" class="icon-weibo" title="微博"></a>
@@ -58,16 +58,16 @@
 
 		<div class="icons cc-license">
 					<%  Array.prototype.S=String.fromCharCode(2);
-					  Array.prototype.in_array=function(e){
-		    			var r=new RegExp(this.S+e+this.S);
-		    			return (r.test(this.S+this.join(this.S)+this.S));
+						Array.prototype.in_array=function(e){
+						var r=new RegExp(this.S+e+this.S);
+						return (r.test(this.S+this.join(this.S)+this.S));
 						};
 						var cc = new Array('by','by-nc','by-nc-nd','by-nc-sa','by-nd','by-sa','zero'); %>
 				<% if (cc.in_array(theme.creative_commons) ) { %>
-		          <a href="http://creativecommons.org/licenses/<%= theme.creative_commons %>/4.0" class="cc-opacity" target="_blank">
-		            <img src="<%- config.root %>img/cc-<%= theme.creative_commons %>.svg" alt="Creative Commons" />
-		          </a>
-		    <% } %>
+				<a href="http://creativecommons.org/licenses/<%= theme.creative_commons %>/4.0" class="cc-opacity" target="_blank">
+					<img src="<%- config.root %>img/cc-<%= theme.creative_commons %>.svg" alt="Creative Commons" />
+				</a>
+				<% } %>
 					<!-- Analytics Begin -->
 					<%- partial('analytics') %>
 					<!-- Analytics End -->
@@ -85,7 +85,7 @@
 			<% }%>
 			<% if (theme.beian.domain.enable) { %>
 			<p>
-				<span>工信部备案：</span>
+				<span>工信部备案:</span>
 				<a target="_blank" href="http://www.miitbeian.gov.cn/">
 					<%= theme.beian.domain.no %>
 				</a>
