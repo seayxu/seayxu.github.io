@@ -69,7 +69,7 @@ author:
   github: seayxu     ## e.g. wuchong for https://github.com/wuchong
   facebook: iseayxu   ## e.g. imjark for https://facebook.com/imjark
   linkedin: seayxu   ## e.g. wuchong1014 for https://www.linkedin.com/in/wuchong1014
-  google_plus: 112748204150183693089   ## e.g. "111190881341800841449" for https://plus.google.com/u/0/111190881341800841449, the "" is needed!
+  google_plus: "112748204150183693089"   ## e.g. "111190881341800841449" for https://plus.google.com/111190881341800841449, the "" is needed!
   stackoverflow: 5826591  ## e.g. 3222790 for http://stackoverflow.com/users/3222790/jark
   segmentfault: seay ## e.g. seay for http://segmentfault.com/u/seay
   douban:     ## e.g. wuchong1014 or your id for https://www.douban.com/people/wuchong1014
@@ -81,7 +81,7 @@ beian:
   ga:
     enable: true
     area: 鄂
-    no: 42011102000087
+    no: "42032202000124"
     img: http://beian.gov.cn/img/ghs.png
   domain:
     enable: true
