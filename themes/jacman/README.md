@@ -15,7 +15,7 @@ Jacman is a fresh looking and responsive theme for [Hexo](http://hexo.io) with m
 ```
 $ git clone https://github.com/wuchong/jacman.git themes/jacman
 ```
-**Jacman requires Hexo 2.7 and above.** 
+**Jacman requires Hexo 2.7 and above.**
 ###Enable
 Modify `theme` setting in blog folder` _config.yml` to `jacman`.
 ###Update
@@ -23,7 +23,7 @@ Modify `theme` setting in blog folder` _config.yml` to `jacman`.
 cd themes/jacman
 git pull origin master
 ```
-**please backup your `_config.yml` file before update.** 
+**please backup your `_config.yml` file before update.**
 
 ##Configuration
 

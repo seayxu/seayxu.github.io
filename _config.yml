@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: seay前端博客
+title: seay's blog
 subtitle: seay front-end blog
-description: Seay front-end blog,SeayXu,powsered by hexo
+description: seay blog,SeayXu,powsered by hexo
 author: Seay
 language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://git.seay.me
+url: http://blog.seay.me
 root: /
 permalink: post/:title.html
 permalink_defaults:
