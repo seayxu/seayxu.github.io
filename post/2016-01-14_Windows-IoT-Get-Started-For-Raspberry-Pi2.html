@@ -1,0 +1,922 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>树莓派(Raspberry Pi2)Windows IoT入门 | seay&#39;s blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Seay">
+    
+
+    
+    <meta name="description" content="设置电脑在电脑上设置 Visual Studio 2015若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：  请确保运行的是 Windows 10（版本 10240）的公共版本或更高版本。可从此处升级。如果已经运行 Windows 10，可通过单击“开始”按钮、键入“winver”并点击 Enter，查找当前版本号。  在此处安装 Visual Studio Comm">
+<meta name="keywords" content="Raspberry Pi 2,树莓派,Windows IoT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="树莓派(Raspberry Pi2)Windows IoT入门">
+<meta property="og:url" content="http://blog.seay.me/post/2016-01-14_Windows-IoT-Get-Started-For-Raspberry-Pi2.html">
+<meta property="og:site_name" content="seay&#39;s blog">
+<meta property="og:description" content="设置电脑在电脑上设置 Visual Studio 2015若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：  请确保运行的是 Windows 10（版本 10240）的公共版本或更高版本。可从此处升级。如果已经运行 Windows 10，可通过单击“开始”按钮、键入“winver”并点击 Enter，查找当前版本号。  在此处安装 Visual Studio Comm">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/SetupRPI/Iso.PNG">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/SetupRPI/MSI.PNG">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/SetupRPI/rpiffu.PNG">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/ImagerHelperSearch.PNG">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/SetupRPI/ImageHelper.PNG">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/rpi2.png">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/DefaultAppRpi2.png">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/Blinky/components.png">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/PinMappings/RP2_Pinout.png">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/Blinky/breadboard_assembled_rpi2.png">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/PinMappings/MBM_Pinout.png">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/Blinky/breadboard_assembled.png">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/AppDeployment/cs-remote-machine-debugging.png">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/AppDeployment/cs-remote-connections.PNG">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/AppDeployment/cs-debug-project-properties.PNG">
+<meta property="og:image" content="http://ms-iot.github.io/content/images/Blinky/blinky-screenshot.png">
+<meta property="og:updated_time" content="2017-06-12T09:35:47.584Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="树莓派(Raspberry Pi2)Windows IoT入门">
+<meta name="twitter:description" content="设置电脑在电脑上设置 Visual Studio 2015若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：  请确保运行的是 Windows 10（版本 10240）的公共版本或更高版本。可从此处升级。如果已经运行 Windows 10，可通过单击“开始”按钮、键入“winver”并点击 Enter，查找当前版本号。  在此处安装 Visual Studio Comm">
+<meta name="twitter:image" content="http://ms-iot.github.io/content/images/SetupRPI/Iso.PNG">
+<meta name="twitter:creator" content="@seayxu">
+<link rel="publisher" href="112748204150183693089">
+
+    
+    <link rel="alternative" href="/atom.xml" title="seay&#39;s blog" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/apple.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/apple.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="stylesheet" href="/css/ua-parser.css">
+    
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="seay&#39;s blog">seay&#39;s blog</a></h1>
+				<h2 class="blog-motto">personal blog</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">首页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/code">示例</a></li>
+					
+						<li><a href="/about">关于</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:blog.seay.me">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody">
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/post/2016-01-14_Windows-IoT-Get-Started-For-Raspberry-Pi2.html" title="树莓派(Raspberry Pi2)Windows IoT入门" itemprop="url">树莓派(Raspberry Pi2)Windows IoT入门</a>
+  </h1>
+  <p class="article-author">Posted By
+    
+		<a href="http://weibo.com/5600137615?rel=author" title="Seay" target="_blank" itemprop="author">Seay</a>
+		
+  <p class="article-time">
+    <time datetime="2016-01-14T15:32:55.000Z" itemprop="datePublished"> 发表于 2016-01-14</time>
+
+  </p>
+</header>
+
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#设置电脑"><span class="toc-number">1.</span> <span class="toc-text">设置电脑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在电脑上设置-Visual-Studio-2015"><span class="toc-number">1.1.</span> <span class="toc-text">在电脑上设置 Visual Studio 2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置你的设备"><span class="toc-number">2.</span> <span class="toc-text">设置你的设备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#需要具备的条件"><span class="toc-number">2.1.</span> <span class="toc-text">需要具备的条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Windows-10-IoT-核心版工具"><span class="toc-number">2.2.</span> <span class="toc-text">安装 Windows 10 IoT 核心版工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将-Windows-10-IoT-Core-Insider-Preview-映像放置在-SD-卡上"><span class="toc-number">2.3.</span> <span class="toc-text">将 Windows 10 IoT Core Insider Preview 映像放置在 SD 卡上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#连接电路板"><span class="toc-number">2.4.</span> <span class="toc-text">连接电路板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动-Windows-10-IoT-核心版"><span class="toc-number">2.5.</span> <span class="toc-text">启动 Windows 10 IoT 核心版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他资源"><span class="toc-number">2.6.</span> <span class="toc-text">其他资源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开发"><span class="toc-number">3.</span> <span class="toc-text">开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Blinky-示例"><span class="toc-number">3.1.</span> <span class="toc-text">Blinky 示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#将-LED-连接到你的-Windows-IoT-设备"><span class="toc-number">3.1.1.</span> <span class="toc-text">将 LED 连接到你的 Windows IoT 设备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#适用于-Raspberry-Pi-2-RPi2"><span class="toc-number">3.1.2.</span> <span class="toc-text">适用于 Raspberry Pi 2 (RPi2)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#适用于-MinnowBoard-Max-MBM"><span class="toc-number">3.1.3.</span> <span class="toc-text">适用于 MinnowBoard Max (MBM)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#部署你的应用"><span class="toc-number">3.1.4.</span> <span class="toc-text">部署你的应用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#我们来看看代码"><span class="toc-number">3.1.5.</span> <span class="toc-text">我们来看看代码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#计时器代码"><span class="toc-number">3.1.5.1.</span> <span class="toc-text">计时器代码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#初始化-GPIO-引脚"><span class="toc-number">3.1.5.2.</span> <span class="toc-text">初始化 GPIO 引脚</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#修改-GPIO-引脚的状态"><span class="toc-number">3.1.5.3.</span> <span class="toc-text">修改 GPIO 引脚的状态</span></a></li></ol></li></ol></li></ol></li></ol>
+		
+		</div>
+		
+		<h2 id="设置电脑"><a href="#设置电脑" class="headerlink" title="设置电脑"></a><a href="http://ms-iot.github.io/content/zh-CN/win10/SetupPCRPI.htm" target="_blank" rel="external">设置电脑</a></h2><h3 id="在电脑上设置-Visual-Studio-2015"><a href="#在电脑上设置-Visual-Studio-2015" class="headerlink" title="在电脑上设置 Visual Studio 2015"></a>在电脑上设置 Visual Studio 2015</h3><p>若要设置 Windows 10 IoT 核心版开发电脑，首先需要安装以下内容：</p>
+<ol>
+<li><p><strong>请确保运行的是 Windows 10（版本 10240）的公共版本或更高版本</strong>。可从<a href="http://www.microsoft.com/zh-CN/software-download/windows10" target="_blank" rel="external">此处</a>升级。如果已经运行 Windows 10，可通过单击“开始”按钮、键入“winver”并点击 Enter，查找当前版本号。</p>
+</li>
+<li><p>在<a href="http://go.microsoft.com/fwlink/?LinkID=534599" target="_blank" rel="external">此处</a><strong>安装</strong> Visual Studio Community 2015。可从<a href="https://www.visualstudio.com/vs-2015-product-editions" target="_blank" rel="external">此处</a>下载 Visual Studio <code>Professional 2015</code> 和 Visual Studio <code>Enterprise</code> 2015。</p>
+<p> <strong>注意：</strong> 如果选择安装不同版本的 VS 2015，请确保执行“自定义”安装，并依次选中“通用 Windows 应用开发工具”-&gt;“工具和 Windows SDK”复选框。</p>
+</li>
+<li><p>通过依次选择“帮助”&gt;“关于 Microsoft Visual Studio”<strong>验证</strong> Visual Studio <strong>安装</strong>。“Visual Studio”的所需版本是 <code>14.0.23107.0 D14Rel</code>。“用于通用 Windows 应用的 Visual Studio 工具”的所需版本是 <code>14.0.23121.00 D14OOB</code>。</p>
+</li>
+<li><p>确保已按照<a href="https://msdn.microsoft.com/library/windows/apps/xaml/dn706236.aspx" target="_blank" rel="external">这些说明</a>启用了<strong>开发人员模式</strong>。</p>
+</li>
+</ol>
+<h2 id="设置你的设备"><a href="#设置你的设备" class="headerlink" title="设置你的设备"></a><a href="http://ms-iot.github.io/content/zh-CN/win10/SetupRPI.htm" target="_blank" rel="external">设置你的设备</a></h2><h3 id="需要具备的条件"><a href="#需要具备的条件" class="headerlink" title="需要具备的条件"></a>需要具备的条件</h3><ol>
+<li><p><strong>运行 Windows 10 的电脑</strong>（在上一步中已准备就绪）</p>
+</li>
+<li><p><strong>Raspberry Pi 2</strong></p>
+</li>
+<li><p><strong>5V 微型 USB 电源</strong> - 使用至少 1.0A 电流。如果计划使用多个高耗电 USB 外围设备，请改用电流较高的电源 (&gt;2.0A)。</p>
+</li>
+<li><p><strong>8GB 微型 SD 卡</strong> - 类 10 或更高。（我们建议使用<a href="http://www.amazon.com/gp/product/B00IVPU786" target="_blank" rel="external">这个</a>或<a href="http://www.amazon.com/SanDisk-Ultra-Micro-SDHC-16GB/dp/9966573445" target="_blank" rel="external">这个</a>）</p>
+</li>
+<li><p><strong>HDMI 电缆和监视器</strong></p>
+</li>
+<li><p><strong>以太网电缆</strong></p>
+</li>
+<li><p><strong>微型 SD 卡读卡器</strong>（因为大多数内部 SD 卡读卡器均会出现问题，所以我们建议使用外部 USB 卡读卡器，例如<a href="http://www.amazon.com/dp/B009D79VH4" target="_blank" rel="external">这个</a>或<a href="http://www.amazon.com/dp/B0096FB5CW" target="_blank" rel="external">这个</a>）</p>
+</li>
+</ol>
+<h3 id="安装-Windows-10-IoT-核心版工具"><a href="#安装-Windows-10-IoT-核心版工具" class="headerlink" title="安装 Windows 10 IoT 核心版工具"></a>安装 Windows 10 IoT 核心版工具</h3><ol>
+<li><p>从 Microsoft 下载中心<a href="http://go.microsoft.com/fwlink/?LinkId=616847" target="_blank" rel="external">下载</a>用于 Raspberry Pi 2 的 ISO。</p>
+</li>
+<li><p>将 ISO 保存到本地文件夹</p>
+<p> <img src="http://ms-iot.github.io/content/images/SetupRPI/Iso.PNG" alt=""></p>
+</li>
+<li><p>双击 ISO（IoT 核心版 RPi.iso）。它将自动将其本身作为虚拟驱动器进行装载，以便你可以访问内容。</p>
+<p> <img src="http://ms-iot.github.io/content/images/SetupRPI/MSI.PNG" alt=""></p>
+</li>
+<li><p>安装 Windows_10_IoT_Core_RPi2.msi。安装完成后，flash.ffu 将位于 C:\Program Files (x86)\Microsoft IoT\FFU\RaspberryPi2</p>
+<p> <img src="http://ms-iot.github.io/content/images/SetupRPI/rpiffu.PNG" alt=""></p>
+</li>
+<li><p>完成后将弹出虚拟 CD</p>
+</li>
+</ol>
+<h3 id="将-Windows-10-IoT-Core-Insider-Preview-映像放置在-SD-卡上"><a href="#将-Windows-10-IoT-Core-Insider-Preview-映像放置在-SD-卡上" class="headerlink" title="将 Windows 10 IoT Core Insider Preview 映像放置在 SD 卡上"></a>将 Windows 10 IoT Core Insider Preview 映像放置在 SD 卡上</h3><ol>
+<li><p>将微型 SD 卡插入 SD 卡读卡器。</p>
+</li>
+<li><p>使用 IoTCoreImageHelper.exe 切换 SD 卡。从“开始”菜单搜索“WindowsIoT”，并选择快捷方式“WindowsIoTImageHelper”</p>
+<p> <img src="http://ms-iot.github.io/content/images/ImagerHelperSearch.PNG" alt=""></p>
+</li>
+<li><p>该工具将按照显示方式枚举设备。选择希望切换的 SD 卡，然后提供 FFU 的位置并切换映像。<br> <img src="http://ms-iot.github.io/content/images/SetupRPI/ImageHelper.PNG" alt=""></p>
+</li>
+<li><p>单击任务栏中的“安全删除硬件”图标，然后选择你的 USB SD 读卡器以将其从系统中安全删除。如果未正确执行此操作，可能导致映像损坏。</p>
+<p><strong>注意</strong>： 如果希望在使用完 Windows 10 IoT 核心版后将其从 SD 卡中删除，请参阅标题为<strong>如何从 SD 卡中删除 Windows 10 IoT 核心版？</strong>的<a href="http://ms-iot.github.io/content/zh-CN/Faqs.htm" target="_blank" rel="external">常见问题</a>部分。</p>
+<p><strong>注意</strong>： IoTCoreImageHelper.exe 是推荐用来切换 SD 卡的工具。但是，说明可用于直接使用 <a href="http://ms-iot.github.io/content/zh-CN/win10/samples/DISM.htm" target="_blank" rel="external">DISM 命令</a>行工具</p>
+</li>
+</ol>
+<h3 id="连接电路板"><a href="#连接电路板" class="headerlink" title="连接电路板"></a>连接电路板</h3><ol>
+<li><p>插入已准备的<strong>微型 SD 卡</strong>（插槽在如下所示的电路板的另一侧）。</p>
+</li>
+<li><p><strong>将网络电缆</strong>从本地网络连接到电路板上的以太网端口。请确保开发电脑在同一网络上。</p>
+<p><strong>注意</strong>： 如果没有本地有线网络，请参阅<a href="http://ms-iot.github.io/content/zh-CN/win10/ConnectToDevice.htm" target="_blank" rel="external">此处</a>获取其他连接选项。</p>
+</li>
+<li><p><strong>将 HDMI 监视器连接到</strong>电路板上的 HDMI 端口。</p>
+</li>
+<li><p><strong>将电源连接到</strong>开发板上的微型 USB 端口。</p>
+<p> <img src="http://ms-iot.github.io/content/images/rpi2.png" alt=""></p>
+</li>
+</ol>
+<h3 id="启动-Windows-10-IoT-核心版"><a href="#启动-Windows-10-IoT-核心版" class="headerlink" title="启动 Windows 10 IoT 核心版"></a>启动 Windows 10 IoT 核心版</h3><ol>
+<li><p>连接电源后，Windows 10 IoT 核心版将自动启动。这可能需要几分钟时间。</p>
+</li>
+<li><p>启动设备后，DefaultApp 将启动并显示 RPi2 的 IP 地址。</p>
+<p> <img src="http://ms-iot.github.io/content/images/DefaultAppRpi2.png" alt=""></p>
+</li>
+<li><p>遵循<a href="http://ms-iot.github.io/content/zh-CN/win10/samples/PowerShell.htm" target="_blank" rel="external">此处的 PowerShell 文档</a>，使用 PowerShell 连接到正在运行的设备。也可按照<a href="http://ms-iot.github.io/content/zh-CN/win10/samples/SSH.htm" target="_blank" rel="external">此处</a>的说明使用 SSH 连接到设备。</p>
+</li>
+<li><p><strong>强烈推荐</strong>更新管理员帐户的默认密码。若要执行此操作，请在 PowerShell 连接中发出以下命令：</p>
+<p>使用强密码替换 <code>[new password]</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">net user Administrator [new password]</div></pre></td></tr></table></figure>
+<p>此操作完成后，将需要使用 psSession 和新凭据重新建立当前会话。</p>
+</li>
+</ol>
+<h3 id="其他资源"><a href="#其他资源" class="headerlink" title="其他资源"></a>其他资源</h3><ul>
+<li><a href="http://ms-iot.github.io/content/zh-CN/win10/SupportedInterfaces.htm" target="_blank" rel="external">受支持的外围接口和设备</a></li>
+</ul>
+<h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a><a href="http://ms-iot.github.io/content/zh-CN/win10/samples/Blinky.htm" target="_blank" rel="external">开发</a></h2><h3 id="Blinky-示例"><a href="#Blinky-示例" class="headerlink" title="Blinky 示例"></a>Blinky 示例</h3><p>我们将创建一个简单的 LED 闪烁应用并将 LED 连接到你的 Windows 10 IoT Core 设备。</p>
+<p>这是一个有外设的示例。若要更好地了解什么是有外设的模式以及如何将你的设备配置为有外设，请按照<a href="http://ms-iot.github.io/content/zh-CN/win10/HeadlessMode.htm" target="_blank" rel="external">此处</a>的说明操作。</p>
+<p>另外，还请注意 GPIO API 仅在 Windows 10 IoT Core 上可用，因此该示例无法在你的桌面上运行。</p>
+<p>在 Visual Studio 中加载项目</p>
+<p>你可以通过在<a href="https://github.com/ms-iot/samples/archive/develop.zip" target="_blank" rel="external">此处</a>下载所有示例的 zip 并导航到 <code>samples-develop\Blinky</code>，查找此示例的源代码。示例代码可采用 C++ 或 C# 提供，但此处的文档仅详细介绍了 C# 变体。在磁盘上创建文件夹的副本，然后从 Visual Studio 中打开项目。</p>
+<h4 id="将-LED-连接到你的-Windows-IoT-设备"><a href="#将-LED-连接到你的-Windows-IoT-设备" class="headerlink" title="将 LED 连接到你的 Windows IoT 设备"></a>将 LED 连接到你的 Windows IoT 设备</h4><p>你将会需要一些组件：</p>
+<ul>
+<li><p>一个 LED（你喜欢的任意一种颜色）</p>
+</li>
+<li><p>一个 220 Ω 电阻器</p>
+</li>
+<li><p>一块试验板和几根连接线</p>
+<p>  <img src="http://ms-iot.github.io/content/images/Blinky/components.png" alt=""></p>
+</li>
+</ul>
+<h4 id="适用于-Raspberry-Pi-2-RPi2"><a href="#适用于-Raspberry-Pi-2-RPi2" class="headerlink" title="适用于 Raspberry Pi 2 (RPi2)"></a>适用于 Raspberry Pi 2 (RPi2)</h4><p>我们要将 LED 的一端连接到 RPi2 上的 GPIO 5（JP3 扩展头上的引脚 29），将另一端连接到电阻器，并将电阻器连接到 RPi2 上的 3.3 伏电源。请注意 LED 的正负极非常重要。请确保将较短的腿 (-) 连接到 GPIO 5 并将较长的腿 (+) 连接到电阻器，否则它不会点亮。</p>
+<p>下面是 RPi2 的引出线：</p>
+<p><img src="http://ms-iot.github.io/content/images/PinMappings/RP2_Pinout.png" alt=""></p>
+<p><em>使用 <a href="http://fritzing.org/" target="_blank" rel="external">Fritzing</a> 制作的图像</em></p>
+<p>下面是使用电路组装的试验板可能样子的一个示例：</p>
+<p><img src="http://ms-iot.github.io/content/images/Blinky/breadboard_assembled_rpi2.png" alt=""></p>
+<p><em>使用 <a href="http://fritzing.org/" target="_blank" rel="external">Fritzing</a> 制作的图像</em></p>
+<h4 id="适用于-MinnowBoard-Max-MBM"><a href="#适用于-MinnowBoard-Max-MBM" class="headerlink" title="适用于 MinnowBoard Max (MBM)"></a>适用于 MinnowBoard Max (MBM)</h4><p>我们要将 LED 的一端连接到 MBM 上的 GPIO 5（JP1 扩展头上的引脚 18），将另一端连接到电阻器，并将电阻器连接到 MBM 上的 3.3 伏电源。请注意 LED 的正负极非常重要。请确保将较短的腿 (-) 连接到 GPIO 5 并将较长的腿 (+) 连接到电阻器，否则它不会点亮。</p>
+<p>以下是 MBM 上的 JP1 连接器：</p>
+<p><img src="http://ms-iot.github.io/content/images/PinMappings/MBM_Pinout.png" alt=""></p>
+<p><em>使用 <a href="http://fritzing.org/" target="_blank" rel="external">Fritzing</a> 制作的图像</em></p>
+<p>下面是使用电路组装的试验板可能样子的一个示例：</p>
+<p><img src="http://ms-iot.github.io/content/images/Blinky/breadboard_assembled.png" alt=""></p>
+<p><em>使用 <a href="http://fritzing.org/" target="_blank" rel="external">Fritzing</a> 制作的图像</em></p>
+<h4 id="部署你的应用"><a href="#部署你的应用" class="headerlink" title="部署你的应用"></a>部署你的应用</h4><ol>
+<li><p>应用程序在 Visual Studio 中打开后，在工具栏下拉列表中设置体系结构。如果针对 MinnowBoard Max 进行生成，请选择 <code>x86</code>。如果针对 Raspberry Pi 2 进行生成，请选择 <code>ARM</code>。</p>
+</li>
+<li><p>接下来，在 Visual Studio 工具栏中，单击<code>Local Machine</code>下拉列表并选择 <code>Remote Machine</code></p>
+<p> <img src="http://ms-iot.github.io/content/images/AppDeployment/cs-remote-machine-debugging.png" alt=""></p>
+</li>
+<li><p>此时，Visual Studio 将显示“远程连接”对话框。如果以前使用过 <a href="http://ms-iot.github.io/content/zh-CN/win10/samples/PowerShell.htm" target="_blank" rel="external">PowerShell</a> 设置设备的唯一名称，可在此处输入该名称（在此示例中，我们使用的是 my-device）。否则，使用 Windows IoT 核心版设备的 IP 地址。输入设备名称/IP 后，选择 <code>None</code> 进行 Windows 身份验证，然后单击“选择”。</p>
+<p> <img src="http://ms-iot.github.io/content/images/AppDeployment/cs-remote-connections.PNG" alt=""></p>
+</li>
+<li><p>可通过导航到项目属性（在解决方案资源管理器中选择“属性”）并在左侧选择 Debug 选项卡来验证或修改这些值：</p>
+<p> <img src="http://ms-iot.github.io/content/images/AppDeployment/cs-debug-project-properties.PNG" alt="项目属性调试选项卡"></p>
+</li>
+</ol>
+<p>完成所有设置后，你应可以在 Visual Studio 中按 F5。Blinky 应用将会部署并在 Windows IoT 设备上启动，此时你应会看到 LED 与屏幕上的模拟图像同步闪烁。</p>
+<p><img src="http://ms-iot.github.io/content/images/Blinky/blinky-screenshot.png" alt=""></p>
+<p>恭喜你！ 你已控制了 Windows IoT 设备上的一个 GPIO 引脚！</p>
+<h4 id="我们来看看代码"><a href="#我们来看看代码" class="headerlink" title="我们来看看代码"></a>我们来看看代码</h4><p>此示例的代码相当简单。我们使用了一个计时器，每当调用“Tick”事件时，都会切换 LED 的状态。</p>
+<h5 id="计时器代码"><a href="#计时器代码" class="headerlink" title="计时器代码"></a>计时器代码</h5><p>下面说明如何使用 C# 语言设置计时器：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="title">MainPage</span>(<span class="params"></span>)</span></div><div class="line">&#123;</div><div class="line">    <span class="comment">// ...</span></div><div class="line"></div><div class="line">    <span class="keyword">this</span>.timer = <span class="keyword">new</span> DispatcherTimer();</div><div class="line">    <span class="keyword">this</span>.timer.Interval = TimeSpan.FromMilliseconds(<span class="number">500</span>);</div><div class="line">    <span class="keyword">this</span>.timer.Tick += Timer_Tick;</div><div class="line">    <span class="keyword">this</span>.timer.Start();</div><div class="line"></div><div class="line">    <span class="comment">// ...</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">Timer_Tick</span>(<span class="params"><span class="keyword">object</span> sender, <span class="keyword">object</span> e</span>)</span></div><div class="line">&#123;</div><div class="line">    FlipLED();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h5 id="初始化-GPIO-引脚"><a href="#初始化-GPIO-引脚" class="headerlink" title="初始化 GPIO 引脚"></a>初始化 GPIO 引脚</h5><p>为了驱动 GPIO 引脚，首先我们需要对其进行初始化。以下是 C# 代码（请注意我们如何在 Windows.Devices.Gpio 命名空间中利用新 WinRT 类）：</p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">using</span> Windows.Devices.Gpio;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">InitGPIO</span>(<span class="params"></span>)</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">var</span> gpio = GpioController.GetDefault();</div><div class="line"></div><div class="line">    <span class="comment">// Show an error if there is no GPIO controller</span></div><div class="line">    <span class="keyword">if</span> (gpio == <span class="literal">null</span>)</div><div class="line">    &#123;</div><div class="line">        pin = <span class="literal">null</span>;</div><div class="line">        GpioStatus.Text = <span class="string">"There is no GPIO controller on this device."</span>;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    pin = gpio.OpenPin(LED_PIN);</div><div class="line"></div><div class="line">    <span class="comment">// Show an error if the pin wasn't initialized properly</span></div><div class="line">    <span class="keyword">if</span> (pin == <span class="literal">null</span>)</div><div class="line">    &#123;</div><div class="line">        GpioStatus.Text = <span class="string">"There were problems initializing the GPIO pin."</span>;</div><div class="line">        <span class="keyword">return</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    pin.Write(GpioPinValue.High);</div><div class="line">    pin.SetDriveMode(GpioPinDriveMode.Output);</div><div class="line"></div><div class="line">    GpioStatus.Text = <span class="string">"GPIO pin initialized correctly."</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>让让我们稍稍细分一下此过程：</p>
+<ul>
+<li><p>首先，我们使用 <code>GpioController.GetDefault()</code> 获取 GPIO 控制器。</p>
+</li>
+<li><p>如果设备没有 GPIO 控制器，则此函数将返回 <code>null</code>。</p>
+</li>
+<li><p>然后，我们尝试通过使用 <code>LED_PIN</code> 值调用 <code>GpioController.OpenPin()</code> 来打开引脚。</p>
+</li>
+<li><p>获取 <code>pin</code> 后，我们会使用 <code>GpioPin.Write()</code> 函数将它设置为默认的关闭状态（高）。</p>
+</li>
+<li><p>我们还使用了 <code>GpioPin.SetDriveMode()</code> 函数将 <code>pin</code> 设置为以输出模式运行。</p>
+</li>
+</ul>
+<h5 id="修改-GPIO-引脚的状态"><a href="#修改-GPIO-引脚的状态" class="headerlink" title="修改 GPIO 引脚的状态"></a>修改 GPIO 引脚的状态</h5><p>在具有<code>GpioOutputPin</code> 实例的访问权限后，没有必要再通过更改引脚状态来打开或关闭 LED。</p>
+<p>若要打开 LED，只需将值 <code>GpioPinValue.Low</code> 写入引脚：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">this.pin.Write(GpioPinValue.Low);</div></pre></td></tr></table></figure>
+<p>当然，写入 <code>GpioPinValue.High</code> 便会关闭 LED：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">this.pin.Write(GpioPinValue.High);</div></pre></td></tr></table></figure>
+<p>记得我们已将 LED 的另一端连接到了 3.3 伏电源，因此，我们需要将引脚驱动到低位，使电流通过 LED。</p>
+<blockquote>
+<p>本文来源:<a href="http://ms-iot.github.io/content/zh-CN/GetStarted.htm" target="_blank" rel="external"><code>微软Windows IoT官网</code></a></p>
+</blockquote>
+
+    <blockquote>
+    <div class="license-by">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><br />本作品由<span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">SeayXu</span>创作，采用<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a>进行许可。<br />基于<a xmlns:dct="http://purl.org/dc/terms/" href="http://git.seay.me" rel="dct:source">http://git.seay.me</a>上的作品创作。<br />
+  可自由转载、引用，但需署名作者且注明文章出处，并以相同方式共享。<br />
+  本文链接:<a href="">树莓派(Raspberry Pi2)Windows IoT入门</a>
+    </div>
+  </blockquote>
+
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/Raspberry-Pi/">Raspberry Pi<span class="article-category-count">1</span></a>►<a class="article-category-link" href="/categories/Raspberry-Pi/Windows-IoT/">Windows IoT<span class="article-category-count">1</span></a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Raspberry-Pi-2/">Raspberry Pi 2</a><a href="/tags/树莓派/">树莓派</a><a href="/tags/Windows-IoT/">Windows IoT</a>
+  </div>
+
+</div>
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://blog.seay.me/post/2016-01-14_Windows-IoT-Get-Started-For-Raspberry-Pi2.html" data-title="树莓派(Raspberry Pi2)Windows IoT入门 | seay&#39;s blog" data-tsina="5600137615" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev" >
+ <a href="/post/2016-01-17_Ubuntu-Shell-WiFi-Setting.html" title="Ubuntu(Shell)命令行下连接到无线网络-使用wpa-cli命令">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Ubuntu(Shell)命令行下连接到无线网络-使用wpa-cli命令</span>
+</a>
+</div>
+
+
+</nav>
+
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="post/2016-01-14_Windows-IoT-Get-Started-For-Raspberry-Pi2.html" data-title="树莓派(Raspberry Pi2)Windows IoT入门" data-url="http://blog.seay.me/post/2016-01-14_Windows-IoT-Get-Started-For-Raspberry-Pi2.html"></div>
+</section>
+
+
+
+</div>
+
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#设置电脑"><span class="toc-number">1.</span> <span class="toc-text">设置电脑</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#在电脑上设置-Visual-Studio-2015"><span class="toc-number">1.1.</span> <span class="toc-text">在电脑上设置 Visual Studio 2015</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置你的设备"><span class="toc-number">2.</span> <span class="toc-text">设置你的设备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#需要具备的条件"><span class="toc-number">2.1.</span> <span class="toc-text">需要具备的条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Windows-10-IoT-核心版工具"><span class="toc-number">2.2.</span> <span class="toc-text">安装 Windows 10 IoT 核心版工具</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将-Windows-10-IoT-Core-Insider-Preview-映像放置在-SD-卡上"><span class="toc-number">2.3.</span> <span class="toc-text">将 Windows 10 IoT Core Insider Preview 映像放置在 SD 卡上</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#连接电路板"><span class="toc-number">2.4.</span> <span class="toc-text">连接电路板</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#启动-Windows-10-IoT-核心版"><span class="toc-number">2.5.</span> <span class="toc-text">启动 Windows 10 IoT 核心版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#其他资源"><span class="toc-number">2.6.</span> <span class="toc-text">其他资源</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开发"><span class="toc-number">3.</span> <span class="toc-text">开发</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Blinky-示例"><span class="toc-number">3.1.</span> <span class="toc-text">Blinky 示例</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#将-LED-连接到你的-Windows-IoT-设备"><span class="toc-number">3.1.1.</span> <span class="toc-text">将 LED 连接到你的 Windows IoT 设备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#适用于-Raspberry-Pi-2-RPi2"><span class="toc-number">3.1.2.</span> <span class="toc-text">适用于 Raspberry Pi 2 (RPi2)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#适用于-MinnowBoard-Max-MBM"><span class="toc-number">3.1.3.</span> <span class="toc-text">适用于 MinnowBoard Max (MBM)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#部署你的应用"><span class="toc-number">3.1.4.</span> <span class="toc-text">部署你的应用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#我们来看看代码"><span class="toc-number">3.1.5.</span> <span class="toc-text">我们来看看代码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#计时器代码"><span class="toc-number">3.1.5.1.</span> <span class="toc-text">计时器代码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#初始化-GPIO-引脚"><span class="toc-number">3.1.5.2.</span> <span class="toc-text">初始化 GPIO 引脚</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#修改-GPIO-引脚的状态"><span class="toc-number">3.1.5.3.</span> <span class="toc-text">修改 GPIO 引脚的状态</span></a></li></ol></li></ol></li></ol></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="github-card">
+<p class="asidetitle">Github 名片</p>
+<div class="github-card" data-github="seayxu" data-width="220" data-height="119" data-theme="medium">
+<script type="text/javascript" src="//cdn.jsdelivr.net/github-cards/latest/widget.js" ></script>
+</div>
+  </div>
+
+
+
+  <!-- 
+<div class="category-list"><\!--categorieslist-\->
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/NET/" title=".NET">.NET<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/NET/ASP-NET/" title="ASP.NET">ASP.NET<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Database/" title="Database">Database<sup>3</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/前端/Gulp/" title="Gulp">Gulp<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/前端/Hexo/" title="Hexo">Hexo<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/System/Linux/" title="Linux">Linux<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Database/MSSQL/" title="MSSQL">MSSQL<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Database/MySQL/" title="MySQL">MySQL<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Raspberry-Pi/" title="Raspberry Pi">Raspberry Pi<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Ruby/" title="Ruby">Ruby<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/System/" title="System">System<sup>2</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/System/Linux/Ubuntu/" title="Ubuntu">Ubuntu<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/Raspberry-Pi/Windows-IoT/" title="Windows IoT">Windows IoT<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/前端/" title="前端">前端<sup>4</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/前端/工具/多说/" title="多说">多说<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/前端/工具/" title="工具">工具<sup>1</sup></a></li>
+		  
+		
+		</ul>
+</div>
+ -->
+
+<div class="category-block">
+  <h3 class="asidetitle">分类</h3>
+     <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/NET/">.NET</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/NET/ASP-NET/">ASP.NET</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/">Database</a><span class="category-list-count">3</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Database/MSSQL/">MSSQL</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Database/MySQL/">MySQL</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Raspberry-Pi/">Raspberry Pi</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Raspberry-Pi/Windows-IoT/">Windows IoT</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ruby/">Ruby</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/System/">System</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/System/Linux/">Linux</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/System/Linux/Ubuntu/">Ubuntu</a><span class="category-list-count">1</span></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/">前端</a><span class="category-list-count">4</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/Gulp/">Gulp</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/Hexo/">Hexo</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/前端/工具/">工具</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/前端/工具/多说/">多说</a><span class="category-list-count">1</span></li></ul></li></ul></li></ul>
+</div>
+
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/前端/" title="前端">前端<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/数据库/" title="数据库">数据库<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Database/" title="Database">Database<sup>3</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Hexo/" title="Hexo">Hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Raspberry-Pi-2/" title="Raspberry Pi 2">Raspberry Pi 2<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Ubuntu/" title="Ubuntu">Ubuntu<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/树莓派/" title="树莓派">树莓派<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MySQL/" title="MySQL">MySQL<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Gulp/" title="Gulp">Gulp<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/NET-Core/" title="NET Core">NET Core<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ASP-NET-5/" title="ASP.NET 5">ASP.NET 5<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/MSSQL/" title="MSSQL">MSSQL<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ASP-NET/" title="ASP.NET">ASP.NET<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Windows-IoT/" title="Windows IoT">Windows IoT<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/工具/" title="工具">工具<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/多说/" title="多说">多说<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/ASP-NET-Core/" title="ASP.NET Core">ASP.NET Core<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/System/" title="System">System<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Shell/" title="Shell">Shell<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://seay.me" target="_blank" title="个人站点">个人站点</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://github.com/seayxu" target="_blank" title="Github">Github</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://www.cnblogs.com/seayxu" target="_blank" title="博客园">博客园</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="/atom.xml" target="_blank" title="Feed">Feed</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="/sitemap.xml" target="_blank" title="SiteMap">SiteMap</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+  <div class="weiboshow">
+  <p class="asidetitle">新浪微博</p>
+  <iframe width="100%" height="90" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&width=0&height=90&fansRow=2&ptype=1&speed=0&skin=1&isTitle=0&noborder=1&isWeibo=0&isFans=0&uid=5600137615&verifier=b1538d55&dpc=1"></iframe>
+</div>
+
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m Seay. <br/>
+			This is my git blog.</p>
+	</section>
+	
+	<div class="social-font" class="clearfix">
+		
+		<a href="http://weibo.com/5600137615" target="_blank" class="icon-weibo" title="微博"></a>
+		
+		
+		<a href="https://github.com/seayxu" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		<a href="http://stackoverflow.com/users/5826591" target="_blank" class="icon-stack-overflow" title="stackoverflow"></a>
+		
+		
+		<a href="https://twitter.com/seayxu" target="_blank" class="icon-twitter" title="twitter"></a>
+		
+		
+		<a href="https://www.facebook.com/iseayxu" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="https://www.linkedin.com/in/seayxu" target="_blank" class="icon-linkedin" title="linkedin"></a>
+		
+		
+		<a href="https://segmentfault.com/u/seay" target="_blank" class="icon-douban" title="segmentfault"></a>
+		
+		
+		
+		<a href="http://www.zhihu.com/people/seayxu" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		<a href="https://plus.google.com/112748204150183693089?rel=author" target="_blank" class="icon-google_plus" title="Google+"></a>
+		
+		
+		<a href="mailto:xu@seay.me" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2017
+		
+		<a href="/about" target="_blank" title="Seay">Seay</a>
+		
+		</p>
+
+		<div class="icons cc-license">
+					
+				
+				<a href="http://creativecommons.org/licenses/by-sa/4.0" class="cc-opacity" target="_blank">
+					<img src="/img/cc-by-sa.svg" alt="Creative Commons" />
+				</a>
+				
+					<!-- Analytics Begin -->
+					
+
+
+<script type="text/javascript">
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?9b96c361201736e1a9c6e8d2b8673b3d";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257185775'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1257185775%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+
+
+
+<a href="http://www.amazingcounters.com"><img border="0" src="http://cc.amazingcounters.com/counter.php?i=3199339&c=9598330" alt="AmazingCounters.com"></a>
+
+
+					<!-- Analytics End -->
+		</div>
+		
+		<div class="beian">
+			
+			<p>
+				<img src="http://beian.gov.cn/img/ghs.png" />
+				<span>公安部备案:</span>
+				<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42032202000124">
+					<span>鄂公网安备 42032202000124号</span>
+				</a>
+			</p>
+			
+			
+			<p>
+				<span>工信部备案:</span>
+				<a target="_blank" href="http://www.miitbeian.gov.cn/">
+					鄂ICP备13012446号-2
+				</a>
+			</p>
+			
+		</div>
+		
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize();
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+      
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      sinakey = 2063936778,
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&appkey='+sinakey+'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});
+</script>
+
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"git-seay"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+    ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//git.seay.me/js/ua-parser.min.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script >
+<!-- 多说公共JS代码 end -->
+// <script src="/js/embed-15.11.15.0.min.js"></script>
+// <script src="/js/ua-parser.min.js"></script>
+<!-- 多说 ua-parser-js start -->
+<script type="text/javascript">
+  if (typeof DUOSHUO !== 'undefined')hookDUOSHUO_tp();
+  else $('[src="/js/embed-15.11.15.js"]')[0].onload=hookDUOSHUO_tp;
+  function hookDUOSHUO_tp(){
+    var _D_post=DUOSHUO.templates.post
+    DUOSHUO.templates.post=function (e,t){
+      var rs=_D_post(e,t);
+      if(e.post.agent&&/^Mozilla/.test(e.post.agent))rs=rs.replace(/<\/div><p>/,show_ua(e.post.agent)+'</div><p>');
+      return rs;
+    }
+  }
+  function show_ua(string){
+    console.log(string);
+    $.ua.set(string);
+    var sua=$.ua;
+    if(sua.os.version=='x86_64')sua.os.version='x64';
+    return '<span class="this_ua browser '+sua.browser.name+'">'+sua.browser.name+' | '+sua.browser.version+'</span>'+'<span class="this_ua platform '+sua.os.name+'">'+sua.os.name+' '+sua.os.version+'</span>';
+  }
+</script>
+<!-- 多说 ua-parser-js end -->
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+});
+</script>
+
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+<!-- 
+<script src="/js/ua-parser.min.js"></script>
+ -->
+
+  </body>
+</html>
+
+<script type="text/javascript">
+  document.writeln("<a href=\"https://github.com/seayxu\" target=\"_blank\"><img style=\"position: absolute; top: 0; right: 0; border: 0;\" src=\"https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png\" alt=\"Fork me on GitHub\"></a>");
+</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{"tsina":"2063936778"},"bdText":"","bdMini":"1","bdMiniList":["tsina","weixin","qzone","renren","youdao","fbook","twi","copy"],"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"1","bdPos":"right","bdTop":"160"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
